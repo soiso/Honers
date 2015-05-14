@@ -46,6 +46,9 @@ public class Player : MonoBehaviour {
 
     public int m_StopFrame = 0;
 
+    private TimeZone_BoxCollider m_TimeZoneTrigger;
+    private PanelParametor.TIMEZONE m_TimeZone;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -57,6 +60,7 @@ public class Player : MonoBehaviour {
         m_controller = GetComponent<CharacterController>();
         //m_have_fruit = new List<Fruit.FRUIT_TYPE>();
         m_score = GetComponent<Score>();
+        m_TimeZoneTrigger = GetComponentInChildren<TimeZone_BoxCollider>();
 
         m_is_strong = false;
 	}
@@ -75,6 +79,9 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
+        m_TimeZone = m_TimeZoneTrigger.m_myColliderTimeZone;
+        GetComponent<ShaderChanger>().Change( m_TimeZone );
+
         switch(m_frame_Information.m_movetype)
         {
             case PlayerFrameInformation.MOVE_TYPE.frame :
