@@ -14,7 +14,7 @@ public class Gate : MonoBehaviour {
     private Hamster m_owner_Ham;
 
     [SerializeField]
-    private GameObject[] m_observer_Objcect;
+    private GameObject[] m_observer_Objcect = null;
     
 	void Start () 
     {
@@ -52,14 +52,16 @@ public class Gate : MonoBehaviour {
             return;
 
         int hamTimeZone = (int)m_owner_Ham.m_time_Zone;
-        Notice(hamTimeZone);
-        Vector3 move_Target = new Vector3(0, m_gateHeight[hamTimeZone], 0);
+        //if (m_observer_Objcect != null)
+            //Notice(hamTimeZone);
+        Vector3 move_Target = new Vector3(this.transform.position.x, m_gateHeight[hamTimeZone], this.transform.position.z);
         this.transform.position = this.transform.position * (1.0f - m_move_Speed) + move_Target * m_move_Speed;
     }
 
 	// Update is called once per frame
 	void Update ()
     {
-        Move();	
+        if(!this.transform.root.GetComponent<PicturePaper>().m_move)
+            Move();	
 	}
 }

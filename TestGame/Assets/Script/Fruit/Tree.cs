@@ -54,6 +54,7 @@ public class Tree : MonoBehaviour {
         m_default_SpornPosition = m_sporn_Transform.position;
         m_default_SpornPosition.z = 0f;
         Direction_NextGrawFruit();
+        
 	}
 	
     void Direction_NextGrawFruit()
