@@ -1,0 +1,361 @@
+fileFormatVersion: 2
+guid: f155a6da346524b42b79c4a92b2e8ee1
+timeCreated: 1430377029
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: body
+    100002: bone
+    100004: bone1
+    100006: bone10
+    100008: bone11
+    100010: bone12
+    100012: bone13
+    100014: bone14
+    100016: bone15
+    100018: bone16
+    100020: bone17
+    100022: bone18
+    100024: bone19
+    100026: bone2
+    100028: bone20
+    100030: bone3
+    100032: bone4
+    100034: bone5
+    100036: bone6
+    100038: bone7
+    100040: bone8
+    100042: bone9
+    100044: eff
+    100046: eff1
+    100048: eff10
+    100050: eff11
+    100052: eff12
+    100054: eff13
+    100056: eff14
+    100058: eff2
+    100060: eff3
+    100062: eff4
+    100064: eff5
+    100066: eff6
+    100068: eff7
+    100070: eff8
+    100072: eff9
+    100074: face
+    100076: hand_l_tale
+    100078: hand_r
+    100080: mouse
+    100082: null
+    100084: null1
+    100086: null1_NeutralPose
+    100088: onaka
+    100090: //RootNode
+    100092: root
+    100094: root1
+    100096: root10
+    100098: root11
+    100100: root12
+    100102: root13
+    100104: root14
+    100106: root2
+    100108: root3
+    100110: root4
+    100112: root5
+    100114: root6
+    100116: root7
+    100118: root8
+    100120: root9
+    100122: scarf
+    100124: timer
+    400000: body
+    400002: bone
+    400004: bone1
+    400006: bone10
+    400008: bone11
+    400010: bone12
+    400012: bone13
+    400014: bone14
+    400016: bone15
+    400018: bone16
+    400020: bone17
+    400022: bone18
+    400024: bone19
+    400026: bone2
+    400028: bone20
+    400030: bone3
+    400032: bone4
+    400034: bone5
+    400036: bone6
+    400038: bone7
+    400040: bone8
+    400042: bone9
+    400044: eff
+    400046: eff1
+    400048: eff10
+    400050: eff11
+    400052: eff12
+    400054: eff13
+    400056: eff14
+    400058: eff2
+    400060: eff3
+    400062: eff4
+    400064: eff5
+    400066: eff6
+    400068: eff7
+    400070: eff8
+    400072: eff9
+    400074: face
+    400076: hand_l_tale
+    400078: hand_r
+    400080: mouse
+    400082: null
+    400084: null1
+    400086: null1_NeutralPose
+    400088: onaka
+    400090: //RootNode
+    400092: root
+    400094: root1
+    400096: root10
+    400098: root11
+    400100: root12
+    400102: root13
+    400104: root14
+    400106: root2
+    400108: root3
+    400110: root4
+    400112: root5
+    400114: root6
+    400116: root7
+    400118: root8
+    400120: root9
+    400122: scarf
+    400124: timer
+    4300000: body
+    4300002: hand_l_tale
+    4300004: hand_r
+    4300006: timer
+    4300008: scarf
+    4300010: face
+    4300012: onaka
+    4300014: mouse
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: face
+    13700004: hand_l_tale
+    13700006: hand_r
+    13700008: mouse
+    13700010: onaka
+    13700012: scarf
+    13700014: timer
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: face
+        weight: 1
+      - path: hand_l_tale
+        weight: 1
+      - path: hand_r
+        weight: 1
+      - path: mouse
+        weight: 1
+      - path: null
+        weight: 1
+      - path: null/null1_NeutralPose
+        weight: 1
+      - path: null/null1_NeutralPose/null1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/eff
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root1/bone3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root1/bone3/eff1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root2/bone4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root2/bone4/eff2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root3/bone5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root3/bone5/eff3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root4/bone6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root4/bone6/eff4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root11
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root11/bone17
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root11/bone17/eff11
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root13
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root13/bone19
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/bone2/root13/bone19/eff13
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root5/bone7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root5/bone7/eff5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root7/bone11
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root7/bone11/bone12
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root7/bone11/bone12/eff7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root8/bone13
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root8/bone13/bone14
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root8/bone13/bone14/eff8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root14
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root14/bone20
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/bone1/root14/bone20/eff14
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/root6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/root6/bone8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/root6/bone8/bone9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/root6/bone8/bone9/bone10
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/root6/bone8/bone9/bone10/eff6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root9/bone15
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root9/bone15/eff9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root10
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root10/bone16
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root10/bone16/eff10
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root12
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root12/bone18
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root12/bone18/eff12
+        weight: 1
+      - path: onaka
+        weight: 1
+      - path: scarf
+        weight: 1
+      - path: timer
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

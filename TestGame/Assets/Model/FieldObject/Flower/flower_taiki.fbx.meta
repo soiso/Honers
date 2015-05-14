@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: f23267545ab04634c9d03238a9789b49
+timeCreated: 1430927142
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: flower_3:arm
+    100002: flower_3:body
+    100004: flower_3:bone
+    100006: flower_3:bone10
+    100008: flower_3:bone11
+    100010: flower_3:bone12
+    100012: flower_3:bone13
+    100014: flower_3:bone14
+    100016: flower_3:bone15
+    100018: flower_3:bone16
+    100020: flower_3:bone17
+    100022: flower_3:bone18
+    100024: flower_3:bone19
+    100026: flower_3:bone3
+    100028: flower_3:bone4
+    100030: flower_3:bone5
+    100032: flower_3:bone6
+    100034: flower_3:bone7
+    100036: flower_3:bone8
+    100038: flower_3:bone9
+    100040: flower_3:eff
+    100042: flower_3:eff1
+    100044: flower_3:eff2
+    100046: flower_3:eff3
+    100048: flower_3:eff4
+    100050: flower_3:eff5
+    100052: flower_3:eff6
+    100054: flower_3:eff7
+    100056: flower_3:flower
+    100058: flower_3:head
+    100060: flower_3:mouse
+    100062: flower_3:null
+    100064: flower_3:null_NeutralPose
+    100066: flower_3:reef_b
+    100068: flower_3:reef_f
+    100070: flower_3:root
+    100072: flower_3:root1
+    100074: flower_3:root2
+    100076: flower_3:root3
+    100078: flower_3:root4
+    100080: flower_3:root5
+    100082: flower_3:root6
+    100084: flower_3:root7
+    100086: //RootNode
+    400000: flower_3:arm
+    400002: flower_3:body
+    400004: flower_3:bone
+    400006: flower_3:bone10
+    400008: flower_3:bone11
+    400010: flower_3:bone12
+    400012: flower_3:bone13
+    400014: flower_3:bone14
+    400016: flower_3:bone15
+    400018: flower_3:bone16
+    400020: flower_3:bone17
+    400022: flower_3:bone18
+    400024: flower_3:bone19
+    400026: flower_3:bone3
+    400028: flower_3:bone4
+    400030: flower_3:bone5
+    400032: flower_3:bone6
+    400034: flower_3:bone7
+    400036: flower_3:bone8
+    400038: flower_3:bone9
+    400040: flower_3:eff
+    400042: flower_3:eff1
+    400044: flower_3:eff2
+    400046: flower_3:eff3
+    400048: flower_3:eff4
+    400050: flower_3:eff5
+    400052: flower_3:eff6
+    400054: flower_3:eff7
+    400056: flower_3:flower
+    400058: flower_3:head
+    400060: flower_3:mouse
+    400062: flower_3:null
+    400064: flower_3:null_NeutralPose
+    400066: flower_3:reef_b
+    400068: flower_3:reef_f
+    400070: flower_3:root
+    400072: flower_3:root1
+    400074: flower_3:root2
+    400076: flower_3:root3
+    400078: flower_3:root4
+    400080: flower_3:root5
+    400082: flower_3:root6
+    400084: flower_3:root7
+    400086: //RootNode
+    4300000: flower_3:arm
+    4300002: flower_3:reef_f
+    4300004: flower_3:body
+    4300006: flower_3:mouse
+    4300008: flower_3:head
+    4300010: flower_3:flower
+    4300012: flower_3:reef_b
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: flower_3:arm
+    13700002: flower_3:body
+    13700004: flower_3:flower
+    13700006: flower_3:head
+    13700008: flower_3:mouse
+    13700010: flower_3:reef_b
+    13700012: flower_3:reef_f
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: flower_3:arm
+        weight: 1
+      - path: flower_3:body
+        weight: 1
+      - path: flower_3:flower
+        weight: 1
+      - path: flower_3:head
+        weight: 1
+      - path: flower_3:mouse
+        weight: 1
+      - path: flower_3:null_NeutralPose
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:eff
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:root5
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:root5/flower_3:bone14
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:root5/flower_3:bone14/flower_3:eff5
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:root6
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:root6/flower_3:bone15
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root/flower_3:bone/flower_3:bone16/flower_3:bone17/flower_3:bone18/flower_3:root6/flower_3:bone15/flower_3:eff6
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root1
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root1/flower_3:bone3
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root1/flower_3:bone3/flower_3:bone4
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root1/flower_3:bone3/flower_3:bone4/flower_3:bone5
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root1/flower_3:bone3/flower_3:bone4/flower_3:bone5/flower_3:bone6
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root1/flower_3:bone3/flower_3:bone4/flower_3:bone5/flower_3:bone6/flower_3:eff1
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root2
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root2/flower_3:bone7
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root2/flower_3:bone7/flower_3:bone8
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root2/flower_3:bone7/flower_3:bone8/flower_3:bone9
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root2/flower_3:bone7/flower_3:bone8/flower_3:bone9/flower_3:eff2
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root3
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root3/flower_3:bone10
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root3/flower_3:bone10/flower_3:bone11
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root3/flower_3:bone10/flower_3:bone11/flower_3:eff3
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root4
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root4/flower_3:bone12
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root4/flower_3:bone12/flower_3:bone13
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root4/flower_3:bone12/flower_3:bone13/flower_3:eff4
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root7
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root7/flower_3:bone19
+        weight: 1
+      - path: flower_3:null_NeutralPose/flower_3:null/flower_3:root7/flower_3:bone19/flower_3:eff7
+        weight: 1
+      - path: flower_3:reef_b
+        weight: 1
+      - path: flower_3:reef_f
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

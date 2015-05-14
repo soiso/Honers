@@ -1,0 +1,275 @@
+fileFormatVersion: 2
+guid: 88898f23295dcb04293d7590d178b1c6
+timeCreated: 1430912722
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: body
+    100002: bone
+    100004: bone1
+    100006: bone10
+    100008: bone11
+    100010: bone12
+    100012: bone13
+    100014: bone14
+    100016: bone15
+    100018: bone16
+    100020: bone2
+    100022: bone3
+    100024: bone4
+    100026: bone5
+    100028: bone6
+    100030: bone7
+    100032: bone8
+    100034: bone9
+    100036: eff
+    100038: eff1
+    100040: eff2
+    100042: eff3
+    100044: eff4
+    100046: eff5
+    100048: eff6
+    100050: eff7
+    100052: eff8
+    100054: eye
+    100056: //RootNode
+    100058: hand
+    100060: head
+    100062: HIGE
+    100064: null
+    100066: null1
+    100068: root
+    100070: root1
+    100072: root2
+    100074: root3
+    100076: root4
+    100078: root5
+    100080: root6
+    100082: root7
+    100084: root8
+    400000: body
+    400002: bone
+    400004: bone1
+    400006: bone10
+    400008: bone11
+    400010: bone12
+    400012: bone13
+    400014: bone14
+    400016: bone15
+    400018: bone16
+    400020: bone2
+    400022: bone3
+    400024: bone4
+    400026: bone5
+    400028: bone6
+    400030: bone7
+    400032: bone8
+    400034: bone9
+    400036: eff
+    400038: eff1
+    400040: eff2
+    400042: eff3
+    400044: eff4
+    400046: eff5
+    400048: eff6
+    400050: eff7
+    400052: eff8
+    400054: eye
+    400056: //RootNode
+    400058: hand
+    400060: head
+    400062: HIGE
+    400064: null
+    400066: null1
+    400068: root
+    400070: root1
+    400072: root2
+    400074: root3
+    400076: root4
+    400078: root5
+    400080: root6
+    400082: root7
+    400084: root8
+    4300000: head
+    4300002: body
+    4300004: hand
+    4300006: eye
+    4300008: HIGE
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: eye
+    13700004: hand
+    13700006: head
+    13700008: HIGE
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: eye
+        weight: 1
+      - path: hand
+        weight: 1
+      - path: head
+        weight: 1
+      - path: HIGE
+        weight: 1
+      - path: null1
+        weight: 1
+      - path: null1/null
+        weight: 1
+      - path: null1/null/root
+        weight: 1
+      - path: null1/null/root/bone
+        weight: 1
+      - path: null1/null/root/bone/bone1
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/eff
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root5
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root5/bone11
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root5/bone11/bone12
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root5/bone11/bone12/eff5
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root6
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root6/bone13
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root6/bone13/bone14
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root6/bone13/bone14/eff6
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root7
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root7/bone15
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root7/bone15/eff7
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root8
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root8/bone16
+        weight: 1
+      - path: null1/null/root/bone/bone1/bone2/root8/bone16/eff8
+        weight: 1
+      - path: null1/null/root/bone/bone1/root3
+        weight: 1
+      - path: null1/null/root/bone/bone1/root3/bone7
+        weight: 1
+      - path: null1/null/root/bone/bone1/root3/bone7/bone8
+        weight: 1
+      - path: null1/null/root/bone/bone1/root3/bone7/bone8/eff3
+        weight: 1
+      - path: null1/null/root/bone/bone1/root4
+        weight: 1
+      - path: null1/null/root/bone/bone1/root4/bone9
+        weight: 1
+      - path: null1/null/root/bone/bone1/root4/bone9/bone10
+        weight: 1
+      - path: null1/null/root/bone/bone1/root4/bone9/bone10/eff4
+        weight: 1
+      - path: null1/null/root/bone/root1
+        weight: 1
+      - path: null1/null/root/bone/root1/bone3
+        weight: 1
+      - path: null1/null/root/bone/root1/bone3/bone4
+        weight: 1
+      - path: null1/null/root/bone/root1/bone3/bone4/eff1
+        weight: 1
+      - path: null1/null/root/bone/root2
+        weight: 1
+      - path: null1/null/root/bone/root2/bone5
+        weight: 1
+      - path: null1/null/root/bone/root2/bone5/bone6
+        weight: 1
+      - path: null1/null/root/bone/root2/bone5/bone6/eff2
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

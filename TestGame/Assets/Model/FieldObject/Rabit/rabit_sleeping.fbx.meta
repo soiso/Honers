@@ -1,0 +1,279 @@
+fileFormatVersion: 2
+guid: 902c1c52467e7c8429b1bb1a1e555cef
+timeCreated: 1430911994
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: body
+    100002: bone
+    100004: bone1
+    100006: bone10
+    100008: bone11
+    100010: bone12
+    100012: bone13
+    100014: bone14
+    100016: bone2
+    100018: bone3
+    100020: bone4
+    100022: bone5
+    100024: bone6
+    100026: bone7
+    100028: bone8
+    100030: bone9
+    100032: eff
+    100034: eff1
+    100036: eff2
+    100038: eff3
+    100040: eff4
+    100042: eff5
+    100044: eff6
+    100046: eff7
+    100048: eff8
+    100050: eff9
+    100052: eye
+    100054: hand_l
+    100056: hand_r
+    100058: null
+    100060: null1
+    100062: null1_NeutralPose
+    100064: //RootNode
+    100066: root
+    100068: root1
+    100070: root2
+    100072: root3
+    100074: root4
+    100076: root5
+    100078: root6
+    100080: root7
+    100082: root8
+    100084: root9
+    100086: scarf
+    400000: body
+    400002: bone
+    400004: bone1
+    400006: bone10
+    400008: bone11
+    400010: bone12
+    400012: bone13
+    400014: bone14
+    400016: bone2
+    400018: bone3
+    400020: bone4
+    400022: bone5
+    400024: bone6
+    400026: bone7
+    400028: bone8
+    400030: bone9
+    400032: eff
+    400034: eff1
+    400036: eff2
+    400038: eff3
+    400040: eff4
+    400042: eff5
+    400044: eff6
+    400046: eff7
+    400048: eff8
+    400050: eff9
+    400052: eye
+    400054: hand_l
+    400056: hand_r
+    400058: null
+    400060: null1
+    400062: null1_NeutralPose
+    400064: //RootNode
+    400066: root
+    400068: root1
+    400070: root2
+    400072: root3
+    400074: root4
+    400076: root5
+    400078: root6
+    400080: root7
+    400082: root8
+    400084: root9
+    400086: scarf
+    4300000: body
+    4300002: hand_r
+    4300004: scarf
+    4300006: hand_l
+    4300008: eye
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: body
+    13700002: eye
+    13700004: hand_l
+    13700006: hand_r
+    13700008: scarf
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: eye
+        weight: 1
+      - path: hand_l
+        weight: 1
+      - path: hand_r
+        weight: 1
+      - path: null
+        weight: 1
+      - path: null/null1_NeutralPose
+        weight: 1
+      - path: null/null1_NeutralPose/null1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/eff
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root1/bone1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root1/bone1/eff1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/eff2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root3/bone5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root3/bone5/eff3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root4/bone6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root4/bone6/eff4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root8/bone13
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root8/bone13/eff8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root9/bone14
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root9/bone14/eff9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5/bone7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5/bone7/bone8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5/bone7/bone8/eff5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6/bone9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6/bone9/bone10
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6/bone9/bone10/eff6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7/bone11
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7/bone11/bone12
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7/bone11/bone12/eff7
+        weight: 1
+      - path: scarf
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

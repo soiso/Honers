@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: 83369f497616bb244b0c692a9f17d6b5
+timeCreated: 1429112964
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: arm
+    100002: body
+    100004: bone
+    100006: bone10
+    100008: bone11
+    100010: bone12
+    100012: bone13
+    100014: bone14
+    100016: bone15
+    100018: bone16
+    100020: bone17
+    100022: bone18
+    100024: bone19
+    100026: bone3
+    100028: bone4
+    100030: bone5
+    100032: bone6
+    100034: bone7
+    100036: bone8
+    100038: bone9
+    100040: eff
+    100042: eff1
+    100044: eff2
+    100046: eff3
+    100048: eff4
+    100050: eff5
+    100052: eff6
+    100054: eff7
+    100056: flower
+    100058: //RootNode
+    100060: head
+    100062: mouse
+    100064: null
+    100066: null_NeutralPose
+    100068: reef_b
+    100070: reef_f
+    100072: root
+    100074: root1
+    100076: root2
+    100078: root3
+    100080: root4
+    100082: root5
+    100084: root6
+    100086: root7
+    400000: arm
+    400002: body
+    400004: bone
+    400006: bone10
+    400008: bone11
+    400010: bone12
+    400012: bone13
+    400014: bone14
+    400016: bone15
+    400018: bone16
+    400020: bone17
+    400022: bone18
+    400024: bone19
+    400026: bone3
+    400028: bone4
+    400030: bone5
+    400032: bone6
+    400034: bone7
+    400036: bone8
+    400038: bone9
+    400040: eff
+    400042: eff1
+    400044: eff2
+    400046: eff3
+    400048: eff4
+    400050: eff5
+    400052: eff6
+    400054: eff7
+    400056: //RootNode
+    400058: flower
+    400060: head
+    400062: mouse
+    400064: null
+    400066: null_NeutralPose
+    400068: reef_b
+    400070: reef_f
+    400072: root
+    400074: root1
+    400076: root2
+    400078: root3
+    400080: root4
+    400082: root5
+    400084: root6
+    400086: root7
+    4300000: arm
+    4300002: reef_f
+    4300004: body
+    4300006: mouse
+    4300008: head
+    4300010: flower
+    4300012: reef_b
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: arm
+    13700002: body
+    13700004: flower
+    13700006: head
+    13700008: mouse
+    13700010: reef_b
+    13700012: reef_f
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

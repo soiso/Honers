@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 0dc615dfeb6a3794d8534b1467d29b7f
+timeCreated: 1429113065
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bone
+    100002: bone1
+    100004: bone1_NeutralPose
+    100006: bone2
+    100008: bone2_NeutralPose
+    100010: bone3
+    100012: bone3_NeutralPose
+    100014: bone4
+    100016: bone4_NeutralPose
+    100018: bone5
+    100020: bone5_NeutralPose
+    100022: bone6
+    100024: bone6_NeutralPose
+    100026: bone_NeutralPose
+    100028: eff
+    100030: eff1
+    100032: eff2
+    100034: eff3
+    100036: eff4
+    100038: eff5
+    100040: eff6
+    100042: eye1
+    100044: null
+    100046: null1
+    100048: polymsh
+    100050: //RootNode
+    100052: rabit5
+    100054: rabit_leg_b
+    100056: rabit_leg_f
+    100058: root
+    100060: root1
+    100062: root2
+    100064: root3
+    100066: root4
+    100068: root5
+    100070: root6
+    400000: bone
+    400002: bone1
+    400004: bone1_NeutralPose
+    400006: bone2
+    400008: bone2_NeutralPose
+    400010: bone3
+    400012: bone3_NeutralPose
+    400014: bone4
+    400016: bone4_NeutralPose
+    400018: bone5
+    400020: bone5_NeutralPose
+    400022: bone6
+    400024: bone6_NeutralPose
+    400026: bone_NeutralPose
+    400028: eff
+    400030: eff1
+    400032: eff2
+    400034: eff3
+    400036: eff4
+    400038: eff5
+    400040: eff6
+    400042: eye1
+    400044: null
+    400046: null1
+    400048: polymsh
+    400050: //RootNode
+    400052: rabit5
+    400054: rabit_leg_b
+    400056: rabit_leg_f
+    400058: root
+    400060: root1
+    400062: root2
+    400064: root3
+    400066: root4
+    400068: root5
+    400070: root6
+    4300000: rabit_leg_f
+    4300002: rabit_leg_b
+    4300004: rabit5
+    4300006: polymsh
+    4300008: eye1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: eye1
+    13700002: polymsh
+    13700004: rabit5
+    13700006: rabit_leg_b
+    13700008: rabit_leg_f
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
