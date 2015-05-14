@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ad9618de949284ea9345e4000b2b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Stage2
+  sceneName: New_Stage2
 --- !u!114 &796495421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,7 +2047,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11478904, guid: df4be424296107f45a5700e86adfb1a2, type: 2}
       propertyPath: sceneName.Array.data[1]
-      value: Stage2
+      value: New_Stage2
       objectReference: {fileID: 0}
     - target: {fileID: 11478904, guid: df4be424296107f45a5700e86adfb1a2, type: 2}
       propertyPath: sceneName.Array.data[2]
