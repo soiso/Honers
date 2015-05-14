@@ -32,6 +32,8 @@ public class FruitCounter : MonoBehaviour
         {
             if (transform.name == "FruitCounter") continue;
             if (transform.name == "Text") continue;
+            if (transform.name == "Score") continue;
+            if (transform.name == "Score_num")continue;
             GameObject fruit_num =transform.FindChild("Text").gameObject;
             scoretext = fruit_num.GetComponent<Text>();
             if (transform.name == "apple")

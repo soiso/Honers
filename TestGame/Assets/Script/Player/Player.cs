@@ -152,15 +152,15 @@ public class Player : MonoBehaviour {
     }
 
 
-    public void Add_Score(float default_Score,Fruit.FRUIT_TYPE type)
-    {
-        m_score.AddScore(default_Score);
-    }
+   //public void Add_Score(float default_Score,Fruit.FRUIT_TYPE type)
+   // {
+   //     m_score.AddScore(default_Score);
+   // }
 
-    public void Sub_Score( float defalut_Score)
-    {
-        m_score.SubScore(defalut_Score);
-    }
+   // public void Sub_Score( float defalut_Score)
+   // {
+   //     m_score.SubScore(defalut_Score);
+   // } 
 
     public void Damage(DamageTrigger.DamageObject damage_Info)
     {

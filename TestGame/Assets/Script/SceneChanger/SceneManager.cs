@@ -9,7 +9,7 @@ using System.Linq;
 
 
 
-public class SceneManager : Singleton<SceneManager>
+public class SceneManager : MonoBehaviour
 {
     [SerializeField, SceneName]
     public string[] sceneName;
@@ -18,8 +18,8 @@ public class SceneManager : Singleton<SceneManager>
     private GameObject startsign;
     private AsyncOperation loadInfo;
     protected bool next_scene_load = false;
-    private int currentScene_num = 0;
-    private string currentSceneName;
+    public int currentScene_num = 0;
+    public string currentSceneName;
 
 
 
@@ -32,17 +32,7 @@ public class SceneManager : Singleton<SceneManager>
 
     // Update is called once per frame
     void Update()
-    {
-        GameObject oldPicPaper = GameObject.Find("PicturePaper_old");
-        if (oldPicPaper != null)
-        {
-            if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 30.0f)
-            {
-                startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
-                GameObject.Destroy(oldPicPaper);
-            }
-
-        }
+    {   
         if (next_scene_load == true)
         {
             if (loadInfo.allowSceneActivation == false)
@@ -56,6 +46,17 @@ public class SceneManager : Singleton<SceneManager>
                 }
             }
         }
+        GameObject oldPicPaper = GameObject.Find("PicturePaper_old");
+        if (oldPicPaper != null)
+        {
+            if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 30.0f)
+            {
+                startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
+                GameObject.Destroy(oldPicPaper);
+            }
+
+        }
+
         if (startsign.GetComponent<StartSign>().AlphaIncrease())
         {
             Time.timeScale = 1;
@@ -92,14 +93,13 @@ public class SceneManager : Singleton<SceneManager>
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
 
-        currentScene_num++;
 
     }
 
     public void NextSceneLoad()
     {
 
-        //next_scene_load = true;
+        Objectmanager.m_instance.m_stage_timer.Reset();
         if (sceneName[currentScene_num] == "TitleTest")
         {
             ChangeScene(sceneName[currentScene_num]);
@@ -117,6 +117,16 @@ public class SceneManager : Singleton<SceneManager>
                 ChangeScene_Add(sceneName[currentScene_num]);
             }
         }
+    }
+
+    public void EndStage()
+    {
+        ChangeScene_Add("Result");
+        currentScene_num++;
+    }
+    public string GetCurrentStageName()
+    {
+        return currentSceneName;
     }
 }
 
