@@ -18,6 +18,9 @@ public class Asagao : FieldObjectInterface {
     //とりあえず
     private float m_current_Leap = 0f;
 
+    [SerializeField, HeaderAttribute("伸びる速度")]
+    private float m_animation_Speed = .8f;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -25,6 +28,7 @@ public class Asagao : FieldObjectInterface {
         m_default_Position = this.transform.position;
         m_Animator = gameObject.GetComponent<Animator>();
         //m_Animator.speed = 0;
+        m_Animator.speed = m_animation_Speed;
 	}
 
     void Glow()

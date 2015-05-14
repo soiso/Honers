@@ -85,6 +85,12 @@ public class Fruit : MonoBehaviour {
                 renderer.enabled = !renderer.enabled;
                 m_nextSwitch = Time.time + m_swith_Interval;
                 m_swith_Interval -= m_switch_adjust;
+
+                //sonoutinaosu
+                m_default_Score = m_default_Score - 5f;
+                if (m_default_Score < 0)
+                    m_default_Score = 0;
+
             }
 
         }

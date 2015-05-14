@@ -29,6 +29,5 @@ public class Camera_Script : MonoBehaviour {
         
         m_camera.rect = new Rect(0f, 0f, 0.95f, 1f);
         m_camera.aspect = m_aspect_Rate;
- 
 	}
 }

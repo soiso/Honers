@@ -202,10 +202,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_createFruitList:
-  - {fileID: 157676, guid: ae178d65e73ee2b4583bed10be19762d, type: 2}
-  - {fileID: 179832, guid: d13435b5436e1a8438a41310e7cca7be, type: 2}
-  - {fileID: 168864, guid: 172dbf7b45a9ccf4887b3238d23efd3b, type: 2}
-  - {fileID: 144522, guid: 078e1c2eb03d9ce49a07add2bacc3d81, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &73485782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d08cda9dfd6db99408a845383ee3d0ad, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &427695235 stripped
+--- !u!4 &427695235
 Transform:
   m_PrefabParentObject: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
   m_PrefabInternal: {fileID: 1902617562}
@@ -578,10 +578,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_createFruitList:
-  - {fileID: 157676, guid: ae178d65e73ee2b4583bed10be19762d, type: 2}
-  - {fileID: 179832, guid: d13435b5436e1a8438a41310e7cca7be, type: 2}
-  - {fileID: 168864, guid: 172dbf7b45a9ccf4887b3238d23efd3b, type: 2}
-  - {fileID: 144522, guid: 078e1c2eb03d9ce49a07add2bacc3d81, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &535894875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 262252567}
---- !u!4 &563139447 stripped
+--- !u!4 &563139447
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fb4d088fee567934ebcd3ead70d710fe, type: 3}
   m_PrefabInternal: {fileID: 63668614}
@@ -757,10 +757,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_createFruitList:
-  - {fileID: 157676, guid: ae178d65e73ee2b4583bed10be19762d, type: 2}
-  - {fileID: 179832, guid: d13435b5436e1a8438a41310e7cca7be, type: 2}
-  - {fileID: 168864, guid: 172dbf7b45a9ccf4887b3238d23efd3b, type: 2}
-  - {fileID: 144522, guid: 078e1c2eb03d9ce49a07add2bacc3d81, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &972598993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,10 +1781,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_createFruitList:
-  - {fileID: 157676, guid: ae178d65e73ee2b4583bed10be19762d, type: 2}
-  - {fileID: 179832, guid: d13435b5436e1a8438a41310e7cca7be, type: 2}
-  - {fileID: 168864, guid: 172dbf7b45a9ccf4887b3238d23efd3b, type: 2}
-  - {fileID: 144522, guid: 078e1c2eb03d9ce49a07add2bacc3d81, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &1415565790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1812,7 +1812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1450888450
 Transform:
   m_ObjectHideFlags: 0
@@ -1912,7 +1912,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 99f42603a03f9894a92b921db6c5a0ed, type: 3}
   - {fileID: 21300000, guid: 748709d510f59bf4c8c5cead0ffcbd3a, type: 3}
   - {fileID: 21300000, guid: 41792142265ec984cbd77e168fe604b2, type: 3}
---- !u!4 &1569563234 stripped
+--- !u!4 &1569563234
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fb4d088fee567934ebcd3ead70d710fe, type: 3}
   m_PrefabInternal: {fileID: 1591643197}
@@ -2245,7 +2245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 153322, guid: 294e95f6734c3194097f1a7949c71a77, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 294e95f6734c3194097f1a7949c71a77, type: 2}
@@ -2389,11 +2389,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1415565788}
   m_RootOrder: 2
---- !u!4 &2117737951 stripped
+--- !u!4 &2117737951
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fb4d088fee567934ebcd3ead70d710fe, type: 3}
   m_PrefabInternal: {fileID: 1018706009}
---- !u!4 &2137165880 stripped
+--- !u!4 &2137165880
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: fb4d088fee567934ebcd3ead70d710fe, type: 3}
   m_PrefabInternal: {fileID: 1414003598}
