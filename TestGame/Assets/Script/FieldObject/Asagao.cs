@@ -58,6 +58,7 @@ public class Asagao : FieldObjectInterface {
             m_current_Leap = .0f;
         }
         m_CurrentTimeZone = m_trigger_Collider.m_myColliderTimeZone;
+        GetComponent<ShaderChanger>().Change(m_CurrentTimeZone);
         if (Is_ActiveTimeZone(m_CurrentTimeZone))
         {
             Glow();

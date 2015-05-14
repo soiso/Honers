@@ -134,6 +134,7 @@ GameObject:
   - 114: {fileID: 11400024}
   - 95: {fileID: 9569030}
   - 54: {fileID: 5488376}
+  - 114: {fileID: 11473764}
   m_Layer: 17
   m_Name: Asagao
   m_TagString: Untagged
@@ -740,6 +741,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 41792142265ec984cbd77e168fe604b2, type: 3}
   m_RenderTime: 2
   m_ChangeTime: 2
+--- !u!114 &11473764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef374947cb1c33d4a8eeb07f86a0d879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MorningColor: {r: .816176474, g: 1, b: 1, a: 0}
+  NoonColor: {r: .256920427, g: .557153046, b: .970588207, a: 0}
+  NightColor: {r: .386245668, g: .426202089, b: .691176474, a: 0}
 --- !u!114 &11473888
 MonoBehaviour:
   m_ObjectHideFlags: 1

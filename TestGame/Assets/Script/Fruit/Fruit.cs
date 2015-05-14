@@ -116,7 +116,7 @@ public class Fruit : MonoBehaviour {
 
          if(layer_name == "Player")
          {
-             col_object.GetComponent<Player>().m_score.AddScore(m_default_Score);
+             //col_object.GetComponent<Player>().m_score.AddScore(m_default_Score);
              /*sound*/
              sound = GetComponent<AudioSource>();
              sound.clip = clip;
