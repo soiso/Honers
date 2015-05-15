@@ -55,7 +55,7 @@ public class Fruit : MonoBehaviour {
        m_current_switchInterval = m_swith_Interval;
        m_effect = GetComponent<ParticleSystem>();
       // fruit_counter = GameObject.Find("FruitCounter");
-       m_effect.Play();
+       //m_effect.Play();
 	}
 
     void Sound_Check()
