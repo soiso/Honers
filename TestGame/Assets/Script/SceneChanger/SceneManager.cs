@@ -21,6 +21,7 @@ public class SceneManager : MonoBehaviour
     public int currentScene_num = 0;
     public string currentSceneName;
 
+
     // Use this for initialization
     void Start()
     {
@@ -62,6 +63,7 @@ public class SceneManager : MonoBehaviour
         if (startsign.GetComponent<StartSign>().AlphaIncrease())
         {
             Time.timeScale = 1;
+            Objectmanager.m_instance.m_stage_timer.Time_Start();
         }
     }
 
