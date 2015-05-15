@@ -67,7 +67,6 @@ public class Result : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-
     {
         if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() == "TitleTest") return;
         current_time = Time.time;
@@ -79,7 +78,7 @@ public class Result : MonoBehaviour
     }
     public void NextScene()
     {
-              Objectmanager.m_instance.m_fruit_Counter.Reset();
+        Objectmanager.m_instance.m_fruit_Counter.Reset();
         Objectmanager.m_instance.m_score.Reset();
         Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }

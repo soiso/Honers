@@ -13,7 +13,8 @@ public class SceneManager : MonoBehaviour
 {
     [SerializeField, SceneName]
     public string[] sceneName;
-
+    [SerializeField]
+    public float[] rimit_time;
     private GameObject picpaper;
     private GameObject startsign;
     private AsyncOperation loadInfo;
@@ -81,7 +82,7 @@ public class SceneManager : MonoBehaviour
     {
         currentSceneName = sceneName;
         Application.LoadLevel(sceneName);
-        currentScene_num++;
+        //currentScene_num++;
         //BGM変えたい
         Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(sceneName);
         if (sceneName == "TitleTest")
@@ -93,6 +94,7 @@ public class SceneManager : MonoBehaviour
         Time.timeScale = 0;
         currentSceneName = sceneName;
         picpaper = GameObject.Find("PicturePaper");
+        Objectmanager.m_instance.m_stage_timer.SetStageRimit(rimit_time[currentScene_num]);
 
         loadInfo = Application.LoadLevelAdditiveAsync(sceneName);
         loadInfo.allowSceneActivation = false;
@@ -105,31 +107,48 @@ public class SceneManager : MonoBehaviour
 
     public void NextSceneLoad()
     {
-
         Objectmanager.m_instance.m_stage_timer.Reset();
-        if (sceneName[currentScene_num] == "TitleTest")
+        //if (sceneName[currentScene_num] == "TitleTest")
+        //{
+        //    ChangeScene(sceneName[currentScene_num]);
+        //    currentScene_num = 0;
+        //}
+        //else
+        //{
+        //    if (currentSceneName == sceneName[currentScene_num])
+        //    {
+        //        currentScene_num += 1;
+        //        NextSceneLoad();
+        //    }
+        //    else
+        //    {
+        //        ChangeScene_Add(sceneName[currentScene_num]);
+        //    }
+        //}
+        //土日で仕上げる
+        currentSceneName = sceneName[currentScene_num];
+        currentScene_num = 0;
+        foreach(string stageName in sceneName)
         {
-            ChangeScene(sceneName[currentScene_num]);
-            currentScene_num = 0;
-        }
-        else
-        {
-            if (currentSceneName == sceneName[currentScene_num])
+            if(stageName == currentSceneName)
             {
-                currentScene_num += 1;
-                NextSceneLoad();
+                currentScene_num++;
+                if (sceneName[currentScene_num] == "TitleTest")
+                    ChangeScene(sceneName[currentScene_num]);
+                else
+                {
+                    ChangeScene_Add(sceneName[currentScene_num]);
+                }
+                break;
             }
-            else
-            {
-                ChangeScene_Add(sceneName[currentScene_num]);
-            }
+            currentScene_num++;
         }
     }
 
     public void EndStage()
     {
         ChangeScene_Add("Result");
-        currentScene_num++;
+        //currentScene_num++;
     }
     public string GetCurrentStageName()
     {
