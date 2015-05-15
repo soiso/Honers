@@ -5,7 +5,7 @@ using System.Collections;
 public class Score : MonoBehaviour
 {
     private Text score_num;
-    public int score;
+    public float score;
     // Use this for initialization
     void Awake()
     {
@@ -20,8 +20,16 @@ public class Score : MonoBehaviour
     {
         score_num.text = score.ToString();
     }
-    public void SetScore(int num)
+    public void SetScore(float num)
     {
-        score = num;
+        score += num;
+    }
+    public float GetScore()
+    {
+        return score;
+    }
+    public void Reset()
+    {
+        score = 0;
     }
 }

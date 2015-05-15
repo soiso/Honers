@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Result : MonoBehaviour
@@ -7,6 +8,15 @@ public class Result : MonoBehaviour
     private float current_time;
     private bool s_flag;
 
+    private Text score_num;
+    private int apple_num = 0;
+    private int strawberry_num = 0;
+    private int peach_num = 0;
+    private int grape_num = 0;
+
+    private Transform[] transformList;
+    private Text scoretext;
+
 #if UNITY_STANDALONE
 
     // Use this for initialization
@@ -14,6 +24,34 @@ public class Result : MonoBehaviour
     {
         start_time = Time.time;
         s_flag = false;
+        transformList = this.transform.GetComponentsInChildren<Transform>();
+        score_num = transform.FindChild("Score_num").GetComponent<Text>();
+        score_num.text = Objectmanager.m_instance.m_score.GetScore().ToString();
+
+        apple_num = Objectmanager.m_instance.m_fruit_Counter.apple_num;
+        strawberry_num = Objectmanager.m_instance.m_fruit_Counter.strawberry_num;
+        peach_num = Objectmanager.m_instance.m_fruit_Counter.peach_num;
+        grape_num = Objectmanager.m_instance.m_fruit_Counter.grape_num;
+
+        foreach(Transform trans in transformList)
+        {
+            if (trans.name == "Canvas") continue;
+            if (trans.name == "Background") continue;
+            if (trans.name == "Mozi") continue;
+            if (trans.name == "Score_num") continue;
+            if (trans.name == "Text") continue;
+
+            GameObject fruit_num = trans.FindChild("Text").gameObject;
+            scoretext = fruit_num.GetComponent<Text>();
+            if (trans.name == "apple")
+                scoretext.text = apple_num.ToString();
+            if (trans.name == "peach")
+                scoretext.text = peach_num.ToString();
+            if (trans.name == "orrange")
+                scoretext.text = grape_num.ToString();
+            if (trans.name == "strawberry")
+                scoretext.text = strawberry_num.ToString();
+        }
     }
 
     // Update is called once per frame

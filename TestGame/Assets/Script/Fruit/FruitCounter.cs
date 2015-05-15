@@ -8,10 +8,10 @@ using System.Linq;
 public class FruitCounter : MonoBehaviour
 {
 
-    private int apple_num=0;
-    private int strawberry_num=0;
-    private int peach_num=0;
-    private int grape_num=0;
+    public int apple_num=0;
+    public int strawberry_num=0;
+    public int peach_num=0;
+    public int grape_num = 0;
     public int m_dongri_Num { get; private set; }
 
     private Transform[] transformList;
@@ -40,7 +40,7 @@ public class FruitCounter : MonoBehaviour
                 scoretext.text = apple_num.ToString();
             if (transform.name == "peach")
                 scoretext.text = peach_num.ToString();
-            if (transform.name == "grape")
+            if (transform.name == "orrange")
                 scoretext.text = grape_num.ToString();
             if (transform.name == "strawberry")
                 scoretext.text = strawberry_num.ToString();
@@ -55,7 +55,7 @@ public class FruitCounter : MonoBehaviour
         peach_num = 0;
         grape_num = 0;
     }
-    public void GetFruitType(Fruit.FRUIT_TYPE type)
+    public void GetFruitType(Fruit.FRUIT_TYPE type,float score)
     {
         
         switch(type)
@@ -80,8 +80,8 @@ public class FruitCounter : MonoBehaviour
                     m_dongri_Num = 0;
                 }
                 break;
-
         }
+        Objectmanager.m_instance.m_score.SetScore(score);
     }
 
     public bool Set_FruitManager(FruitArrangeManager m)

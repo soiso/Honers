@@ -51,7 +51,8 @@ public class SceneManager : MonoBehaviour
         {
             if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 30.0f)
             {
-                startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
+                if (currentSceneName != "Result") startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
+                else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
             }
 

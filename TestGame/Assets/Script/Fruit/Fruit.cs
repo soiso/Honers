@@ -150,7 +150,7 @@ public class Fruit : MonoBehaviour {
                  it.enabled = false;
              }
              //fruit_counter.GetComponent<FruitCounter>().GetFruitType(GetComponent<FruitInfomation>().fruit_type);
-             Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type);
+             Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type,m_default_Score);
          }
 
     }
