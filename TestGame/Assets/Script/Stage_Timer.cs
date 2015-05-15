@@ -1,19 +1,31 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+
 using System.Collections;
 
 public class Stage_Timer : MonoBehaviour {
 
     [SerializeField]
     public float stage_rimit;
-    private float start_time;
+    private float start_time=0.0f;
     private float current_time;
-
+    
     private bool s_flag;
-	// Use this for initialization
+
+    private Text rimit_time;
+
+    // Use this for initialization
 	void Start () {
-        start_time = Time.time;
         s_flag = false;
+        
+        rimit_time = GetComponentInChildren<Text>();
+
 	}
+    public void Time_Start()
+    {
+        start_time = Time.time;
+        rimit_time.enabled = true;
+    }
     public void Reset()
     {
         start_time = Time.time;
@@ -24,15 +36,17 @@ public class Stage_Timer : MonoBehaviour {
 	void Update () {
         if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() == "TitleTest") return;
         current_time = Time.time;
+        if (start_time < 0.1f) current_time = 0.0f;
         if(current_time - start_time >stage_rimit && s_flag != true){
             ChangeResult();
             s_flag = true;
+            rimit_time.enabled = false;
 	    }
-        
+        rimit_time.text = (stage_rimit - (current_time - start_time)).ToString("f2");
     }
 
     public void ChangeResult()
     {
-            Objectmanager.m_instance.m_scene_manager.EndStage();
+          Objectmanager.m_instance.m_scene_manager.EndStage();
     }
 }

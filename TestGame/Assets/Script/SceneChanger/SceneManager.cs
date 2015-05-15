@@ -62,6 +62,9 @@ public class SceneManager : MonoBehaviour
         if (startsign.GetComponent<StartSign>().AlphaIncrease())
         {
             Time.timeScale = 1;
+
+            Objectmanager.m_instance.m_stage_timer.Time_Start();
+
         }
     }
 
