@@ -20,8 +20,6 @@ public class StageSelect : MonoBehaviour
         {
             manager.GetComponent<SceneManager>().ChangeScene_Add(sceneName);
         }
-
-
     }
 
 }

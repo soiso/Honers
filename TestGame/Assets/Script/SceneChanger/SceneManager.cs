@@ -53,6 +53,8 @@ public class SceneManager : MonoBehaviour
             {
                 startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
                 GameObject.Destroy(oldPicPaper);
+                //BGM変えたい
+                Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(currentSceneName);
             }
 
         }
@@ -77,6 +79,8 @@ public class SceneManager : MonoBehaviour
         currentSceneName = sceneName;
         Application.LoadLevel(sceneName);
         currentScene_num++;
+        //BGM変えたい
+        Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(sceneName);
         if (sceneName == "TitleTest")
             currentScene_num = 0;
 
@@ -93,7 +97,7 @@ public class SceneManager : MonoBehaviour
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
 
-
+       
     }
 
     public void NextSceneLoad()

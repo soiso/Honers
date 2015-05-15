@@ -77,6 +77,8 @@ public class PicturePaper : MonoBehaviour {
     public void Move_Begin()
     {
         m_move = true;
+        //GameObject.Find("BGM").GetComponent<AudioSource>().Stop();
+        Objectmanager.m_instance.m_BGM.Stop();
     }
     public float GetTargetRange()
     {

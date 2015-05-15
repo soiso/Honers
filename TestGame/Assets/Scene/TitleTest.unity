@@ -124,7 +124,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414794, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11408520, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_timescale_Adjust
@@ -330,6 +330,14 @@ Prefab:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 444638, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22450138, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
   m_IsPrefabParent: 0
@@ -379,7 +387,7 @@ RectTransform:
   m_Children:
   - {fileID: 744366526}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: .100000001, y: 0}
@@ -639,7 +647,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 155127793}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &569079584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,7 +792,8 @@ Prefab:
       propertyPath: m_MoveTarget
       value: 
       objectReference: {fileID: 1568342632}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11488334, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &695987484
@@ -1305,7 +1314,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &1114760625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,7 +1919,7 @@ RectTransform:
   - {fileID: 796495419}
   - {fileID: 505604199}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 7.88999939, y: 6.00000191}
@@ -2039,7 +2048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402018, guid: df4be424296107f45a5700e86adfb1a2, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11478904, guid: df4be424296107f45a5700e86adfb1a2, type: 2}
       propertyPath: sceneName.Array.data[0]
@@ -2108,9 +2117,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2013947307}
+  - 114: {fileID: 2013947308}
   - 82: {fileID: 2013947306}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2125,7 +2135,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6a0013ea234ee2b45befd26416a86c06, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2192,11 +2202,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2013947305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.08000004, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 155127793}
+  m_RootOrder: 0
+--- !u!114 &2013947308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2013947305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac521f3ced1df4544bb2599ee52f2a97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TitleBGM: {fileID: 8300000, guid: 45369c4e901b7344f996cab83187bee2, type: 3}
+  m_Stage1BGM: {fileID: 8300000, guid: 99f44d6e5af02cf4191b006076bc31e9, type: 3}
+  m_Stage2BGM: {fileID: 8300000, guid: 283640ac0f8454241a3f3b28c0387dce, type: 3}
+  m_ResultBGM: {fileID: 8300000, guid: 7c8fe9a9b96a25c4daeec9b1a82ad3f1, type: 3}
 --- !u!1 &2045935212
 GameObject:
   m_ObjectHideFlags: 0
