@@ -65,7 +65,8 @@ public class Tree : MonoBehaviour {
             m_current_GrawFruit = null;
         }
 
-        Vector3 adjust = new Vector3(Random.Range(-0.3f, 0.3f),Random.Range(-0.3f, 0.3f), 0);
+        //Vector3 adjust = new Vector3(Random.Range(-0.1f, 0.1f),Random.Range(-0.1f, 0.1f), 0);
+        Vector3 adjust = new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), 0);
         //adjust.y += 0.2f;
         m_sporn_Transform.position =m_default_SpornPosition + adjust;
         int next_Fruit = Random.Range(0,m_create_FruitRenderer.Length - 1);
@@ -92,6 +93,9 @@ public class Tree : MonoBehaviour {
 
     void Update()
     {
+        if (Time.timeScale <= 0.1f)
+            return;
+
         if(!m_active)
         {
             var material = GetComponentInChildren<MeshRenderer>().material;
