@@ -1311,6 +1311,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 33.5833321
       objectReference: {fileID: 0}
+    - target: {fileID: 11465582, guid: 619399d5fd8bf69408406cd5d96f9d60, type: 2}
+      propertyPath: m_rollTime
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 619399d5fd8bf69408406cd5d96f9d60, type: 2}
   m_IsPrefabParent: 0
@@ -1645,6 +1649,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418cfbabd3d09e441a487505071ef5db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1425822522
+GameObject:
+  m_PrefabParentObject: {fileID: 138016, guid: 619399d5fd8bf69408406cd5d96f9d60, type: 2}
+  m_PrefabInternal: {fileID: 1139300813}
+--- !u!114 &1425822524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425822522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27eec11f11a7d3a4c9aa939b6762845e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 1425822522}
+  m_wave_Time: .5
 --- !u!224 &1489659145
 RectTransform:
   m_PrefabParentObject: {fileID: 22414776, guid: 7c632ddce514e994dba77da6256c2036,

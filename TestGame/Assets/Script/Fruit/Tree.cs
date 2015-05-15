@@ -136,11 +136,11 @@ public class Tree : MonoBehaviour {
         float current_rotete_Angle = m_param.m_max_RotateAngle * Mathf.Sin(Time.time)*m_param.m_rotate_speed;
         Quaternion rot = Quaternion.AngleAxis(current_rotete_Angle, new Vector3(0, 0, 1));
 
-        if(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
-        {
-            Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
-            rot *= q;
-        }
+        //if(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
+        //{
+        //    Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
+        //    rot *= q;
+        //}
         m_sporn_Transform.rotation = rot;
         m_current_GrawFruit.transform.position = m_sporn_Transform.transform.position;
         m_current_GrawFruit.transform.rotation = m_sporn_Transform.transform.rotation;

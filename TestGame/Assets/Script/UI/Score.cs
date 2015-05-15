@@ -21,11 +21,12 @@ public class Score : MonoBehaviour
     void Update()
     {
         //score_num.text = score.ToString();
-        score_num.SetNumber((int)score);
+       
     }
     public void SetScore(float num)
     {
         score += num;
+        score_num.SetNumber((int)score);
     }
     public float GetScore()
     {

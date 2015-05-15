@@ -28,11 +28,11 @@ public class TestSporn : MonoBehaviour {
                 GameObject insert = m_owner.m_factory.Create_Object(Random.Range(0,5));
                 insert.transform.position = this.transform.position;
                 insert.transform.rotation = this.transform.rotation;
-                if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
-                {
-                    Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
-                    insert.transform.rotation = q;
-                }
+                //if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
+                //{
+                //    Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
+                //    insert.transform.rotation = q;
+                //}
             }
             m_last_SpornTime = Time.time;
         }
