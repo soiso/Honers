@@ -102,21 +102,31 @@ public class Result : MonoBehaviour
         start_time = Time.time;
         s_flag = false;
         transformList = this.transform.GetComponentsInChildren<Transform>();
-        score_num = transform.FindChild("Score_num").GetComponent<Text>();
-        score_num.text = Objectmanager.m_instance.m_score.GetScore().ToString();
+
+        //score_num = transform.FindChild("Score_num").GetComponent<Text>();
+        //score_num.text = Objectmanager.m_instance.m_score.GetScore().ToString();
+        score_num = GetComponentInChildren<NumberRenderer>();
+        score_num.SetNumber((int)Objectmanager.m_instance.m_score.GetScore());
+
 
         apple_num = Objectmanager.m_instance.m_fruit_Counter.apple_num;
         strawberry_num = Objectmanager.m_instance.m_fruit_Counter.strawberry_num;
         peach_num = Objectmanager.m_instance.m_fruit_Counter.peach_num;
         grape_num = Objectmanager.m_instance.m_fruit_Counter.grape_num;
 
-        foreach (Transform trans in transformList)
+        foreach(Transform trans in transformList)
         {
-            if (trans.name == "Canvas") continue;
-            if (trans.name == "Background") continue;
-            if (trans.name == "Mozi") continue;
-            if (trans.name == "Score_num") continue;
-            if (trans.name == "Text") continue;
+            //if (trans.name == "Canvas") continue;
+            //if (trans.name == "Background") continue;
+            //if (trans.name == "Mozi") continue;
+            //if (trans.name == "Score_num") continue;
+            //if (trans.name == "NumberRenderer") continue;
+            //if (trans.name == "Text") continue;
+            if (trans.name != "peach" ||
+                trans.name != "orrange" ||
+                trans.name != "apple" ||
+                trans.name != "strawberry")
+                continue;
 
             GameObject fruit_num = trans.FindChild("Text").gameObject;
             scoretext = fruit_num.GetComponent<Text>();
