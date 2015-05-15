@@ -21,6 +21,10 @@ public class Asagao : FieldObjectInterface {
     [SerializeField, HeaderAttribute("伸びる速度")]
     private float m_animation_Speed = .8f;
 
+    [SerializeField, HeaderAttribute("伸縮SE")]
+    public AudioClip m_SE;
+    private AudioSource m_Souce;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -29,6 +33,8 @@ public class Asagao : FieldObjectInterface {
         m_Animator = gameObject.GetComponent<Animator>();
         //m_Animator.speed = 0;
         m_Animator.speed = m_animation_Speed;
+        m_Souce = GetComponent<AudioSource>();
+        m_Souce.clip = m_SE;
 	}
 
     void Glow()
@@ -60,6 +66,10 @@ public class Asagao : FieldObjectInterface {
         if (m_CurrentTimeZone != m_trigger_Collider.m_myColliderTimeZone)
         {
             m_current_Leap = .0f;
+        }
+        if( m_CurrentTimeZone != m_trigger_Collider.m_myColliderTimeZone )
+        {
+            m_Souce.Play();
         }
         m_CurrentTimeZone = m_trigger_Collider.m_myColliderTimeZone;
         GetComponent<ShaderChanger>().Change(m_CurrentTimeZone);

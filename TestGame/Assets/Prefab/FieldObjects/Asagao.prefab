@@ -135,6 +135,7 @@ GameObject:
   - 95: {fileID: 9569030}
   - 54: {fileID: 5488376}
   - 114: {fileID: 11473764}
+  - 82: {fileID: 8241098}
   m_Layer: 17
   m_Name: Asagao
   m_TagString: Untagged
@@ -394,7 +395,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 126296}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 16.3700008, y: -.49000001, z: 0}
+  m_LocalPosition: {x: 13.9723244, y: -.436335087, z: 0}
   m_LocalScale: {x: 1.1500001, y: 1.5, z: 1}
   m_Children:
   - {fileID: 462508}
@@ -683,6 +684,75 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .0500000007, y: .0500000007, z: .0500000007}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &8241098
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126296}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0f34da0da255a141b409a9a6b753480, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9569030
 Animator:
   serializedVersion: 3
@@ -771,6 +841,8 @@ MonoBehaviour:
   m_ActiveTimeZone: 00000000
   m_target_TransForm: {fileID: 0}
   m_glowSpeed: 1
+  m_animation_Speed: .800000012
+  m_SE: {fileID: 8300000, guid: d0f34da0da255a141b409a9a6b753480, type: 3}
 --- !u!137 &13738806
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
