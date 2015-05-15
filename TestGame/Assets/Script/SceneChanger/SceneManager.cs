@@ -21,8 +21,6 @@ public class SceneManager : MonoBehaviour
     public int currentScene_num = 0;
     public string currentSceneName;
 
-
-
     // Use this for initialization
     void Start()
     {
@@ -32,7 +30,8 @@ public class SceneManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
+
         if (next_scene_load == true)
         {
             if (loadInfo.allowSceneActivation == false)
