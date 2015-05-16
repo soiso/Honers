@@ -12,14 +12,7 @@ public class StageSelect : MonoBehaviour
     }
     public void On_Click()
     {
-        if(sceneName == "TitleTest")
-        {
-            manager.GetComponent<SceneManager>().ChangeScene(sceneName);
-        }
-        else
-        {
-            manager.GetComponent<SceneManager>().ChangeScene_Add(sceneName);
-        }
+        manager.GetComponent<SceneManager>().NextSceneLoad(sceneName);
     }
 
 }

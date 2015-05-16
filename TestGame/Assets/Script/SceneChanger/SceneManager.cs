@@ -21,6 +21,7 @@ public class SceneManager : MonoBehaviour
     protected bool next_scene_load = false;
     public int currentScene_num = 0;
     public string currentSceneName;
+    public string previousSceneName;
 
     // Use this for initialization
     void Start()
@@ -101,38 +102,21 @@ public class SceneManager : MonoBehaviour
         next_scene_load = true;
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
-
-       
     }
 
     public void NextSceneLoad()
     {
         Objectmanager.m_instance.m_stage_timer.Reset();
-        //if (sceneName[currentScene_num] == "TitleTest")
-        //{
-        //    ChangeScene(sceneName[currentScene_num]);
-        //    currentScene_num = 0;
-        //}
-        //else
-        //{
-        //    if (currentSceneName == sceneName[currentScene_num])
-        //    {
-        //        currentScene_num += 1;
-        //        NextSceneLoad();
-        //    }
-        //    else
-        //    {
-        //        ChangeScene_Add(sceneName[currentScene_num]);
-        //    }
-        //}
-        //土日で仕上げる
-        currentSceneName = sceneName[currentScene_num];
+    
+
+        if(currentSceneName != "TitleTest")
+            currentSceneName = sceneName[currentScene_num];
         currentScene_num = 0;
         foreach(string stageName in sceneName)
         {
-            if(stageName == currentSceneName)
+            if (stageName == currentSceneName)
             {
-                currentScene_num++;
+                currentScene_num+=1;
                 if (sceneName[currentScene_num] == "TitleTest")
                     ChangeScene(sceneName[currentScene_num]);
                 else
@@ -142,6 +126,30 @@ public class SceneManager : MonoBehaviour
                 break;
             }
             currentScene_num++;
+        }
+    }
+
+    public void NextSceneLoad(string newstageName)
+    {
+        Objectmanager.m_instance.m_stage_timer.Reset();
+ 
+        //土日で仕上げる
+        //currentSceneName = sceneName[currentScene_num];
+        currentScene_num = 0;
+        foreach (string stageName in sceneName)
+        {
+            if (stageName == newstageName)
+            {
+                if (newstageName == "TitleTest")
+                    ChangeScene(newstageName);
+                else
+                {
+                    ChangeScene_Add(newstageName);
+                }
+                break;
+            }
+            currentScene_num++;
+
         }
     }
 
