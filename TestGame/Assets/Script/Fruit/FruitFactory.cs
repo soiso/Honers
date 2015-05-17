@@ -10,11 +10,22 @@ public class FruitFactory : MonoBehaviour {
 	
 	}
 
-    public GameObject Create_Object(int create_Index)
+    public GameObject Create_Object(FruitInterFace.FRUIT_TYPE type)
    {
+        GameObject ret  = null;
+        int create_Index = (int)type;
        if (create_Index < 0 || create_Index >= m_createFruitList.Length)
            return null;
-       GameObject ret = Instantiate(m_createFruitList[create_Index]);
+
+        for(int i =  0 ; i < m_createFruitList.Length ; i++)
+        {
+            var info = m_createFruitList[i].GetComponent<FruitInfomation>();
+            int val = (int)info.fruit_type;
+            if (val == create_Index)
+            {
+                ret = Instantiate(m_createFruitList[i]);
+            }
+        }
 
        return ret;
    }

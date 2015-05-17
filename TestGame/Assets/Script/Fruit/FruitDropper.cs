@@ -10,7 +10,7 @@ public class FruitDropper : MonoBehaviour {
 
 
     [SerializeField, HeaderAttribute("落とすフルーツの種類数")]
-    private int m_max_FruitType = (int)Fruit.FRUIT_TYPE.num_fruit;
+    private int m_max_FruitType = (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit;
 
     [SerializeField, HeaderAttribute("フルーツを落とすときの最小初速")]
     private float m_minForce;
@@ -26,13 +26,14 @@ public class FruitDropper : MonoBehaviour {
 
     public  void Drop()
     {
-        GameObject drop = m_factry.Create_Object(Random.Range(0, m_max_FruitType));
+        int index = Random.Range(0, m_max_FruitType);
+        GameObject drop = m_factry.Create_Object((FruitInterFace.FRUIT_TYPE)index);
         Vector3 force_vec = new Vector3(Mathf.Sign(Random.Range(-1.0f,1.0f)),
                                                                   Mathf.Sign(Random.Range(-1.0f,1.0f)),
                                                                         0f );
         drop.transform.position = m_drop_Point.position;
 
-        if(drop.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
+        if (drop.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
         {
             Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
             drop.transform.rotation = q;
@@ -43,7 +44,6 @@ public class FruitDropper : MonoBehaviour {
         force_vec = force_vec.normalized * Random.Range(m_minForce, m_maxForce);
 
         Rigidbody r = drop.GetComponent<Rigidbody>();
-        //r.AddForce(force_vec);
 
     }
 }
