@@ -20,6 +20,8 @@ public class FruitCounter : MonoBehaviour
 
     public FruitArrangeManager m_fruitmanager { get; private set; }
 
+    private int m_total_Num;
+
     void Start()
     {
         transformList = this.transform.GetComponentsInChildren<Transform>();
@@ -57,7 +59,7 @@ public class FruitCounter : MonoBehaviour
     }
     public void GetFruitType(FruitInterFace.FRUIT_TYPE type, float score)
     {
-        
+      
         switch(type)
         {
             case FruitInterFace.FRUIT_TYPE.apple:
@@ -81,6 +83,13 @@ public class FruitCounter : MonoBehaviour
             //    }
             //    break;
         }
+          m_total_Num++;
+          int amari = m_total_Num % m_fruitmanager.Get_DongriCount;
+        if( amari == 0)
+        {
+            m_fruitmanager.Create_Dongri();
+        }
+
         Objectmanager.m_instance.m_score.SetScore(score);
     }
 

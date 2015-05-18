@@ -26,7 +26,7 @@ public class TestSporn : MonoBehaviour {
             if(p <m_kakuritu)
             {
                 int index = (Random.Range(0,5));
-                GameObject insert = m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
+                GameObject insert = m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index,-1);
                 insert.transform.position = this.transform.position;
                 insert.transform.rotation = this.transform.rotation;
                 //if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)

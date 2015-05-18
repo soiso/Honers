@@ -17,33 +17,30 @@ public class Tree : MonoBehaviour {
     private float m_adjust_Second;
 
     private float m_last_SpornTime;
+  
     private float m_next_SpornTime;
 
     FruitRendererFactory m_renderer_Factory;
-
-
     private bool m_is_Feaver = false;
     private float m_begin_feaver_Time = 0;
     private float m_feaversporn_Interval = 0.5f;
 
-
     [SerializeField, HeaderAttribute("街灯の影響を受けるかどうか")]
     private bool m_impact_StreetLight = false;
-
     private bool m_active = true;
-
     private RandamRotate m_rotate;
-
     
 private GameObject m_current_GrawFruit = null;
 
     private Vector3 m_default_SpornPosition;
     private TreeParametor m_param;
-    
+
+
+    private Light m_light;
 
 	void Start () 
     {
-
+        m_light = GetComponentInChildren<Light>();
         m_renderer_Factory = GetComponent<FruitRendererFactory>();
         m_param = GetComponent<TreeParametor>();
         m_owner = GetComponentInParent<FruitArrangeManager>();
@@ -164,7 +161,7 @@ private GameObject m_current_GrawFruit = null;
 
     public bool Sporn_Fruit(FruitInterFace.FRUIT_TYPE type)
     {
-        GameObject insert = m_owner.m_factory.Create_Object(type);
+        GameObject insert = m_owner.m_factory.Create_Object(type, m_param.m_event_Affiliation);
         insert.transform.position = m_sporn_Transform.position;
         insert.transform.rotation = m_sporn_Transform.rotation;
         if (insert.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)

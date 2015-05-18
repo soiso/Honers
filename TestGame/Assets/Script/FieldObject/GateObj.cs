@@ -64,7 +64,7 @@ public class GateObj : FieldObjectInterface
 
     void SpornFruit(FruitInterFace.FRUIT_TYPE type)
     {
-        GameObject insert = m_owner.m_factory.Create_Object(type);
+        GameObject insert = m_owner.m_factory.Create_Object(type,-1);
         insert.transform.position = m_SpornPoint.position;
         insert.transform.rotation = m_SpornPoint.rotation;
         if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)

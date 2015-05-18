@@ -87,9 +87,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_gateHeight:
-  - -4
-  - -4
-  - 0
+  - -4.4000001
+  - -4.4000001
+  - -1
   m_move_Speed: .0689999983
   m_owner_GameObject: {fileID: 0}
   m_observer_Objcect: []

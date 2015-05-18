@@ -5,12 +5,14 @@ public class FruitFactory : MonoBehaviour {
 
     [SerializeField]
     GameObject[] m_createFruitList;
-	// Use this for initialization
 	void Start () {
 	
 	}
 
-    public GameObject Create_Object(FruitInterFace.FRUIT_TYPE type)
+    /**
+    * @note イベントを起こさないフルーツは-1
+    **/
+    public GameObject Create_Object(FruitInterFace.FRUIT_TYPE type, int eventIndex = -1 )
    {
         GameObject ret  = null;
         int create_Index = (int)type;
@@ -24,6 +26,7 @@ public class FruitFactory : MonoBehaviour {
             if (val == create_Index)
             {
                 ret = Instantiate(m_createFruitList[i]);
+                ret.GetComponent<FruitInterFace>().m_event_Affiliation = eventIndex;
                 return ret;
             }
         }

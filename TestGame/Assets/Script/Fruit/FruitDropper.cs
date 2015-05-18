@@ -17,17 +17,36 @@ public class FruitDropper : MonoBehaviour {
     [SerializeField,HeaderAttribute("フルーツを落とすときの最大初速")]
     private float m_maxForce;
 
+    [SerializeField, HeaderAttribute("自動で落とすかどうか")]
+    private bool m_auto_Drop = false;
 
+    [SerializeField, HeaderAttribute("フルーツを落とすまでの時間(autoDropにチェックが入ってる場合)")]
+    private float m_drop_Interval = 1.0f;
+
+    private float m_sporn_Time;
 
     void Start()
     {
         m_factry = GetComponent<FruitFactory>();
+        m_sporn_Time = Time.time;
+    }
+
+    void Update()
+    {
+        if (!m_auto_Drop)
+            return;
+
+        if(Time.time >= m_sporn_Time + m_drop_Interval)
+        {
+            Drop();
+            DestroyObject(gameObject);
+        }
     }
 
     public  void Drop()
     {
         int index = Random.Range(0, m_max_FruitType);
-        GameObject drop = m_factry.Create_Object((FruitInterFace.FRUIT_TYPE)index);
+        GameObject drop = m_factry.Create_Object((FruitInterFace.FRUIT_TYPE)index,-1);
         Vector3 force_vec = new Vector3(Mathf.Sign(Random.Range(-1.0f,1.0f)),
                                                                   Mathf.Sign(Random.Range(-1.0f,1.0f)),
                                                                         0f );

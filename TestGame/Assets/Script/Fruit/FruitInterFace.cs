@@ -16,5 +16,14 @@ public class FruitInterFace : MonoBehaviour {
         speed_up,
 
     }
+    [SerializeField, HideInInspector]
+    public int m_event_Affiliation; //どのイベント木に所属するか
+
     public virtual void Collision(GameObject col_object) { }
+
+    public bool Event()
+    {
+        return Objectmanager.m_instance.m_fruit_Counter.
+            m_fruitmanager.Event(m_event_Affiliation);
+    }
 }

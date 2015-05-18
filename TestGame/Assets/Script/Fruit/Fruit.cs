@@ -33,9 +33,9 @@ public class Fruit : FruitInterFace
     
     public AudioClip clip;
     private AudioSource sound;
-
-
     private ParticleSystem m_effect;
+
+
 
   //  private GameObject fruit_counter;
 	void Start () 
@@ -129,6 +129,7 @@ public class Fruit : FruitInterFace
         }
         //fruit_counter.GetComponent<FruitCounter>().GetFruitType(GetComponent<FruitInfomation>().fruit_type);
         Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type, m_default_Score);
+        base.Event();
     }
 
      void OnTriggerEnter(Collider col_object)
