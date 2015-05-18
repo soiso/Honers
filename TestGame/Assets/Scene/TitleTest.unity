@@ -939,7 +939,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &1122472354
 Prefab:
   m_ObjectHideFlags: 0
@@ -1353,6 +1353,14 @@ Prefab:
     - target: {fileID: 414794, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: rimit_time.Array.data[0]
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
