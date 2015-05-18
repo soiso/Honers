@@ -10,6 +10,7 @@ public class Objectmanager : Singleton<Objectmanager>
     public Score m_score { get; private set; }
     public Stage_Timer m_stage_timer { get; private set; }
     public AudioSource m_BGM { get; private set; }
+    public CameraMove m_camera_move { get; private set; }
 
     void Awake()
     {
@@ -21,6 +22,8 @@ public class Objectmanager : Singleton<Objectmanager>
         m_score = GetComponentInChildren<Score>();
 
         m_BGM = GetComponentInChildren<AudioSource>();
+
+        m_camera_move = GetComponentInChildren<CameraMove>();
     }
 
     void Start()
