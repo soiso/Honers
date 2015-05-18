@@ -21,6 +21,7 @@ public class FruitRendererFactory : MonoBehaviour {
             if (val == create_Index)
             {
                 ret = Instantiate(m_createRendererList[i]);
+                return ret;
             }
         }
 

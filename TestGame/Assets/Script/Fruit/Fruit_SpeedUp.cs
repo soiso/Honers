@@ -9,6 +9,12 @@ public class Fruit_SpeedUp : FruitInterFace {
     [SerializeField, HeaderAttribute("スピードUpの大きさ")]
     private float m_speed_Up= 1.0f;
 
+    [SerializeField, HeaderAttribute("加速度Upの大きさ")]
+    private float m_acceleration_Up = 0.3f;
+
+    [SerializeField, HeaderAttribute("減速度Upの大きさ")]
+    private float m_brake_Up = 0.1f;
+
     [SerializeField, HeaderAttribute("消えるまでの時間(秒)")]
     private float m_EraseTime = 10;
 
@@ -20,7 +26,6 @@ public class Fruit_SpeedUp : FruitInterFace {
 
     [SerializeField, HeaderAttribute("点滅周期")]
     private float m_swith_Interval = 1.0f;
-
 
     [SerializeField, HeaderAttribute("点滅周期を狭める速度")]
     private float m_switch_adjust = 0.01f;
@@ -122,7 +127,11 @@ public class Fruit_SpeedUp : FruitInterFace {
         {
             it.enabled = false;
         }
-        col_object.GetComponent<PlayerParametor>().Add_PlayerMaxSpeed(m_speed_Up);
+        var p = col_object.GetComponent<PlayerParametor>();
+        p.Add_Acceleraoin(m_acceleration_Up);
+        p.Add_PlayerMaxSpeed(m_speed_Up);
+        p.Add_BrakeSpeed(m_brake_Up);
+       
     }
 
     void OnTriggerEnter(Collider col_object)

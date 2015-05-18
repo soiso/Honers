@@ -75,11 +75,12 @@ private GameObject m_current_GrawFruit = null;
         if(m_param.m_book_fruit != FruitInterFace.FRUIT_TYPE.error)
             next_Fruit = (int)m_param.m_book_fruit;
         m_current_GrawFruit = m_renderer_Factory.Create_Object(next_Fruit);
+        //とりあえずのエラー処理
         if(!m_current_GrawFruit)
         {
             m_current_GrawFruit = m_renderer_Factory.Create_Object(Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit));
         }
-
+        m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
         m_sporn_Transform.transform.localScale = new Vector3(0,0,0);
         m_sporn_Transform.rotation = Quaternion.identity;
     }
@@ -90,7 +91,8 @@ private GameObject m_current_GrawFruit = null;
         {
 
             int index = Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit - 1);
-            m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
+            Sporn_Fruit((FruitInterFace.FRUIT_TYPE)index);
+           // m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
            m_next_SpornTime = Time.time + m_feaversporn_Interval;
         }
         if (Time.time >= m_param.m_feaverTime + m_begin_feaver_Time)
@@ -125,6 +127,8 @@ private GameObject m_current_GrawFruit = null;
             if (Graw_Fruit())
             {
                 Sporn_Fruit(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type);
+                float next_Interval = Random.Range(-m_adjust_Second, m_adjust_Second);
+                m_next_SpornTime = Time.time + m_defaultUpdateInterval + next_Interval;
                 Direction_NextGrawFruit();
             }
         }
@@ -169,8 +173,7 @@ private GameObject m_current_GrawFruit = null;
             insert.transform.rotation = q;
         }
 
-        float next_Interval = Random.Range(-m_adjust_Second, m_adjust_Second);
-        m_next_SpornTime = Time.time + m_defaultUpdateInterval + next_Interval;
+  
         return true;
     }
 
@@ -186,7 +189,7 @@ private GameObject m_current_GrawFruit = null;
             DestroyObject(m_current_GrawFruit);
             m_current_GrawFruit = null;
         }
-
+        m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
         m_begin_feaver_Time = Time.time;
         m_next_SpornTime = Time.time + m_feaversporn_Interval;
         return true;

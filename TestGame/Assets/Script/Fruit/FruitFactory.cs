@@ -14,7 +14,7 @@ public class FruitFactory : MonoBehaviour {
    {
         GameObject ret  = null;
         int create_Index = (int)type;
-       if (create_Index < 0 || create_Index >= m_createFruitList.Length)
+       if (create_Index < 0)
            return null;
 
         for(int i =  0 ; i < m_createFruitList.Length ; i++)
@@ -24,6 +24,7 @@ public class FruitFactory : MonoBehaviour {
             if (val == create_Index)
             {
                 ret = Instantiate(m_createFruitList[i]);
+                return ret;
             }
         }
 
