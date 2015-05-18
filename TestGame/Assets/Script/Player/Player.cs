@@ -126,7 +126,12 @@ public class Player : MonoBehaviour {
              var obj = col_object.GetComponent<Panel>();
              var param = col_object.GetComponent<PanelParametor>();
              m_debug_color = obj.m_debug_TimeZoneColor;
+         }
 
+         if(layer_name == "FieldFruit")
+         {
+             var fruit = col_object.GetComponent<FruitInterFace>();
+             fruit.Collision(this.gameObject);
          }
 
     }

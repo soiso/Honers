@@ -92,8 +92,8 @@ public class PanelChanger : MonoBehaviour {
             PanelParametor.TIMEZONE temp = m_change_Panel[0].GetComponent<PanelParametor>().GetTimezone;
             m_change_Panel[0].Set_TargetUV(m_change_Panel[1].GetComponent<PanelParametor>().GetTimezone);
             m_change_Panel[1].Set_TargetUV(temp);
-            m_change_Panel[0].GetComponent<BoxCollider>().enabled = false;
-            m_change_Panel[1].GetComponent<BoxCollider>().enabled = false;
+            //m_change_Panel[0].GetComponent<BoxCollider>().enabled = false;
+           // m_change_Panel[1].GetComponent<BoxCollider>().enabled = false;
             m_change_Endcount = 0;
             /*sound*/
             sound.Play();

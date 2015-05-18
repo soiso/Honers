@@ -10,8 +10,8 @@ public class Tree : MonoBehaviour {
     private FruitArrangeManager m_owner;
 
     [SerializeField,HeaderAttribute("出現するフルーツの種類"),
-    Range(0,(int)Fruit.FRUIT_TYPE.num_fruit)]
-    private int m_max_fruit_Type = (int)Fruit.FRUIT_TYPE.num_fruit;
+    Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit)]
+    private int m_max_fruit_Type = (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit;
 
     private float m_defaultUpdateInterval;
     private float m_adjust_Second;
@@ -19,8 +19,7 @@ public class Tree : MonoBehaviour {
     private float m_last_SpornTime;
     private float m_next_SpornTime;
 
-    [SerializeField, HeaderAttribute("作成するフルーツ（Rendererを入れる）")]
-    private GameObject[] m_create_FruitRenderer;
+    FruitRendererFactory m_renderer_Factory;
 
 
     private bool m_is_Feaver = false;
@@ -35,15 +34,17 @@ public class Tree : MonoBehaviour {
 
     private RandamRotate m_rotate;
 
-    private GameObject m_current_GrawFruit = null;
+    
+private GameObject m_current_GrawFruit = null;
 
     private Vector3 m_default_SpornPosition;
-
-
     private TreeParametor m_param;
+    
 
 	void Start () 
     {
+
+        m_renderer_Factory = GetComponent<FruitRendererFactory>();
         m_param = GetComponent<TreeParametor>();
         m_owner = GetComponentInParent<FruitArrangeManager>();
         m_defaultUpdateInterval = m_owner.m_default_SpornInterval;
@@ -69,10 +70,17 @@ public class Tree : MonoBehaviour {
         Vector3 adjust = new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), 0);
         //adjust.y += 0.2f;
         m_sporn_Transform.position =m_default_SpornPosition + adjust;
-        int next_Fruit = Random.Range(0,m_create_FruitRenderer.Length - 1);
-        if(Random.Range(0,100) < m_param.m_donguri_Probability)
-            next_Fruit = (int)Fruit.FRUIT_TYPE.donguri;
-        m_current_GrawFruit = GameObject.Instantiate(m_create_FruitRenderer[next_Fruit]);
+        int next_Fruit = Random.Range(0,(int)FruitInterFace.FRUIT_TYPE.num_normal_fruit);
+
+        if(m_param.m_book_fruit != FruitInterFace.FRUIT_TYPE.error)
+            next_Fruit = (int)m_param.m_book_fruit;
+        m_current_GrawFruit = m_renderer_Factory.Create_Object(next_Fruit);
+        //とりあえずのエラー処理
+        if(!m_current_GrawFruit)
+        {
+            m_current_GrawFruit = m_renderer_Factory.Create_Object(Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit));
+        }
+        m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
         m_sporn_Transform.transform.localScale = new Vector3(0,0,0);
         m_sporn_Transform.rotation = Quaternion.identity;
     }
@@ -81,7 +89,10 @@ public class Tree : MonoBehaviour {
     {
         if(Time.time > m_next_SpornTime)
         {
-           Sporn_Fruit(Random.Range(0,(int)Fruit.FRUIT_TYPE.num_fruit - 1));
+
+            int index = Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit - 1);
+            Sporn_Fruit((FruitInterFace.FRUIT_TYPE)index);
+           // m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
            m_next_SpornTime = Time.time + m_feaversporn_Interval;
         }
         if (Time.time >= m_param.m_feaverTime + m_begin_feaver_Time)
@@ -115,11 +126,12 @@ public class Tree : MonoBehaviour {
         {
             if (Graw_Fruit())
             {
-                Sporn_Fruit((int)m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type);
+                Sporn_Fruit(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type);
+                float next_Interval = Random.Range(-m_adjust_Second, m_adjust_Second);
+                m_next_SpornTime = Time.time + m_defaultUpdateInterval + next_Interval;
                 Direction_NextGrawFruit();
             }
         }
-
     }
 
     bool Graw_Fruit()
@@ -150,19 +162,18 @@ public class Tree : MonoBehaviour {
         return false;
     }
 
-    public bool Sporn_Fruit(int type)
+    public bool Sporn_Fruit(FruitInterFace.FRUIT_TYPE type)
     {
         GameObject insert = m_owner.m_factory.Create_Object(type);
         insert.transform.position = m_sporn_Transform.position;
         insert.transform.rotation = m_sporn_Transform.rotation;
-        if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
+        if (insert.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
         {
             Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
             insert.transform.rotation = q;
         }
 
-        float next_Interval = Random.Range(-m_adjust_Second, m_adjust_Second);
-        m_next_SpornTime = Time.time + m_defaultUpdateInterval + next_Interval;
+  
         return true;
     }
 
@@ -178,7 +189,7 @@ public class Tree : MonoBehaviour {
             DestroyObject(m_current_GrawFruit);
             m_current_GrawFruit = null;
         }
-
+        m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
         m_begin_feaver_Time = Time.time;
         m_next_SpornTime = Time.time + m_feaversporn_Interval;
         return true;
@@ -189,6 +200,11 @@ public class Tree : MonoBehaviour {
     private void End_Feaver()
     {
         m_is_Feaver = false;
+    }
+
+    public void Set_BookFruit(FruitInterFace.FRUIT_TYPE type)
+    {
+        m_param.m_book_fruit = type;
     }
 
     //Message

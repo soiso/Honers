@@ -24,7 +24,7 @@ public class NumberRenderer : MonoBehaviour {
 
     private int m_current_surplus =0;
 
-    private ScaleWeaver m_scale_Weaver;
+    private ScaleWeaver m_scale_Weaver = null;
 
     void Awake()
     {
@@ -115,6 +115,7 @@ public class NumberRenderer : MonoBehaviour {
         Calculate(value);
         m_is_rolling = true;
         m_rollBeginTime = Time.time;
-        m_scale_Weaver.Begin_Wave();
+        if (m_scale_Weaver)
+           m_scale_Weaver.Begin_Wave();
     }
 }

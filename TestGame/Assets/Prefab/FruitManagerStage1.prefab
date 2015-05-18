@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 451318}
   - 114: {fileID: 11468228}
   - 114: {fileID: 11472818}
+  - 114: {fileID: 11489430}
   m_Layer: 26
   m_Name: TreeA
   m_TagString: Untagged
@@ -42,6 +43,7 @@ GameObject:
   - 4: {fileID: 488532}
   - 114: {fileID: 11458594}
   - 114: {fileID: 11476432}
+  - 114: {fileID: 11413130}
   m_Layer: 26
   m_Name: TreeB
   m_TagString: Untagged
@@ -161,6 +163,7 @@ GameObject:
   - 4: {fileID: 477562}
   - 114: {fileID: 11420838}
   - 114: {fileID: 11484620}
+  - 114: {fileID: 11471920}
   m_Layer: 26
   m_Name: TreeC
   m_TagString: Untagged
@@ -225,6 +228,7 @@ GameObject:
   - 4: {fileID: 466090}
   - 114: {fileID: 11402156}
   - 114: {fileID: 11448866}
+  - 114: {fileID: 11445264}
   m_Layer: 26
   m_Name: TreeD
   m_TagString: Untagged
@@ -709,13 +713,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 426472}
   m_max_fruit_Type: 4
-  m_create_FruitRenderer:
-  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
-  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
-  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
-  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
-  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
   m_impact_StreetLight: 0
+--- !u!114 &11413130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c2f6bfab2d81243a2b78b23a99d7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_createRendererList:
+  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
+  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
+  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
+  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
+  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
+  - {fileID: 149192, guid: a12f5e6d159161a4da28b5c998d649f6, type: 2}
 --- !u!114 &11420838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -729,12 +745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 425290}
   m_max_fruit_Type: 4
-  m_create_FruitRenderer:
-  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
-  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
-  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
-  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
-  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
   m_impact_StreetLight: 0
 --- !u!114 &11430402
 MonoBehaviour:
@@ -773,6 +783,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_picturePaperName: PicturePaper
   pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
+--- !u!114 &11445264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 174704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c2f6bfab2d81243a2b78b23a99d7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_createRendererList:
+  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
+  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
+  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
+  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
+  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
+  - {fileID: 149192, guid: a12f5e6d159161a4da28b5c998d649f6, type: 2}
 --- !u!114 &11448866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -788,6 +816,7 @@ MonoBehaviour:
   m_max_RotateAngle: 30
   m_donguri_Probability: 10
   m_feaverTime: 4
+  m_book_fruit: 0
 --- !u!114 &11458594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -801,12 +830,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 485102}
   m_max_fruit_Type: 4
-  m_create_FruitRenderer:
-  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
-  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
-  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
-  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
-  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
   m_impact_StreetLight: 0
 --- !u!114 &11468228
 MonoBehaviour:
@@ -821,12 +844,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 487376}
   m_max_fruit_Type: 4
-  m_create_FruitRenderer:
-  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
-  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
-  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
-  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
-  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
   m_impact_StreetLight: 0
 --- !u!114 &11471044
 MonoBehaviour:
@@ -847,6 +864,26 @@ MonoBehaviour:
   - {fileID: 104162}
   - {fileID: 165114}
   - {fileID: 174704}
+  m_donguri_Interval: 8
+  m_speedUp_Interval: 7
+--- !u!114 &11471920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c2f6bfab2d81243a2b78b23a99d7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_createRendererList:
+  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
+  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
+  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
+  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
+  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
+  - {fileID: 149192, guid: a12f5e6d159161a4da28b5c998d649f6, type: 2}
 --- !u!114 &11472818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -862,6 +899,7 @@ MonoBehaviour:
   m_max_RotateAngle: 30
   m_donguri_Probability: 10
   m_feaverTime: 4
+  m_book_fruit: 0
 --- !u!114 &11475758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -895,6 +933,7 @@ MonoBehaviour:
   m_max_RotateAngle: 30
   m_donguri_Probability: 10
   m_feaverTime: 4
+  m_book_fruit: 0
 --- !u!114 &11476606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -912,6 +951,7 @@ MonoBehaviour:
   - {fileID: 166472, guid: 172dbf7b45a9ccf4887b3238d23efd3b, type: 2}
   - {fileID: 174328, guid: 078e1c2eb03d9ce49a07add2bacc3d81, type: 2}
   - {fileID: 138242, guid: 95039fd47aa97bf40a8bbe9179c7aed2, type: 2}
+  - {fileID: 188688, guid: 200dc222322d55948b3e54df757fc991, type: 2}
 --- !u!114 &11484620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -927,6 +967,25 @@ MonoBehaviour:
   m_max_RotateAngle: 30
   m_donguri_Probability: 10
   m_feaverTime: 4
+  m_book_fruit: 0
+--- !u!114 &11489430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67c2f6bfab2d81243a2b78b23a99d7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_createRendererList:
+  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
+  - {fileID: 118700, guid: 9eeb6ee533ace5049abb854a72c1ddb2, type: 2}
+  - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
+  - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
+  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
+  - {fileID: 149192, guid: a12f5e6d159161a4da28b5c998d649f6, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

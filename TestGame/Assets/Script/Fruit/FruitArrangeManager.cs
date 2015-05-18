@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class FruitArrangeManager : MonoBehaviour {
 
-    
     public FruitFactory m_factory{get; private set;}
-
     private float  m_next_Enable_Arrangetime;
     [SerializeField]
     private float m_enable_ArrangeInterval = 3f;
@@ -17,6 +15,8 @@ public class FruitArrangeManager : MonoBehaviour {
     [SerializeField,HeaderAttribute("基準値に対する最大上限値")]
     public  float m_adjust_Second = 2f;
 
+
+
     private float m_lastShuffleTime = 0f;
     private float m_currentShuffleTime = 0f;
 
@@ -25,8 +25,13 @@ public class FruitArrangeManager : MonoBehaviour {
     private GameObject[] m_GameObjectOfTree;
     private Tree[] m_tree_Array;
 
-	// Use this for initialization
-
+    [SerializeField,HeaderAttribute("どんぐり出現間隔")]
+    private float m_donguri_Interval = 8.0f;
+    private float m_last_DongrispornTime = 0f;
+    [SerializeField, HeaderAttribute("SpeedUp出現間隔")]
+    private float m_speedUp_Interval = 7.0f;
+    private float m_last_SpeedUpSpornTime = 0f;
+    
     void Awake()
     {
       
@@ -35,10 +40,6 @@ public class FruitArrangeManager : MonoBehaviour {
 	void Start () 
     {
         Objectmanager.m_instance.m_fruit_Counter.Set_FruitManager(this);
-        //if(m_GameObjectOfTree.Length == 0)
-        //{
-        //    Debug.Log("FruitArrangeManager::arrangePoint is null !!");
-        //}
         m_factory = GetComponent<FruitFactory>();
         m_next_Enable_Arrangetime = m_enable_ArrangeInterval;
 
@@ -49,10 +50,42 @@ public class FruitArrangeManager : MonoBehaviour {
         }
         //Arrange_Fruit();
 	}
+
+   private bool Book_SpecialFruit(FruitInterFace.FRUIT_TYPE type)
+    {
+       for(int i =0 ; i < 5 ; i++)
+       {
+           int index = Random.Range(0, m_tree_Array.Length);
+           var param = m_tree_Array[index].GetComponent<TreeParametor>();
+           if (param.m_book_fruit == FruitInterFace.FRUIT_TYPE.error)
+           {
+               m_tree_Array[index].GetComponent<Tree>().Set_BookFruit(type);
+               return true;
+           }
+       }
+       return false;
+
+    }
+
+    private void Update_SpecialFruit()
+    {
+        if(Time.time >= m_last_DongrispornTime + m_donguri_Interval )
+        {
+            m_last_DongrispornTime = Time.time;
+            Book_SpecialFruit(FruitInterFace.FRUIT_TYPE.donguri);
+        }
+
+        if (Time.time >= m_last_SpeedUpSpornTime + m_speedUp_Interval)
+        {
+            m_last_SpeedUpSpornTime = Time.time;
+            Book_SpecialFruit(FruitInterFace.FRUIT_TYPE.speed_up);
+        }
+
+    }
 	
 	void Update ()
     {
-
+        Update_SpecialFruit();
 	}
 
     public bool Begin_FeaverTime()

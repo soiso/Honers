@@ -15,4 +15,11 @@ public class TreeParametor : MonoBehaviour {
     [SerializeField, HeaderAttribute("フィーバー時間")]
     public float m_feaverTime = 4.0f;
 
+    public FruitInterFace.FRUIT_TYPE m_book_fruit;
+
+    void Awake()
+    {
+        m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
+    }
+
 }

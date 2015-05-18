@@ -60,7 +60,7 @@ public class TestTree : MonoBehaviour {
         if(m_current_Index >= m_fruit_Sporn_Array.Length)
         {
             m_current_Index = 0;
-            Sporn_Fruit(Random.Range(0,4));
+           // Sporn_Fruit(Random.Range(0,4));
             m_next_Timezone = m_fruit_Sporn_Array[m_current_Index];
             return;
         }
@@ -68,18 +68,18 @@ public class TestTree : MonoBehaviour {
         m_next_Renderer.SetRenderTime((int)m_next_Timezone);
     }
 
-    public bool Sporn_Fruit(int type)
-    {
-        GameObject insert = m_factory.Create_Object(type);
-       insert.transform.position = m_sporn_Transform.position;
-       insert.transform.rotation = m_sporn_Transform.rotation;
-        if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
-        {
-            Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
-            insert.transform.rotation = q;
-        }
-        return true;
-    }
+    //public bool Sporn_Fruit(int type)
+    //{
+    //    GameObject insert = m_factory.Create_Object(type);
+    //   insert.transform.position = m_sporn_Transform.position;
+    //   insert.transform.rotation = m_sporn_Transform.rotation;
+    //   if (insert.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
+    //    {
+    //        Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
+    //        insert.transform.rotation = q;
+    //    }
+    //    return true;
+    //}
 
 	// Update is called once per frame
 	void Update () 

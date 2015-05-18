@@ -55,31 +55,31 @@ public class FruitCounter : MonoBehaviour
         peach_num = 0;
         grape_num = 0;
     }
-    public void GetFruitType(Fruit.FRUIT_TYPE type,float score)
+    public void GetFruitType(FruitInterFace.FRUIT_TYPE type, float score)
     {
         
         switch(type)
         {
-            case Fruit.FRUIT_TYPE.apple:
+            case FruitInterFace.FRUIT_TYPE.apple:
                 apple_num++;
                 break;
-            case Fruit.FRUIT_TYPE.strawberry:
+            case FruitInterFace.FRUIT_TYPE.strawberry:
                 strawberry_num++;
                 break;
-            case Fruit.FRUIT_TYPE.peach:
+            case FruitInterFace.FRUIT_TYPE.peach:
                 peach_num++;
                 break;
-            case Fruit.FRUIT_TYPE.grape:
+            case FruitInterFace.FRUIT_TYPE.grape:
                 grape_num++;
                 break;
-            case Fruit.FRUIT_TYPE.donguri :
-                m_dongri_Num++;
-                if(m_dongri_Num ==1)
-                {
-                    m_fruitmanager.Begin_FeaverTime();
-                    m_dongri_Num = 0;
-                }
-                break;
+            //case FruitInterFace.FRUIT_TYPE.donguri:
+            //    m_dongri_Num++;
+            //    if(m_dongri_Num ==1)
+            //    {
+            //     
+            //        m_dongri_Num = 0;
+            //    }
+            //    break;
         }
         Objectmanager.m_instance.m_score.SetScore(score);
     }
@@ -89,4 +89,10 @@ public class FruitCounter : MonoBehaviour
         m_fruitmanager = m;
         return true;
     }
+
+    public void Bagin_FeaverTime()
+    {
+        m_fruitmanager.Begin_FeaverTime();
+    }
+
 }
