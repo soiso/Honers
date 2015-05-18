@@ -51,7 +51,7 @@ public class GateObj : FieldObjectInterface
             if( m_CurrentNum == m_TargetNum && !m_isSporn)
             {
                 //レアフルーツ生成したいなぁ
-                SpornFruit(0);
+                SpornFruit(m_Fruit[0].GetComponent<FruitInfomation>().fruit_type);
                 m_isSporn = true;
             }
         }
@@ -62,7 +62,7 @@ public class GateObj : FieldObjectInterface
         }
 	}
 
-    void SpornFruit( int type )
+    void SpornFruit(FruitInterFace.FRUIT_TYPE type)
     {
         GameObject insert = m_owner.m_factory.Create_Object(type);
         insert.transform.position = m_SpornPoint.position;

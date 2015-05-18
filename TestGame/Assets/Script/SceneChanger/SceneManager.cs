@@ -21,7 +21,6 @@ public class SceneManager : MonoBehaviour
     protected bool next_scene_load = false;
     public int currentScene_num = 0;
     public string currentSceneName;
-    public string previousSceneName;
 
     // Use this for initialization
     void Start()
@@ -52,7 +51,11 @@ public class SceneManager : MonoBehaviour
         {
             if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 30.0f)
             {
-                if (currentSceneName != "Result") startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
+                if (currentSceneName != "Result")
+                {
+                Objectmanager.m_instance.m_camera_move.cMove_Begin();
+                    startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
+                }
                 else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
                 //BGM変えたい
@@ -83,7 +86,6 @@ public class SceneManager : MonoBehaviour
     {
         currentSceneName = sceneName;
         Application.LoadLevel(sceneName);
-        //currentScene_num++;
         //BGM変えたい
         Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(sceneName);
         if (sceneName == "TitleTest")
@@ -107,10 +109,16 @@ public class SceneManager : MonoBehaviour
     public void NextSceneLoad()
     {
         Objectmanager.m_instance.m_stage_timer.Reset();
-    
 
-        if(currentSceneName != "TitleTest")
+        if (currentSceneName != "TitleTest")
+        {
             currentSceneName = sceneName[currentScene_num];
+        }
+        else
+        {
+        ChangeScene_Add(sceneName[currentScene_num]);
+            return;
+        }
         currentScene_num = 0;
         foreach(string stageName in sceneName)
         {
@@ -133,8 +141,6 @@ public class SceneManager : MonoBehaviour
     {
         Objectmanager.m_instance.m_stage_timer.Reset();
  
-        //土日で仕上げる
-        //currentSceneName = sceneName[currentScene_num];
         currentScene_num = 0;
         foreach (string stageName in sceneName)
         {
