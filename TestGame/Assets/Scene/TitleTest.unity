@@ -1357,11 +1357,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[0]
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 11422642, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_timer
       value: .730000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
