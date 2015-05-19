@@ -104,4 +104,9 @@ public class FruitCounter : MonoBehaviour
         m_fruitmanager.Begin_FeaverTime();
     }
 
+    public void End_FeaverTime()
+    {
+        m_fruitmanager.End_FeaverTime();
+    }
+
 }

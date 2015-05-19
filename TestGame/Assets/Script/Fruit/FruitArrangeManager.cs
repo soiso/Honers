@@ -35,6 +35,8 @@ public class FruitArrangeManager : MonoBehaviour {
 
     public int Get_DongriCount { get { return dongri_count; } }
 
+    private GameObject feaver_sign;
+
     void Awake()
     {
         m_event_Manager = GetComponent<FruitEventManager>();
@@ -55,6 +57,7 @@ public class FruitArrangeManager : MonoBehaviour {
         {
             m_tree_Array[i] = m_GameObjectOfTree[i].GetComponent<Tree>();
         }
+        feaver_sign = GameObject.Find("FeaverSign");
 	}
 
    private bool Book_SpecialFruit(FruitInterFace.FRUIT_TYPE type)
@@ -111,10 +114,17 @@ public class FruitArrangeManager : MonoBehaviour {
 
     public bool Begin_FeaverTime()
     {
+        feaver_sign.GetComponent<FeaverSign>().Feaver_Begin();
         foreach(var it in m_tree_Array)
         {
             it.Begin_Feaver();
         }
+        return true;
+    }
+
+    public bool End_FeaverTime()
+    {
+        feaver_sign.GetComponent<FeaverSign>().Feaver_End();
         return true;
     }
 

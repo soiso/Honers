@@ -116,6 +116,7 @@ private GameObject m_current_GrawFruit = null;
             m_light.enabled = true;
             if (Update_Feaver())
             {
+                Objectmanager.m_instance.m_fruit_Counter.End_FeaverTime();
                 End_Feaver();
                 Direction_NextGrawFruit();
             }

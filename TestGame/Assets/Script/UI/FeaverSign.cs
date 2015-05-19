@@ -17,7 +17,7 @@ public class FeaverSign : MonoBehaviour {
     public float FadeSpeed;
     private Transform move_target;
 
-    public Vector3 velocity;
+    private Vector3 velocity;
     private bool feaver_flag;
 	// Use this for initialization
 	void Start () {

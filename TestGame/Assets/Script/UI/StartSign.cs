@@ -32,7 +32,7 @@ public class StartSign : MonoBehaviour {
 
             IncFlag = false;
 
-            this.transform.parent.GetComponent<Canvas>().enabled = false;
+            //this.transform.parent.GetComponent<Canvas>().enabled = false;
             return true;
     }
         else
