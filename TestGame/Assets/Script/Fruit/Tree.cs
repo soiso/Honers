@@ -113,6 +113,7 @@ private GameObject m_current_GrawFruit = null;
 
         if(m_is_Feaver)
         {
+            m_light.enabled = true;
             if (Update_Feaver())
             {
                 End_Feaver();
@@ -121,6 +122,7 @@ private GameObject m_current_GrawFruit = null;
         }
         else 
         {
+            m_light.enabled = false;
             if (Graw_Fruit())
             {
                 Sporn_Fruit(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type);
