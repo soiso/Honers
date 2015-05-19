@@ -3577,8 +3577,10 @@ MonoBehaviour:
   - {fileID: 178406}
   - {fileID: 166540}
   - {fileID: 199454}
+  - {fileID: 116542}
+  - {fileID: 181514}
   m_speedUp_Interval: 7
-  dongri_count: 5
+  dongri_count: 1
 --- !u!114 &11451688
 MonoBehaviour:
   m_ObjectHideFlags: 1
