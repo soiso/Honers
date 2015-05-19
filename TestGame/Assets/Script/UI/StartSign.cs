@@ -2,21 +2,24 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class StartSign : MonoBehaviour {
+public class StartSign : MonoBehaviour
+{
 
     public float FadeTime = 0.0f;
-    public float AlphaCounter=0.0f;
-    public bool IncFlag=false;
-	// Use this for initialization
-	void Start () {
+    public float AlphaCounter = 0.0f;
+    public bool IncFlag = false;
+    // Use this for initialization
+    void Start()
+    {
 
         this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
         this.transform.parent.GetComponent<Canvas>().enabled = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+    }
 
     public bool AlphaIncrease()
     {
@@ -34,7 +37,7 @@ public class StartSign : MonoBehaviour {
 
             //this.transform.parent.GetComponent<Canvas>().enabled = false;
             return true;
-    }
+        }
         else
             return false;
     }

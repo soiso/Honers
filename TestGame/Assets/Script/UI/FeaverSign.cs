@@ -55,13 +55,11 @@ public class FeaverSign : MonoBehaviour {
         this.transform.position = new Vector3(700, Height, 0);
         velocity = new Vector3(-1.0f, 0, 0)*speed;
         this.GetComponent<Image>().color = new Color(255, 255, 255, 1.0f);
-        //light.GetComponent<Light>().intensity = 0.1f;
     }
 
     public void Feaver_End()
     {
         feaver_flag = false;
         this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
-        //light.GetComponent<Light>().intensity = 1.0f;
     }
 }
