@@ -9,6 +9,7 @@ public class StartSign : MonoBehaviour {
     public bool IncFlag=false;
 	// Use this for initialization
 	void Start () {
+
         this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
         this.transform.parent.GetComponent<Canvas>().enabled = false;
 	}
@@ -28,7 +29,9 @@ public class StartSign : MonoBehaviour {
         {
             this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
             AlphaCounter = 0.0f;
+
             IncFlag = false;
+
             this.transform.parent.GetComponent<Canvas>().enabled = false;
             return true;
     }
@@ -37,6 +40,7 @@ public class StartSign : MonoBehaviour {
     }
     public void AlphaIncrease_Begin()
     {
+
         IncFlag = true;
         this.transform.parent.GetComponent<Canvas>().enabled = true;
     }

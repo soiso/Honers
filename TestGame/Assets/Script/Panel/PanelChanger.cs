@@ -24,6 +24,11 @@ public class PanelChanger : MonoBehaviour {
     public AudioClip clip;
     private AudioSource sound;
 
+    [SerializeField, HeaderAttribute("登録パネル")]
+    public GameObject[] m_Panel;
+
+    private TouchMesh m_Touch;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -34,6 +39,9 @@ public class PanelChanger : MonoBehaviour {
 
         sound = gameObject.GetComponent<AudioSource>();
         sound.clip = clip;
+
+        int index = transform.childCount;
+        m_Touch = transform.GetChild( index-1 ).GetComponent<TouchMesh>();
 	}
 
     public void    SubCount_SelectPanel()
@@ -73,7 +81,7 @@ public class PanelChanger : MonoBehaviour {
     {
         //とりあえず
         int counter = 0;
-        for (int i = 0; i < this.transform.childCount; i++)
+        for (int i = 0; i < this.transform.childCount-1; i++)
         {
             Panel child = this.transform.GetChild(i).GetComponent<Panel>();
             if (child.GetComponent<PanelParametor>().m_touchMesh.m_is_select)
@@ -108,8 +116,14 @@ public class PanelChanger : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
+
         if (!m_is_changeNow)
+        {
+#if  UNITY_ANDROID || UNITY_IOS
+            m_Touch.IsTouch();
+#endif
             Check_Panel();
+        }
 
 	}
 

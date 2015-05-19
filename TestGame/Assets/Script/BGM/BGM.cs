@@ -44,7 +44,7 @@ public class BGM : MonoBehaviour
         //タイトル
         if( StageName == "TitleTest") m_Source.clip = m_TitleBGM;
         //ステージ1
-        else if (StageName == "MU_Stage1") m_Source.clip = m_Stage1BGM;
+        else if (StageName == "New_Stage1") m_Source.clip = m_Stage1BGM;
         //ステージ2
         else if (StageName == "New_Stage2") m_Source.clip = m_Stage2BGM;
         //リザルト
