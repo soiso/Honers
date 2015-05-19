@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7eb74a011adf6f448163869f9b69390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_changeMode: 0
+  m_changeMode: 1
   m_ChangeSecond: 1.10000002
   clip: {fileID: 8300000, guid: 7d78248fe8c1e6b48ae4d05458da7aae, type: 3}
   m_Panel:
