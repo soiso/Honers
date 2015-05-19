@@ -10,6 +10,7 @@ public class StartSign : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
+        this.transform.parent.GetComponent<Canvas>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -28,6 +29,7 @@ public class StartSign : MonoBehaviour {
             this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
             AlphaCounter = 0.0f;
             IncFlag = false;
+            this.transform.parent.GetComponent<Canvas>().enabled = false;
             return true;
     }
         else
@@ -36,6 +38,6 @@ public class StartSign : MonoBehaviour {
     public void AlphaIncrease_Begin()
     {
         IncFlag = true;
-
+        this.transform.parent.GetComponent<Canvas>().enabled = true;
     }
 }

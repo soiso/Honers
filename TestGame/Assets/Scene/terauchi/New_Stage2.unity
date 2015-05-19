@@ -1107,15 +1107,15 @@ Prefab:
       objectReference: {fileID: 1192699834}
     - target: {fileID: 11434708, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
       propertyPath: m_gateHeight.Array.data[2]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11434708, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
-      propertyPath: m_gateHeight.Array.data[0]
-      value: -5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 11434708, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
       propertyPath: m_gateHeight.Array.data[1]
-      value: -5
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434708, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
+      propertyPath: m_gateHeight.Array.data[0]
+      value: -4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}

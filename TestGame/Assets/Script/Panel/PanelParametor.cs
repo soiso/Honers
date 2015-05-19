@@ -59,7 +59,7 @@ public class PanelParametor : MonoBehaviour {
     void Update()
      {
 #if UNITY_ANDROID || UNITY_IOS
-        m_touchMesh.IsTouch();
+        //m_touchMesh.IsTouch();
 #endif
          Calculate_AlbedoColor();
      }
@@ -67,6 +67,14 @@ public class PanelParametor : MonoBehaviour {
     public void Change_Timezone(TIMEZONE change_Zone)
     {
         m_timeZone = change_Zone;
+    }
+
+    public bool IsTouch( Vector3 pos )
+    {
+        var ray = Camera.main.ScreenPointToRay(pos);
+        RaycastHit hit;
+
+        return (GetComponent<MeshCollider>().Raycast(ray, out hit, 100.0f)) ? true : false;
     }
 
 //#if UNITY_STANDALONE
