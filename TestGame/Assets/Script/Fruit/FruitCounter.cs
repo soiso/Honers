@@ -109,4 +109,42 @@ public class FruitCounter : MonoBehaviour
         m_fruitmanager.End_FeaverTime();
     }
 
+    private FruitInterFace.FRUIT_TYPE type;
+    public FruitInterFace.FRUIT_TYPE SnatchFruit()
+    {
+        //フルーツ取ってなかったら帰ります
+        if (m_total_Num <= 0) return FruitInterFace.FRUIT_TYPE.error;
+
+        bool isok = true;
+        
+        while( isok )
+        {
+            type = (FruitInterFace.FRUIT_TYPE)Random.Range((int)(FruitInterFace.FRUIT_TYPE.apple), (int)(FruitInterFace.FRUIT_TYPE.num_normal_fruit));
+            switch (type)
+            {
+                case FruitInterFace.FRUIT_TYPE.apple:
+                    if (apple_num <= 0) break;
+                    apple_num--;
+                    isok = false;
+                    break;
+                case FruitInterFace.FRUIT_TYPE.strawberry:
+                    if (strawberry_num <= 0) break;
+                    strawberry_num--;
+                    isok = false;
+                    break;
+                case FruitInterFace.FRUIT_TYPE.peach:
+                    if (peach_num <= 0) break;
+                    peach_num--;
+                    isok = false;
+                    break;
+                case FruitInterFace.FRUIT_TYPE.grape:
+                    if (grape_num <= 0) break;
+                    grape_num--;
+                    isok = false;
+                    break;
+            }
+        }
+
+        return type;
+    }
 }
