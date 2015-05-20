@@ -16,7 +16,7 @@ public class PanelChanger : MonoBehaviour {
 
     private Panel[] m_change_Panel;
     public bool m_is_changeNow { get; private set; }
-    public int m_change_Endcount { get; private set; }
+    public int m_change_Endcount { get;  set; }
 
     [SerializeField, Range(1.0f, 5.0f)]
     public float m_ChangeSecond;
@@ -132,8 +132,8 @@ public class PanelChanger : MonoBehaviour {
         m_change_Endcount++;
         if(m_change_Endcount >=2)
         {
-            m_change_Panel[0].GetComponent<BoxCollider>().enabled = true;
-            m_change_Panel[1].GetComponent<BoxCollider>().enabled = true;
+            //m_change_Panel[0].GetComponent<BoxCollider>().enabled = true;
+            //m_change_Panel[1].GetComponent<BoxCollider>().enabled = true;
             m_is_changeNow = false;
             m_change_Endcount = 0;
             m_current_Selectpanel = 0;

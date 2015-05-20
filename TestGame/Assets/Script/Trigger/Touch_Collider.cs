@@ -36,30 +36,37 @@ public class Touch_Collider : MonoBehaviour {
 
     public void IsTouch()
     {
-        //if (Input.GetKeyDown(KeyCode.Mouse0))
-        //{
-        //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit hit;
-        //    if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
-        //    {
-        //        m_is_active = (m_is_active) ? false : true;
-        //    }
-        //}
-        if (Input.GetKey(KeyCode.Mouse0))
+        for (int i = 0; i < Input.touchCount; i++)
         {
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
+            //if (Input.GetKey(KeyCode.Mouse0))
+            //{
+            //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //    RaycastHit hit;
+            //    if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
+            //    {
+            //        m_is_active = true;
+            //    }
+            //    else m_is_active = false;
+            //}
+            //if (Input.GetKeyUp(KeyCode.Mouse0))
+            //{
+            //    m_is_active = false;
+            //}
+            if (Input.touches[i].phase == TouchPhase.Began || Input.touches[i].phase == TouchPhase.Stationary )
             {
-                m_is_active = true;
+                var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                RaycastHit hit;
+                if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
+                {
+                    m_is_active = true;
+                }
+                else m_is_active = false;
             }
-            else m_is_active = false;
+            if (Input.touches[i].phase == TouchPhase.Ended )
+            {
+                m_is_active = false;
+            }
         }
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-            m_is_active = false;
-        }
-      
     }
 
 #endif

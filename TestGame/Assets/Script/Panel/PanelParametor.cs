@@ -74,7 +74,7 @@ public class PanelParametor : MonoBehaviour {
         var ray = Camera.main.ScreenPointToRay(pos);
         RaycastHit hit;
 
-        return (GetComponent<MeshCollider>().Raycast(ray, out hit, 100.0f)) ? true : false;
+        return (GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f)) ? true : false;
     }
 
 //#if UNITY_STANDALONE
