@@ -52,18 +52,21 @@ public class TouchMesh : MonoBehaviour {
     [SerializeField, HeaderAttribute("フリック判定までの遊び")]
     private float m_FlickLen;
 
+    [SerializeField, HeaderAttribute("複数タッチ受けるどうか")]
+    public bool m_isTouches;
+
     public void IsTouch()
     {
-        for (int i = 0; i < Input.touchCount; i++ )
-        { 
-            if (Input.touches[i].phase == TouchPhase.Began)
+        if( !m_isTouches )
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (gameObject.GetComponent<BoxCollider>().Raycast(ray, out hit, 50.0f) == false) return;
 
                 GetComponent<BoxCollider>().enabled = false;
-                m_TouchStartPos = Input.touches[i].position;
+                m_TouchStartPos = Input.mousePosition;
 
                 //とりあえず登録されてるパネルと総当りで当たったパネルの検出
                 var changer = GetComponentInParent<PanelChanger>();
@@ -92,14 +95,14 @@ public class TouchMesh : MonoBehaviour {
                 GetComponent<BoxCollider>().enabled = true;
 
             }
-            if (Input.touches[i].phase == TouchPhase.Ended)
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
 
                 var changer = GetComponentInParent<PanelChanger>();
-                m_TouchEndPos = Input.touches[i].position;
+                m_TouchEndPos = Input.mousePosition;
                 m_TouchEndPos.z = .0f;
 
-                var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 //外れたら選択解除
                 if (gameObject.GetComponent<BoxCollider>().Raycast(ray, out hit, 50.0f) == false)
@@ -168,6 +171,125 @@ public class TouchMesh : MonoBehaviour {
 
                 GetComponent<BoxCollider>().enabled = true;
 
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                if (Input.touches[i].phase == TouchPhase.Began)
+                {
+                    var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                    RaycastHit hit;
+                    if (gameObject.GetComponent<BoxCollider>().Raycast(ray, out hit, 50.0f) == false) return;
+
+                    GetComponent<BoxCollider>().enabled = false;
+                    m_TouchStartPos = Input.touches[i].position;
+
+                    //とりあえず登録されてるパネルと総当りで当たったパネルの検出
+                    var changer = GetComponentInParent<PanelChanger>();
+                    for (int j = 0; j < changer.m_Panel.Length; j++)
+                    {
+                        if (changer.m_Panel[j].GetComponent<PanelParametor>().IsTouch(m_TouchStartPos))
+                        {
+                            //当たったパネルのインデックス保存
+                            m_index = j;
+                            break;
+                        }
+                    }
+                    m_TouchStartPos.z = .0f;
+
+                    //当たったパネルの操作
+                    if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                    else
+                        changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select = true;
+
+                    if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        changer.AddCount_SelectPanel();
+                    else
+                        changer.SubCount_SelectPanel();
+
+                    GetComponent<BoxCollider>().enabled = true;
+
+                }
+                if (Input.touches[i].phase == TouchPhase.Ended)
+                {
+
+                    var changer = GetComponentInParent<PanelChanger>();
+                    m_TouchEndPos = Input.touches[i].position;
+                    m_TouchEndPos.z = .0f;
+
+                    var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                    RaycastHit hit;
+                    //外れたら選択解除
+                    if (gameObject.GetComponent<BoxCollider>().Raycast(ray, out hit, 50.0f) == false)
+                    {
+                        if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        {
+                            changer.SubCount_SelectPanel();
+                            changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                        }
+                        return;
+                    }
+                    GetComponent<BoxCollider>().enabled = false;
+
+                    //フリックのベクトル算出
+                    Vector3 FlickVec = m_TouchStartPos - m_TouchEndPos;
+                    //遊びの範囲内なら選択解除
+                    if (Vector3.Distance(m_TouchEndPos, m_TouchStartPos) < m_FlickLen)
+                    {
+                        if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        {
+                            changer.SubCount_SelectPanel();
+                            changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                        }
+                        GetComponent<BoxCollider>().enabled = true;
+                        return;
+                    }
+                    FlickVec.Normalize();
+
+                    //なす角が１番小さいパネルのインデックス
+                    float min_Dot = 1.0f;
+                    for (int j = 0; j < changer.m_Panel.Length; j++)
+                    {
+                        //タッチ開始で選択されたパネルは無視
+                        if (m_index == j) continue;
+
+                        Vector3 v = changer.m_Panel[j].transform.position - changer.m_Panel[m_index].transform.position;
+                        v.Normalize();
+                        float dot = Vector3.Dot(FlickVec, v);
+                        if (dot < min_Dot)
+                        {
+                            min_Dot = dot;
+                            m_target_index = j;
+                        }
+                    }
+                    if (min_Dot > -0.5f)
+                    {
+                        if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        {
+                            changer.SubCount_SelectPanel();
+                            changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                        }
+                        GetComponent<BoxCollider>().enabled = true;
+                        return;
+                    }
+
+                    //ターゲットパネルの操作
+                    if (changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                    else
+                        changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = true;
+
+                    if (changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        changer.AddCount_SelectPanel();
+                    else
+                        changer.SubCount_SelectPanel();
+
+                    GetComponent<BoxCollider>().enabled = true;
+
+                }
             }
 
         }

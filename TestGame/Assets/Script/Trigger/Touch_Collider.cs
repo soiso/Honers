@@ -4,6 +4,8 @@ using System.Collections;
 public class Touch_Collider : MonoBehaviour {
 
     public bool m_is_active{ get; set; }
+    [SerializeField, HeaderAttribute("複数入力受け付けるか")]
+    public bool m_isTouches;
 
     void Start()
     {
@@ -36,25 +38,11 @@ public class Touch_Collider : MonoBehaviour {
 
     public void IsTouch()
     {
-        for (int i = 0; i < Input.touchCount; i++)
+        if (!m_isTouches)
         {
-            //if (Input.GetKey(KeyCode.Mouse0))
-            //{
-            //    var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //    RaycastHit hit;
-            //    if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
-            //    {
-            //        m_is_active = true;
-            //    }
-            //    else m_is_active = false;
-            //}
-            //if (Input.GetKeyUp(KeyCode.Mouse0))
-            //{
-            //    m_is_active = false;
-            //}
-            if (Input.touches[i].phase == TouchPhase.Began || Input.touches[i].phase == TouchPhase.Stationary )
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-                var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
                 {
@@ -62,9 +50,29 @@ public class Touch_Collider : MonoBehaviour {
                 }
                 else m_is_active = false;
             }
-            if (Input.touches[i].phase == TouchPhase.Ended )
+            if (Input.GetKeyUp(KeyCode.Mouse0))
             {
                 m_is_active = false;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                if (Input.touches[i].phase == TouchPhase.Began || Input.touches[i].phase == TouchPhase.Stationary)
+                {
+                    var ray = Camera.main.ScreenPointToRay(Input.touches[i].position);
+                    RaycastHit hit;
+                    if (gameObject.GetComponent<MeshCollider>().Raycast(ray, out hit, 50.0f) == true)
+                    {
+                        m_is_active = true;
+                    }
+                    else m_is_active = false;
+                }
+                if (Input.touches[i].phase == TouchPhase.Ended)
+                {
+                    m_is_active = false;
+                }
             }
         }
     }
