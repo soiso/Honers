@@ -22,17 +22,20 @@ public class SceneManager : MonoBehaviour
     public int currentScene_num = 0;
     public string currentSceneName;
 
+    private GameObject oldPicPaper;
+
     // Use this for initialization
     void Start()
     {
         currentSceneName = "TitleTest";
         startsign = GameObject.Find("StartSign");
+        oldPicPaper = null;
+        Objectmanager.m_instance.m_camera_move.Init();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (next_scene_load == true)
         {
             if (loadInfo.allowSceneActivation == false)
@@ -46,14 +49,13 @@ public class SceneManager : MonoBehaviour
                 }
             }
         }
-        GameObject oldPicPaper = GameObject.Find("PicturePaper_old");
         if (oldPicPaper != null)
         {
-            if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 30.0f)
+            if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 20.0f)
             {
                 if (currentSceneName != "Result")
                 {
-                Objectmanager.m_instance.m_camera_move.cMove_Begin();
+                    Objectmanager.m_instance.m_camera_move.cMove_Begin();
                     startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
                 }
                 else Time.timeScale = 1;
@@ -61,13 +63,12 @@ public class SceneManager : MonoBehaviour
                 //BGM変えたい
                 Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(currentSceneName);
             }
-
         }
 
         if (startsign.GetComponent<StartSign>().AlphaIncrease())
         {
             Time.timeScale = 1;
-
+            Objectmanager.m_instance.m_camera_move.cMove_Begin();
             Objectmanager.m_instance.m_stage_timer.Time_Start();
 
         }
@@ -104,6 +105,9 @@ public class SceneManager : MonoBehaviour
         next_scene_load = true;
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
+        oldPicPaper = picpaper;
+        if (currentSceneName != "Result")
+        Objectmanager.m_instance.m_camera_move.Init();
     }
 
     public void NextSceneLoad()
@@ -116,15 +120,15 @@ public class SceneManager : MonoBehaviour
         }
         else
         {
-        ChangeScene_Add(sceneName[currentScene_num]);
+            ChangeScene_Add(sceneName[currentScene_num]);
             return;
         }
         currentScene_num = 0;
-        foreach(string stageName in sceneName)
+        foreach (string stageName in sceneName)
         {
             if (stageName == currentSceneName)
             {
-                currentScene_num+=1;
+                currentScene_num += 1;
                 if (sceneName[currentScene_num] == "TitleTest")
                     ChangeScene(sceneName[currentScene_num]);
                 else
@@ -140,7 +144,7 @@ public class SceneManager : MonoBehaviour
     public void NextSceneLoad(string newstageName)
     {
         Objectmanager.m_instance.m_stage_timer.Reset();
- 
+
         currentScene_num = 0;
         foreach (string stageName in sceneName)
         {

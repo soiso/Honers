@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraMove : MonoBehaviour {
+public class CameraMove : MonoBehaviour
+{
 
     [SerializeField, Range(0f, 50f)]
     private float m_distance = 20f;
@@ -20,17 +21,17 @@ public class CameraMove : MonoBehaviour {
     private bool cMove;
     private bool Invers;
     private float wait_begin_time;
-	void Start () 
+    void Start()
     {
         m_default_PosVec = new Vector3(.0f, .0f, -1f);
         m_default_Pos = this.transform.position;
         Vector3 default_target_Pos = m_default_target.transform.position;
         cMove = false;
         Invers = false;
-	}
-	
+    }
 
-	void    Lock()
+
+    void Lock()
     {
         Vector3 target_pos = m_target_TransForm.position;
         target_pos += m_default_PosVec * m_distance;
@@ -40,24 +41,29 @@ public class CameraMove : MonoBehaviour {
         this.transform.LookAt(look_pos);
     }
 
-	void Update () 
+    public void Init()
     {
-        //Lock();
-        cMove_Target();
-	}
-
-    public void cMove_Begin()
-    {
-        cMove = true;
+        cMove = false;
         Invers = false;
         wait_begin_time = -1.0f;
     }
 
+    void Update()
+    {
+        //Lock();
+        cMove_Target();
+    }
+
+    public void cMove_Begin()
+    {
+        cMove = true;
+    }
+
     public void cMove_Target()
     {
-        if (!cMove) return;
         if (!Invers)
         {
+            if (!cMove) return;
             Vector3 target_pos = m_target_TransForm.position;
             target_pos.z = this.transform.position.z;
 
@@ -67,14 +73,18 @@ public class CameraMove : MonoBehaviour {
 
             if (Vector3.Distance(target_pos, this.transform.position) < 1.0f)
             {
-                if (wait_begin_time < .0f)
-                    wait_begin_time = Time.time;
-                if (wait_begin_time + m_timer < Time.time)
+                //if (wait_begin_time < .0f)
+                //    wait_begin_time = Time.time;
+                //if (wait_begin_time + m_timer < Time.time)
+                //{
                     Invers = true;
+                    cMove = false;
+                //}
             }
         }
         else
         {
+            if (!cMove) return;
             Vector3 target_pos = m_default_Pos;
             target_pos.z = this.transform.position.z;
 
