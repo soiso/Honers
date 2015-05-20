@@ -342,7 +342,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -.379999995, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 437784}
@@ -1108,6 +1108,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: 0
+  m_isTouches: 0
 --- !u!114 &11417510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1147,6 +1151,13 @@ MonoBehaviour:
   m_changeMode: 0
   m_ChangeSecond: 1.10000002
   clip: {fileID: 8300000, guid: 7d78248fe8c1e6b48ae4d05458da7aae, type: 3}
+  m_Panel:
+  - {fileID: 158682}
+  - {fileID: 109760}
+  - {fileID: 179162}
+  - {fileID: 190168}
+  - {fileID: 169640}
+  - {fileID: 132138}
 --- !u!114 &11426432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1158,6 +1169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: 0
+  m_isTouches: 0
 --- !u!114 &11432902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1218,6 +1233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: 0
+  m_isTouches: 0
 --- !u!114 &11453576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1229,6 +1248,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: 0
+  m_isTouches: 0
 --- !u!114 &11460498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1264,6 +1287,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: 0
+  m_isTouches: 0
 --- !u!114 &11469092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1326,6 +1353,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: 0
+  m_isTouches: 0
 --- !u!114 &11490704
 MonoBehaviour:
   m_ObjectHideFlags: 1
