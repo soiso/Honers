@@ -662,7 +662,7 @@ MonoBehaviour:
   - {fileID: 136142}
   - {fileID: 170496}
   - {fileID: 176252}
-  m_default_Point: {fileID: 136142}
+  m_default_Point: {fileID: 170496}
   m_ashiba: {fileID: 134750}
 --- !u!114 &11469456
 MonoBehaviour:

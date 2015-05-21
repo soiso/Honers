@@ -17,6 +17,10 @@ public class Himawari : MonoBehaviour {
     [SerializeField]
     private GameObject m_ashiba;
 
+    [SerializeField, HeaderAttribute("回転速度"),Range(0f,0.9f)]
+    private float m_rotate_Speed = 0.3f;
+    [SerializeField, HeaderAttribute("伸縮速度")]
+    private float m_move_Speed = 0.5f;
     private GameObject m_current_Movetarget;
 
     private bool m_isStay = true;
@@ -52,7 +56,7 @@ public class Himawari : MonoBehaviour {
         //m_kuki = this.transform.FindChild("Kuki").gameObject;
         //m_rotate_root = this.transform.FindChild("RotateRoot").gameObject;
         m_hana_DefaultScale = m_hana.transform.localScale;
-        Caluculate_MoveTarget();
+       // Caluculate_MoveTarget();
     }
 
 	// Use this for initialization
@@ -83,7 +87,7 @@ public class Himawari : MonoBehaviour {
         cos = Mathf.Acos(cos);
         cos = cos / Mathf.PI * 180.0f;
         Quaternion rot = m_rotate_root.transform.rotation * Quaternion.AngleAxis(cos, axis.normalized);
-        m_rotate_root.transform.rotation = Quaternion.Slerp(m_rotate_root.transform.transform.rotation, rot, 0.05f);
+        m_rotate_root.transform.rotation = Quaternion.Slerp(m_rotate_root.transform.transform.rotation, rot, m_rotate_Speed);
 
         Adjust_Ashiba(axis, cos);
         return false;
@@ -102,12 +106,12 @@ public class Himawari : MonoBehaviour {
         {
             if(cos > 0)
             {
-                m_current_Yscale -= 0.01f;
+                m_current_Yscale -= m_move_Speed;
                 
             }
             else
             {
-                m_current_Yscale += 0.01f;
+                m_current_Yscale += m_move_Speed;
               
             }
         }
@@ -115,12 +119,12 @@ public class Himawari : MonoBehaviour {
         {
             if (cos > 0)
             {
-                m_current_Yscale += 0.01f;
+                m_current_Yscale += m_move_Speed;
                
             }
             else
             {
-                m_current_Yscale -= 0.01f; 
+                m_current_Yscale -= m_move_Speed; 
             }
         }
 
@@ -140,6 +144,8 @@ public class Himawari : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        if (Time.timeScale < 0.1f)
+            return;
         Caluculate_MoveTarget();
         if(Rotate())
         {
