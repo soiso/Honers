@@ -128,7 +128,10 @@ public class Fruit : FruitInterFace
             it.enabled = false;
         }
         //fruit_counter.GetComponent<FruitCounter>().GetFruitType(GetComponent<FruitInfomation>().fruit_type);
-        Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type, m_default_Score);
+        Objectmanager.m_instance.m_fruit_Counter.m_fruitmanager.Dongri_Check();
+        Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type,m_default_Score);
+        
+
         base.Event();
     }
 

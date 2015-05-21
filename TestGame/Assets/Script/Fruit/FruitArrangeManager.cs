@@ -6,6 +6,14 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TreeParametor))]
 public class FruitArrangeManager : MonoBehaviour {
 
+    public enum DONGRI_SPORNTYPE
+    {
+        SCORE,
+        NUM_FRUIT,
+    }
+    [SerializeField,HeaderAttribute("どんぐりの出現タイプ")]
+    private DONGRI_SPORNTYPE m_spern_type;
+
     public FruitFactory m_factory{get; private set;}
     private float  m_next_Enable_Arrangetime;
     [SerializeField]
@@ -28,14 +36,21 @@ public class FruitArrangeManager : MonoBehaviour {
     private float m_last_SpeedUpSpornTime = 0f;
 
    private FruitEventManager m_event_Manager;
-    
+
+   private float m_next_Dongrisocre = 0;
+
     //やっつけ
     [SerializeField, HeaderAttribute("どんぐり出現までの数")]
     private int dongri_count;
 
+    [SerializeField, HeaderAttribute("どんぐりが出現するまでのスコア")]
+    private float m_dongri_score;
+
     public int Get_DongriCount { get { return dongri_count; } }
 
     private GameObject feaver_sign;
+
+    private int m_current_Fruit =0;
 
     void Awake()
     {
@@ -44,6 +59,7 @@ public class FruitArrangeManager : MonoBehaviour {
       {
           m_event_Manager.Calculate_TreePoint(it.GetComponent<TreeParametor>());
       }
+      m_next_Dongrisocre = m_dongri_score;
     }
 
 	void Start () 
@@ -84,6 +100,29 @@ public class FruitArrangeManager : MonoBehaviour {
             Book_SpecialFruit(FruitInterFace.FRUIT_TYPE.speed_up);
         }
 
+    }
+
+    public  void Dongri_Check()
+    {
+        if(m_spern_type == DONGRI_SPORNTYPE.NUM_FRUIT)
+        {
+            m_current_Fruit++;
+            if(m_current_Fruit % dongri_count == 0)
+            {
+                Create_Dongri();
+            }
+            return;
+        }
+        else
+        {
+            float score = Objectmanager.m_instance.m_score.score;
+            if(score > m_next_Dongrisocre)
+            {
+                Create_Dongri();
+                m_next_Dongrisocre += m_dongri_score;
+            }
+        }
+        
     }
 
     public void Create_Dongri()
