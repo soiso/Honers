@@ -47,6 +47,9 @@ public class Ghost : FieldObjectInterface {
     private int m_target_index;
     private bool m_isChange;
 
+    [SerializeField, HeaderAttribute("フルーツマネージャー")]
+    private GameObject m_FruitManager;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -234,7 +237,7 @@ public class Ghost : FieldObjectInterface {
 
     private void DropFruit( FruitInterFace.FRUIT_TYPE type )
     {
-        GameObject insert = GameObject.Find("FruitManager").GetComponent<FruitArrangeManager>().m_factory.Create_Object(type, -1);
+        GameObject insert = m_FruitManager.GetComponent<FruitArrangeManager>().m_factory.Create_Object(type, -1);
         insert.transform.position = transform.position;
         insert.transform.rotation = transform.rotation;
         if (insert.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
