@@ -99,6 +99,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &141718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412276}
+  - 33: {fileID: 3369532}
+  - 23: {fileID: 2369208}
+  - 65: {fileID: 6595854}
+  - 114: {fileID: 11491140}
+  m_Layer: 22
+  m_Name: TouchMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &153650
 GameObject:
   m_ObjectHideFlags: 1
@@ -259,6 +278,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &412276
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.06099987, y: 2.84200025, z: -2.94000006}
+  m_LocalScale: {x: 11.9793854, y: 6.45790911, z: 5.38399935}
+  m_Children: []
+  m_Father: {fileID: 455342}
+  m_RootOrder: 6
 --- !u!4 &421380
 Transform:
   m_ObjectHideFlags: 1
@@ -342,7 +373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 103852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.379999995, y: 0, z: 0}
+  m_LocalPosition: {x: -.379999995, y: 0, z: 1}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 437784}
@@ -351,6 +382,7 @@ Transform:
   - {fileID: 426626}
   - {fileID: 481240}
   - {fileID: 477300}
+  - {fileID: 412276}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &463114
@@ -619,6 +651,30 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &2369208
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141718}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!23 &2372366
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -770,6 +826,13 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158682}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &3369532
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141718}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3377014
 MeshFilter:
@@ -1015,6 +1078,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: .200000003}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &6595854
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
+  m_Center: {x: 0, y: 2.98023224e-08, z: -5.96046448e-08}
 --- !u!82 &8209426
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1370,6 +1445,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_timeZone: 0
   select_Color: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &11491140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518f46ce8acf3424aa31de7e1b737be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TouchStartPos: {x: 0, y: 0, z: 0}
+  m_TouchEndPos: {x: 0, y: 0, z: 0}
+  m_FlickLen: .5
+  m_isTouches: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
