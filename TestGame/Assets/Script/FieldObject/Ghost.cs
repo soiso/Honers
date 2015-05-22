@@ -104,6 +104,7 @@ public class Ghost : FieldObjectInterface {
         {
             m_Sporn = true;
             m_TargetPos = GameObject.Find("Player").transform.position;
+            m_TargetPos.y += 1.5f;
             m_TargetPos.z = .0f;
         }
     }
@@ -125,6 +126,7 @@ public class Ghost : FieldObjectInterface {
                     DropFruit(m_type);
                 }
                 ChangePanel();
+                m_ownerCementery.m_is_active = false;
             }
             m_isChange = true;
         }
