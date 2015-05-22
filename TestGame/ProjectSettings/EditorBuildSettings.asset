@@ -24,6 +24,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/terauchi/Stage2.unity
   - enabled: 1
+    path: Assets/Scene/hiraiwa/H_TestScene.unity
+  - enabled: 1
+    path: Assets/Scene/kawasaki/K_TestScene.unity
+  - enabled: 1
+    path: Assets/Scene/morioka/MO_TestScene.unity
+  - enabled: 1
+    path: Assets/Scene/murata/MU_TestScene.unity
+  - enabled: 1
+    path: Assets/Scene/nagao/N_TestScene.unity
+  - enabled: 1
+    path: Assets/Scene/terauchi/T_TestScene.unity
+  - enabled: 1
     path: Assets/Scene/nagao/Result.unity
   - enabled: 1
     path: Assets/Scene/terauchi/New_Stage2.unity
