@@ -69,7 +69,8 @@ public class Himawari : MonoBehaviour {
     {
         axis.z *= -1.0f;
         Quaternion rot = m_ashiba.transform.rotation * Quaternion.AngleAxis(angle, axis.normalized);
-        m_ashiba.transform.rotation = Quaternion.Slerp(m_ashiba.transform.transform.rotation, rot, 0.05f);
+        Quaternion q = Quaternion.Slerp(m_ashiba.transform.transform.rotation, rot, 0.1f);
+        m_ashiba.transform.rotation = q;
         
     }
 
@@ -81,8 +82,8 @@ public class Himawari : MonoBehaviour {
         if (cos > 0.999f)
             return true;
 
-        Vector3 axis = Vector3.Cross(current_vec, target_vec); 
-
+        Vector3 axis = Vector3.Cross(current_vec, target_vec);
+        axis.Normalize();
         //Vector3 axis = new Vector3(0, 0, 1);
         cos = Mathf.Acos(cos);
         cos = cos / Mathf.PI * 180.0f;
