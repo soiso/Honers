@@ -55,6 +55,9 @@ public class TouchMesh : MonoBehaviour {
     [SerializeField, HeaderAttribute("複数タッチ受けるどうか")]
     public bool m_isTouches;
 
+    [SerializeField, HeaderAttribute("パネルサイズ")]
+    private float m_PanelSize;
+
     public void IsTouch()
     {
         if( !m_isTouches )
@@ -133,6 +136,7 @@ public class TouchMesh : MonoBehaviour {
 
                 //なす角が１番小さいパネルのインデックス
                 float min_Dot = 1.0f;
+                float min_Length = 100.0f;
                 for (int j = 0; j < changer.m_Panel.Length; j++)
                 {
                     //タッチ開始で選択されたパネルは無視
@@ -141,8 +145,15 @@ public class TouchMesh : MonoBehaviour {
                     Vector3 v = changer.m_Panel[j].transform.position - changer.m_Panel[m_index].transform.position;
                     v.Normalize();
                     float dot = Vector3.Dot(FlickVec, v);
-                    if (dot < min_Dot)
+                    if (dot <= min_Dot)
                     {
+                        float l = Vector3.Distance(changer.m_Panel[m_index].transform.position, changer.m_Panel[j].transform.position );
+                        //if (min_Length > l)
+                        //{
+                        //    min_Length = l;
+                        //    min_Dot = dot;
+                        //    m_target_index = j;
+                        //}
                         min_Dot = dot;
                         m_target_index = j;
                     }

@@ -52,7 +52,8 @@ private GameObject m_current_GrawFruit = null;
         m_default_SpornPosition = m_sporn_Transform.position;
         m_default_SpornPosition.z = 0f;
         Direction_NextGrawFruit();
-        
+        if (m_impact_StreetLight) m_active = false;
+        else m_active = true;
 	}
 	
     void Direction_NextGrawFruit()
@@ -106,8 +107,8 @@ private GameObject m_current_GrawFruit = null;
 
         if(!m_active)
         {
-            var material = GetComponentInChildren<MeshRenderer>().material;
-            material.color = Color.black;
+            //var material = GetComponentInChildren<MeshRenderer>().material;
+            //material.color = Color.black;
             return;
         }
 
@@ -213,6 +214,11 @@ private GameObject m_current_GrawFruit = null;
         if (!m_impact_StreetLight)
             return;
         m_active = true;
+        MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
+        foreach (var m in renderer)
+        {
+            m.material.mainTexture = (Texture)Instantiate( Resources.Load("woods2_light"));
+        }
     }
 
     public void ElectricLight_OFF()
@@ -220,6 +226,10 @@ private GameObject m_current_GrawFruit = null;
         if (!m_impact_StreetLight)
             return;
         m_active = false;
-       
+        MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
+        foreach (var m in renderer)
+        {
+            m.material.mainTexture = (Texture)Instantiate(Resources.Load("woods2_shadow"));
+        }
     }
 }
