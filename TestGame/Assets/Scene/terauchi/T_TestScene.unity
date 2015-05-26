@@ -814,7 +814,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!4 &292227235
+--- !u!4 &292227235 stripped
 Transform:
   m_PrefabParentObject: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
   m_PrefabInternal: {fileID: 873861713}
@@ -1599,7 +1599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &718647397
 Transform:
   m_ObjectHideFlags: 0
@@ -1834,7 +1834,7 @@ Prefab:
       objectReference: {fileID: 292227235}
     - target: {fileID: 106638, guid: 7629085660546d44ea5b6deaf6785e3d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7629085660546d44ea5b6deaf6785e3d, type: 2}
@@ -2104,7 +2104,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!4 &862938613
+--- !u!4 &862938613 stripped
 Transform:
   m_PrefabParentObject: {fileID: 461574, guid: 0943a590888c8404f93895d40101d8be, type: 2}
   m_PrefabInternal: {fileID: 1540574705}
@@ -2149,7 +2149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 173976, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
@@ -3198,7 +3198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439804, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 447024, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3226,11 +3226,11 @@ Prefab:
       objectReference: {fileID: 2028686767}
     - target: {fileID: 11462570, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_rotate_Speed
-      value: .0879999995
+      value: .0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 11462570, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_move_Speed
-      value: .100000001
+      value: .0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3251,6 +3251,34 @@ Prefab:
     - target: {fileID: 6538606, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106316, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 410026, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410026, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410026, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 410026, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 457570, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457570, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0943a590888c8404f93895d40101d8be, type: 2}
@@ -4270,7 +4298,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!4 &1999417161
+--- !u!4 &1999417161 stripped
 Transform:
   m_PrefabParentObject: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
   m_PrefabInternal: {fileID: 1188364603}
