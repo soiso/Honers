@@ -24,6 +24,8 @@ public class SceneManager : MonoBehaviour
 
     private GameObject oldPicPaper;
 
+    private bool LoadFlg = false;
+
     // Use this for initialization
     void Start()
     {
@@ -60,6 +62,7 @@ public class SceneManager : MonoBehaviour
                 }
                 else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
+                LoadFlg = false;
                 //BGM変えたい
                 Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(currentSceneName);
             }
@@ -70,7 +73,6 @@ public class SceneManager : MonoBehaviour
             Time.timeScale = 1;
             Objectmanager.m_instance.m_camera_move.cMove_Begin();
             Objectmanager.m_instance.m_stage_timer.Time_Start();
-
         }
     }
 
@@ -101,6 +103,7 @@ public class SceneManager : MonoBehaviour
         Objectmanager.m_instance.m_stage_timer.SetStageRimit(rimit_time[currentScene_num]);
 
         loadInfo = Application.LoadLevelAdditiveAsync(sceneName);
+        LoadFlg = true;
         loadInfo.allowSceneActivation = false;
         next_scene_load = true;
         picpaper.GetComponent<PicturePaper>().SoundPlay();
@@ -112,6 +115,7 @@ public class SceneManager : MonoBehaviour
 
     public void NextSceneLoad()
     {
+        if (LoadFlg) return;
         Objectmanager.m_instance.m_stage_timer.Reset();
 
         if (currentSceneName != "TitleTest")
@@ -143,6 +147,7 @@ public class SceneManager : MonoBehaviour
 
     public void NextSceneLoad(string newstageName)
     {
+        if (LoadFlg) return;
         Objectmanager.m_instance.m_stage_timer.Reset();
 
         currentScene_num = 0;
@@ -159,14 +164,12 @@ public class SceneManager : MonoBehaviour
                 break;
             }
             currentScene_num++;
-
         }
     }
 
     public void EndStage()
     {
         ChangeScene_Add("Result");
-        //currentScene_num++;
     }
     public string GetCurrentStageName()
     {
