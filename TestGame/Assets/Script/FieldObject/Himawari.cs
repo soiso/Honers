@@ -60,9 +60,10 @@ public class Himawari : MonoBehaviour {
        // Caluculate_MoveTarget();
     }
 
+    Vector3 default_Scale;
 	// Use this for initialization
 	void Start () {
-	
+        default_Scale = m_hana.transform.lossyScale;
 	}
 	
 
@@ -137,12 +138,14 @@ public class Himawari : MonoBehaviour {
         Vector3 hana_scale = Vector3.one;
        // float localscaley = m_rotate_root.transform.localScale.y * m_kuki.transform.localScale.y;
 
-        hana_scale.x = 1.0f  /  (m_rotate_root.transform.localScale.x * m_kuki.transform.localScale.x) * m_hana_DefaultScale.x;
-        //hana_scale.y = 1.0f / (m_rotate_root.transform.localScale.y * m_kuki.transform.localScale.y) * m_hana_DefaultScale.y;
-        hana_scale.y = (m_rotate_root.transform.localScale.y * m_kuki.transform.localScale.y) * m_hana_DefaultScale.y;
-        hana_scale.y = m_hana_DefaultScale.y;
-        hana_scale.z = 1.0f / (m_rotate_root.transform.localScale.z * m_kuki.transform.localScale.z) * m_hana_DefaultScale.z; 
-
+        //hana_scale.x = 1.0f  /  (m_rotate_root.transform.localScale.x * m_kuki.transform.localScale.x) * m_hana_DefaultScale.x;
+        ////hana_scale.y = 1.0f / (m_rotate_root.transform.localScale.y * m_kuki.transform.localScale.y) * m_hana_DefaultScale.y;
+        //hana_scale.y = (m_rotate_root.transform.localScale.y * m_kuki.transform.localScale.y) * m_hana_DefaultScale.y;
+        //hana_scale.y = m_hana_DefaultScale.y;
+        //hana_scale.z = 1.0f / (m_rotate_root.transform.localScale.z * m_kuki.transform.localScale.z) * m_hana_DefaultScale.z; 
+        hana_scale.x = m_hana.transform.localScale.x / m_hana.transform.lossyScale.x * default_Scale.x;
+        hana_scale.y = m_hana.transform.localScale.y / m_hana.transform.lossyScale.y * default_Scale.y;
+        hana_scale.z = m_hana.transform.localScale.z / m_hana.transform.lossyScale.z * default_Scale.z;
         m_hana.transform.localScale = hana_scale;
        
     }
