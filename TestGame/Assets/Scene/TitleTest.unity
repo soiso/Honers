@@ -1416,7 +1416,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stage2
+  m_Text: 'Stage4
+
+'
 --- !u!222 &1208994635
 CanvasRenderer:
   m_ObjectHideFlags: 0
