@@ -109,6 +109,13 @@ public class Player : MonoBehaviour {
         //pos.z = 0;
        // this.transform.position = pos;
         Update_Strong();
+
+        //if(this.transform.position.z < 0)
+        //{
+        //    Vector3 pos = this.transform.position;
+        //    pos.z = 0;
+        //    this.transform.position = pos;
+        //}
 	}
 
     public bool ChangeState(PlayerStateInterFace new_state)
