@@ -213,6 +213,11 @@ private GameObject m_current_GrawFruit = null;
         if (!m_impact_StreetLight)
             return;
         m_active = true;
+        MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
+        foreach( MeshRenderer m in renderer )
+        {
+            m.material.mainTexture = (Texture)Resources.Load("woods2_light");
+        }
     }
 
     public void ElectricLight_OFF()
@@ -220,6 +225,11 @@ private GameObject m_current_GrawFruit = null;
         if (!m_impact_StreetLight)
             return;
         m_active = false;
+        MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer m in renderer)
+        {
+            m.material.mainTexture = (Texture)Resources.Load("woods2_shadow");
+        }
        
     }
 }

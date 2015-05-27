@@ -22,6 +22,9 @@ public class PanelParametor : MonoBehaviour {
 
      public TouchMesh m_touchMesh { get; private set; }
 
+     [SerializeField, HeaderAttribute("繋がってるパネル")]
+     public GameObject[] m_linkPanel;
+
     // public float m_leap_Speed;
 
     void Start()

@@ -129,25 +129,24 @@ public class TouchMesh : MonoBehaviour {
                     GetComponent<BoxCollider>().enabled = true;
                     return;
                 }
+                FlickVec.z = .0f;
                 FlickVec.Normalize();
 
                 //なす角が１番小さいパネルのインデックス
-                float min_Dot = 1.0f;
-                for (int j = 0; j < changer.m_Panel.Length; j++)
+                float max_Dot = 0.6f;
+                PanelParametor param = changer.m_Panel[m_index].GetComponent<PanelParametor>();
+                for (int j = 0; j < param.m_linkPanel.Length; j++)
                 {
-                    //タッチ開始で選択されたパネルは無視
-                    if (m_index == j) continue;
-
-                    Vector3 v = changer.m_Panel[j].transform.position - changer.m_Panel[m_index].transform.position;
+                    Vector3 v = changer.m_Panel[m_index].transform.position - param.m_linkPanel[j].transform.position;
                     v.Normalize();
                     float dot = Vector3.Dot(FlickVec, v);
-                    if (dot < min_Dot)
+                    if (dot > max_Dot)
                     {
-                        min_Dot = dot;
+                        max_Dot = dot;
                         m_target_index = j;
                     }
                 }
-                if (min_Dot > -0.5f)
+                if( max_Dot < 0.6f )
                 {
                     if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
                     {
@@ -159,12 +158,12 @@ public class TouchMesh : MonoBehaviour {
                 }
 
                 //ターゲットパネルの操作
-                if (changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
-                    changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                if (param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                    param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
                 else
-                    changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = true;
+                    param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = true;
 
-                if (changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                if (param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
                     changer.AddCount_SelectPanel();
                 else
                     changer.SubCount_SelectPanel();
@@ -250,22 +249,20 @@ public class TouchMesh : MonoBehaviour {
                     FlickVec.Normalize();
 
                     //なす角が１番小さいパネルのインデックス
-                    float min_Dot = 1.0f;
-                    for (int j = 0; j < changer.m_Panel.Length; j++)
+                    float max_Dot = 0.6f;
+                    PanelParametor param = changer.m_Panel[m_index].GetComponent<PanelParametor>();
+                    for (int j = 0; j < param.m_linkPanel.Length; j++)
                     {
-                        //タッチ開始で選択されたパネルは無視
-                        if (m_index == j) continue;
-
-                        Vector3 v = changer.m_Panel[j].transform.position - changer.m_Panel[m_index].transform.position;
+                        Vector3 v = changer.m_Panel[m_index].transform.position - param.m_linkPanel[j].transform.position;
                         v.Normalize();
                         float dot = Vector3.Dot(FlickVec, v);
-                        if (dot < min_Dot)
+                        if (dot > max_Dot)
                         {
-                            min_Dot = dot;
+                            max_Dot = dot;
                             m_target_index = j;
                         }
                     }
-                    if (min_Dot > -0.5f)
+                    if (max_Dot < 0.6f)
                     {
                         if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
                         {
