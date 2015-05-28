@@ -19,6 +19,8 @@ public class PlayerFrameInformation : MonoBehaviour
 
     public MOVE_TYPE m_movetype = MOVE_TYPE.frame;
 
+  
+
     private Vector2 axis = Vector2.zero;
     public Vector2 GetAxis
     {
@@ -34,6 +36,8 @@ public class PlayerFrameInformation : MonoBehaviour
     {
         get { return move_Direction; }
     }
+
+    public movedirection m_lastMoveDirection { get; private set; }
 
     [SerializeField]
     private GameObject m_right_touch;
@@ -54,7 +58,7 @@ public class PlayerFrameInformation : MonoBehaviour
             m_left_touch = GameObject.Find("LeftToughMesh");
         }
 
-       
+        m_lastMoveDirection = movedirection.RIGHT;
     }
 
     public void Create_WithSlider()
@@ -98,12 +102,14 @@ public class PlayerFrameInformation : MonoBehaviour
                gameObject.GetComponent<Player>().m_StopFrame=0;
                 is_move = true;
                 move_Direction = movedirection.LEFT;
+                m_lastMoveDirection = movedirection.LEFT;
         }
         else if (!m_left_touch.GetComponent<Touch_Collider>().m_is_active && m_right_touch.GetComponent<Touch_Collider>().m_is_active)
         {
             gameObject.GetComponent<Player>().m_StopFrame = 0;
             is_move = true;
             move_Direction = movedirection.RIGHT;
+            m_lastMoveDirection = movedirection.RIGHT;
         }
         else
         {

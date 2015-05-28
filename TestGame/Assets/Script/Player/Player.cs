@@ -49,6 +49,8 @@ public class Player : MonoBehaviour {
     //private TimeZone_BoxCollider m_TimeZoneTrigger;
     //private PanelParametor.TIMEZONE m_TimeZone;
 
+    public Vector3 m_lossyScale;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -61,7 +63,7 @@ public class Player : MonoBehaviour {
         //m_have_fruit = new List<Fruit.FRUIT_TYPE>();
         m_score = GetComponent<Score>();
         //m_TimeZoneTrigger = GetComponentInChildren<TimeZone_BoxCollider>();
-
+        m_lossyScale = this.transform.lossyScale;
         m_is_strong = false;
 	}
 	

@@ -42,11 +42,11 @@ public class P_Move : PlayerStateInterFace
 
     void Rotate(ref Player player)
     {
-        if (!player.Get_FrameInfo.Is_Move)
-            return;
+      //  if (!player.Get_FrameInfo.Is_Move)
+         //   return;
         Vector3 rotate_Angle = new Vector3(0, 0, 0);
 
-        rotate_Angle.x = (player.Get_FrameInfo.MoveDirection == PlayerFrameInformation.movedirection.LEFT) 
+        rotate_Angle.x = (player.Get_FrameInfo.m_lastMoveDirection == PlayerFrameInformation.movedirection.LEFT) 
                                                                                             ? -1f : 1f;
 
         Quaternion rotate_Q = Quaternion.LookRotation(rotate_Angle);

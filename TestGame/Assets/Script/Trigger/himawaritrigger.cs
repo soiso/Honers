@@ -3,7 +3,7 @@ using System.Collections;
 
 public class himawaritrigger : MonoBehaviour {
 
-  
+    bool m_isActive = false;
 
 	// Use this for initialization
 	void Start () {
@@ -29,7 +29,7 @@ public class himawaritrigger : MonoBehaviour {
         string layer_name = LayerMask.LayerToName(other.gameObject.layer);
         if (layer_name == "Player")
         {
-            other.gameObject.transform.parent = null;
+            other.gameObject.transform.parent = this.transform.root;
         }
     }
 

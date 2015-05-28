@@ -12,13 +12,13 @@ public class Fruit : FruitInterFace
     [SerializeField, HeaderAttribute("消えるまでの時間(秒)")]
     private float m_EraseTime = 10;
 
-    [SerializeField,HeaderAttribute("EraseTime = EraseTime + Randam.Range(0, eraseAdjust)")]
-    private float m_erase_Adjust =10;
+    [SerializeField, HeaderAttribute("EraseTime = EraseTime + Randam.Range(0, eraseAdjust)")]
+    private float m_erase_Adjust = 10;
 
     [SerializeField, HeaderAttribute("点滅し始めるまでの時間")]
     private float m_swith_Time;
 
-    [SerializeField,HeaderAttribute("点滅周期")]
+    [SerializeField, HeaderAttribute("点滅周期")]
     private float m_swith_Interval = 1.0f;
 
 
@@ -30,44 +30,44 @@ public class Fruit : FruitInterFace
     private bool m_is_GetPlayer = false;
 
     private float m_nextSwitch;
-    
+
     public AudioClip clip;
     private AudioSource sound;
     private ParticleSystem m_effect;
 
 
 
-  //  private GameObject fruit_counter;
-	void Start () 
+    //  private GameObject fruit_counter;
+    void Start()
     {
-       m_EraseTime = Time.time + m_EraseTime + Random.Range(0, m_erase_Adjust);
-       m_current_switchInterval = m_swith_Interval;
-       m_effect = GetComponent<ParticleSystem>();
-	}
+        m_EraseTime = Time.time + m_EraseTime + Random.Range(0, m_erase_Adjust);
+        m_current_switchInterval = m_swith_Interval;
+        m_effect = GetComponent<ParticleSystem>();
+    }
 
     void Sound_Check()
     {
-       if (!sound.isPlaying)
+        if (!sound.isPlaying)
             DestroyObject(gameObject);
     }
 
     void Update_Arive()
     {
         float arive_time = m_EraseTime - Time.time;
-        if(arive_time <0)
+        if (arive_time < 0)
         {
             DestroyObject(gameObject);
         }
 
-        if(arive_time < m_swith_Time)
+        if (arive_time < m_swith_Time)
         {
-            float interval  = Time.time + m_current_switchInterval;
+            float interval = Time.time + m_current_switchInterval;
             var renderer = GetComponent<MeshRenderer>();
-            if(!renderer)
+            if (!renderer)
             {
                 renderer = GetComponentInChildren<MeshRenderer>();
             }
-            if(Time.time > m_nextSwitch )
+            if (Time.time > m_nextSwitch)
             {
                 renderer.enabled = !renderer.enabled;
                 m_nextSwitch = Time.time + m_swith_Interval;
@@ -80,8 +80,8 @@ public class Fruit : FruitInterFace
             }
         }
     }
-	
-	void Update ()
+
+    void Update()
     {
         if (m_is_GetPlayer)
         {
@@ -91,7 +91,7 @@ public class Fruit : FruitInterFace
 
         Update_Arive();
 
-	}
+    }
 
     public override void Collision(GameObject col_object)
     {
@@ -129,20 +129,10 @@ public class Fruit : FruitInterFace
         }
         //fruit_counter.GetComponent<FruitCounter>().GetFruitType(GetComponent<FruitInfomation>().fruit_type);
         Objectmanager.m_instance.m_fruit_Counter.m_fruitmanager.Dongri_Check();
-        Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type,m_default_Score);
-        
+        Objectmanager.m_instance.m_fruit_Counter.GetFruitType(GetComponent<FruitInfomation>().fruit_type, m_default_Score);
+
 
         base.Event();
     }
-
-     void OnTriggerEnter(Collider col_object)
-    {
-
-    }
-
-    void   OnTriggerStay(Collider col_object)
-     {
-
-     }
 
 }
