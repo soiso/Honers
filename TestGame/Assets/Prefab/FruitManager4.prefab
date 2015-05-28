@@ -638,7 +638,8 @@ GameObject:
   - 114: {fileID: 11492824}
   - 114: {fileID: 11437606}
   - 114: {fileID: 11494538}
-  m_Layer: 26
+  - 65: {fileID: 6518050}
+  m_Layer: 16
   m_Name: TreeB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +864,8 @@ GameObject:
   - 114: {fileID: 11479494}
   - 114: {fileID: 11444434}
   - 114: {fileID: 11449296}
-  m_Layer: 26
+  - 65: {fileID: 6501942}
+  m_Layer: 16
   m_Name: TreeC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2299,6 +2301,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119064}
   m_Mesh: {fileID: 4300002, guid: 5a76f570521d16f45b037bf1cdb24b54, type: 3}
+--- !u!65 &6501942
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194876}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 3.73000002, z: 1}
+  m_Center: {x: 0, y: 1.77999997, z: 0}
+--- !u!65 &6518050
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167332}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14999998, y: 3.63000011, z: 1}
+  m_Center: {x: 0, y: 1.67999995, z: 0}
 --- !u!95 &9504548
 Animator:
   serializedVersion: 3
@@ -2978,7 +3004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 405082}
   m_max_fruit_Type: 4
-  m_impact_StreetLight: 0
+  m_impact_StreetLight: 1
 --- !u!114 &11484908
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3039,7 +3065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sporn_Transform: {fileID: 406014}
   m_max_fruit_Type: 4
-  m_impact_StreetLight: 0
+  m_impact_StreetLight: 1
 --- !u!114 &11494538
 MonoBehaviour:
   m_ObjectHideFlags: 1
