@@ -11,6 +11,9 @@ public class ElectricLight : FieldObjectInterface
     public AudioClip clip;
     private AudioSource audio;
 
+    [SerializeField, HeaderAttribute("動力源(あれば)")]
+    public GameObject m_Owner = null;
+
 	void Start () 
     {
         m_pointLight = this.transform.GetChild(0).GetComponent<Light>();
@@ -18,6 +21,7 @@ public class ElectricLight : FieldObjectInterface
         m_timezoneCollider = this.transform.GetChild(2).GetComponent<TimeZone_BoxCollider>();
         audio = GetComponent<AudioSource>();
         audio.clip = clip;
+        if (m_Owner != null) m_timezoneCollider.enabled = false;
 	}
 
     private void NullcheckContainer()
@@ -88,9 +92,18 @@ public class ElectricLight : FieldObjectInterface
 
 	void Update () 
     {
-       Calculate_CurrentTimezone();
+        if( m_Owner != null )
+        {
+            var obj = m_Owner.GetComponent<Hamster>();
+            this.m_CurrentTimeZone = obj.m_time_Zone;
+        }
+        else
+        {
+            Calculate_CurrentTimezone();
+        }
+       
         //NullcheckContainer();
-	    if(Is_ActiveTimeZone(m_CurrentTimeZone))
+	    if(Is_ActiveTimeZone(this.m_CurrentTimeZone))
         {
             Active_InLightObject();
         }

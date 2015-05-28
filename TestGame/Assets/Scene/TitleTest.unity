@@ -855,7 +855,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeTime: .5
   AlphaCounter: 0
-  IncFlag: 0
 --- !u!114 &744366524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,6 +1863,10 @@ Prefab:
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[3]
       value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212070, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
