@@ -52,6 +52,8 @@ private GameObject m_current_GrawFruit = null;
         m_default_SpornPosition = m_sporn_Transform.position;
         m_default_SpornPosition.z = 0f;
         Direction_NextGrawFruit();
+        if (m_impact_StreetLight) m_active = false;
+        else m_active = true;
         
 	}
 	
@@ -106,8 +108,8 @@ private GameObject m_current_GrawFruit = null;
 
         if(!m_active)
         {
-            var material = GetComponentInChildren<MeshRenderer>().material;
-            material.color = Color.black;
+            //var material = GetComponentInChildren<MeshRenderer>().material;
+            //material.color = Color.black;
             return;
         }
 
