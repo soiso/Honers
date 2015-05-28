@@ -507,7 +507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &569901570
 RectTransform:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ad9618de949284ea9345e4000b2b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: MU_TestScene
+  sceneName: TitleTest
 --- !u!114 &569901572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,6 +1856,10 @@ Prefab:
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[10]
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494380, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_isTouches
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}

@@ -4,8 +4,6 @@ using System.Collections;
 public class Touch_Collider : MonoBehaviour {
 
     public bool m_is_active{ get; set; }
-    [SerializeField, HeaderAttribute("複数入力受け付けるか")]
-    public bool m_isTouches;
 
     void Start()
     {
@@ -38,7 +36,7 @@ public class Touch_Collider : MonoBehaviour {
 
     public void IsTouch()
     {
-        if (!m_isTouches)
+        if (!Objectmanager.m_instance.m_touchinfo.m_isTouches)
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {

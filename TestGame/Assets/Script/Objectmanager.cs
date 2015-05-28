@@ -12,6 +12,8 @@ public class Objectmanager : Singleton<Objectmanager>
     public AudioSource m_BGM { get; private set; }
     public CameraMove m_camera_move { get; private set; }
 
+    public TouchParam m_touchinfo { get; private set; }
+
     void Awake()
     {
         m_fruit_Counter = GetComponentInChildren<FruitCounter>();
@@ -24,6 +26,7 @@ public class Objectmanager : Singleton<Objectmanager>
         m_BGM = GetComponentInChildren<AudioSource>();
 
         m_camera_move = GetComponentInChildren<CameraMove>();
+        m_touchinfo = GetComponentInChildren<TouchParam>();
     }
 
     void Start()
