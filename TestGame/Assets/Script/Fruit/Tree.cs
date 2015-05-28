@@ -2,14 +2,15 @@
 using System.Collections;
 
 [RequireComponent(typeof(TreeParametor))]
-public class Tree : MonoBehaviour {
+public class Tree : MonoBehaviour
+{
 
-	[SerializeField,HeaderAttribute("フルーツの出現位置")]
+    [SerializeField, HeaderAttribute("フルーツの出現位置")]
     private Transform m_sporn_Transform;
 
     private FruitArrangeManager m_owner;
 
-    [SerializeField,HeaderAttribute("出現するフルーツの種類"),
+    [SerializeField, HeaderAttribute("出現するフルーツの種類"),
     Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit)]
     private int m_max_fruit_Type = (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit;
 
@@ -17,7 +18,7 @@ public class Tree : MonoBehaviour {
     private float m_adjust_Second;
 
     private float m_last_SpornTime;
-  
+
     private float m_next_SpornTime;
 
     FruitRendererFactory m_renderer_Factory;
@@ -29,8 +30,8 @@ public class Tree : MonoBehaviour {
     private bool m_impact_StreetLight = false;
     private bool m_active = true;
     private RandamRotate m_rotate;
-    
-private GameObject m_current_GrawFruit = null;
+
+    private GameObject m_current_GrawFruit = null;
 
     private Vector3 m_default_SpornPosition;
     private TreeParametor m_param;
@@ -38,7 +39,7 @@ private GameObject m_current_GrawFruit = null;
 
     private Light m_light;
 
-	void Start () 
+    void Start()
     {
         m_light = GetComponentInChildren<Light>();
         m_renderer_Factory = GetComponent<FruitRendererFactory>();
@@ -46,17 +47,19 @@ private GameObject m_current_GrawFruit = null;
         m_owner = GetComponentInParent<FruitArrangeManager>();
         m_defaultUpdateInterval = m_owner.m_default_SpornInterval;
         m_adjust_Second = m_owner.m_adjust_Second;
-        float adjust = Random.Range(-m_adjust_Second,m_adjust_Second);
+        float adjust = Random.Range(-m_adjust_Second, m_adjust_Second);
         m_rotate = GetComponent<RandamRotate>();
         m_next_SpornTime = m_defaultUpdateInterval + adjust;
         m_default_SpornPosition = m_sporn_Transform.position;
         m_default_SpornPosition.z = 0f;
         Direction_NextGrawFruit();
+
         if (m_impact_StreetLight) m_active = false;
         else m_active = true;
         
 	}
-	
+
+
     void Direction_NextGrawFruit()
     {
         if (m_current_GrawFruit)
@@ -68,31 +71,31 @@ private GameObject m_current_GrawFruit = null;
         //Vector3 adjust = new Vector3(Random.Range(-0.1f, 0.1f),Random.Range(-0.1f, 0.1f), 0);
         Vector3 adjust = new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), 0);
         //adjust.y += 0.2f;
-        m_sporn_Transform.position =m_default_SpornPosition + adjust;
-        int next_Fruit = Random.Range(0,(int)FruitInterFace.FRUIT_TYPE.num_normal_fruit);
+        m_sporn_Transform.position = m_default_SpornPosition + adjust;
+        int next_Fruit = Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit);
 
-        if(m_param.m_book_fruit != FruitInterFace.FRUIT_TYPE.error)
+        if (m_param.m_book_fruit != FruitInterFace.FRUIT_TYPE.error)
             next_Fruit = (int)m_param.m_book_fruit;
         m_current_GrawFruit = m_renderer_Factory.Create_Object(next_Fruit);
         //とりあえずのエラー処理
-        if(!m_current_GrawFruit)
+        if (!m_current_GrawFruit)
         {
             m_current_GrawFruit = m_renderer_Factory.Create_Object(Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit));
         }
         m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
-        m_sporn_Transform.transform.localScale = new Vector3(0,0,0);
+        m_sporn_Transform.transform.localScale = new Vector3(0, 0, 0);
         m_sporn_Transform.rotation = Quaternion.identity;
     }
 
     bool Update_Feaver()
     {
-        if(Time.time > m_next_SpornTime)
+        if (Time.time > m_next_SpornTime)
         {
 
             int index = Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit - 1);
             Sporn_Fruit((FruitInterFace.FRUIT_TYPE)index);
-           // m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
-           m_next_SpornTime = Time.time + m_feaversporn_Interval;
+            // m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
+            m_next_SpornTime = Time.time + m_feaversporn_Interval;
         }
         if (Time.time >= m_param.m_feaverTime + m_begin_feaver_Time)
         {
@@ -106,14 +109,14 @@ private GameObject m_current_GrawFruit = null;
         if (Time.timeScale <= 0.1f)
             return;
 
-        if(!m_active)
+        if (!m_active)
         {
             //var material = GetComponentInChildren<MeshRenderer>().material;
             //material.color = Color.black;
             return;
         }
 
-        if(m_is_Feaver)
+        if (m_is_Feaver)
         {
             m_light.enabled = true;
             if (Update_Feaver())
@@ -123,7 +126,7 @@ private GameObject m_current_GrawFruit = null;
                 Direction_NextGrawFruit();
             }
         }
-        else 
+        else
         {
             m_light.enabled = false;
             if (Graw_Fruit())
@@ -147,7 +150,7 @@ private GameObject m_current_GrawFruit = null;
         m_sporn_Transform.transform.localScale = new Vector3(rate, rate, rate);
 
         //rotate
-        float current_rotete_Angle = m_param.m_max_RotateAngle * Mathf.Sin(Time.time)*m_param.m_rotate_speed;
+        float current_rotete_Angle = m_param.m_max_RotateAngle * Mathf.Sin(Time.time) * m_param.m_rotate_speed;
         Quaternion rot = Quaternion.AngleAxis(current_rotete_Angle, new Vector3(0, 0, 1));
 
         //if(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type == Fruit.FRUIT_TYPE.apple)
@@ -175,7 +178,7 @@ private GameObject m_current_GrawFruit = null;
             insert.transform.rotation = q;
         }
 
-  
+
         return true;
     }
 
@@ -186,7 +189,7 @@ private GameObject m_current_GrawFruit = null;
 
         m_is_Feaver = true;
 
-        if(m_current_GrawFruit)
+        if (m_current_GrawFruit)
         {
             DestroyObject(m_current_GrawFruit);
             m_current_GrawFruit = null;
@@ -216,7 +219,7 @@ private GameObject m_current_GrawFruit = null;
             return;
         m_active = true;
         MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
-        foreach( MeshRenderer m in renderer )
+        foreach (MeshRenderer m in renderer)
         {
             m.material.mainTexture = (Texture)Resources.Load("woods2_light");
         }
@@ -232,6 +235,6 @@ private GameObject m_current_GrawFruit = null;
         {
             m.material.mainTexture = (Texture)Resources.Load("woods2_shadow");
         }
-       
+
     }
 }
