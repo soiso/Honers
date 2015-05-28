@@ -466,6 +466,10 @@ Prefab:
       propertyPath: m_linkPanel.Array.data[2]
       value: 
       objectReference: {fileID: 390730984}
+    - target: {fileID: 11491140, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_isTouches
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe4909b161dcb842af19d715c844965, type: 2}
   m_IsPrefabParent: 0
