@@ -1783,11 +1783,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[3]
-      value: TitleTest
+      value: New_Stage4
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[2]
-      value: New_Stage4
+      value: New_Stage3
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[2]
@@ -1795,7 +1795,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[4]
-      value: H_TestScene
+      value: TitleTest
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[5]
@@ -1843,7 +1843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[10]
-      value: New_Stage3
+      value: H_TestScene
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[10]
