@@ -18,7 +18,7 @@ public class FeaverSign : MonoBehaviour {
     private Transform move_target;
 
     private Vector3 velocity;
-    private bool feaver_flag;
+    public bool feaver_flag;
 	// Use this for initialization
 	void Start () {
         //velocity = new Vector3(0, 0, 0);

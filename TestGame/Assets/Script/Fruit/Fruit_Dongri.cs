@@ -46,35 +46,35 @@ public class Fruit_Dongri : FruitInterFace
             DestroyObject(gameObject);
     }
 
-    void Update_Arive()
-    {
-        float arive_time = m_EraseTime - Time.time;
-        if (arive_time < 0)
-        {
-            DestroyObject(gameObject);
-        }
+    //void Update_Arive()
+    //{
+    //    float arive_time = m_EraseTime - Time.time;
+    //    if (arive_time < 0)
+    //    {
+    //        DestroyObject(gameObject);
+    //    }
 
-        if (arive_time < m_swith_Time)
-        {
-            float interval = Time.time + m_current_switchInterval;
-            var renderer = GetComponent<MeshRenderer>();
-            if (!renderer)
-            {
-                renderer = GetComponentInChildren<MeshRenderer>();
-            }
-            if (Time.time > m_nextSwitch)
-            {
-                renderer.enabled = !renderer.enabled;
-                m_nextSwitch = Time.time + m_swith_Interval;
-                m_swith_Interval -= m_switch_adjust;
+    //    if (arive_time < m_swith_Time)
+    //    {
+    //        float interval = Time.time + m_current_switchInterval;
+    //        var renderer = GetComponent<MeshRenderer>();
+    //        if (!renderer)
+    //        {
+    //            renderer = GetComponentInChildren<MeshRenderer>();
+    //        }
+    //        if (Time.time > m_nextSwitch)
+    //        {
+    //            renderer.enabled = !renderer.enabled;
+    //            m_nextSwitch = Time.time + m_swith_Interval;
+    //            m_swith_Interval -= m_switch_adjust;
 
-                //sonoutinaosu
-                m_default_Score = m_default_Score - 5f;
-                if (m_default_Score < 0)
-                    m_default_Score = 0;
-            }
-        }
-    }
+    //            //sonoutinaosu
+    //            m_default_Score = m_default_Score - 5f;
+    //            if (m_default_Score < 0)
+    //                m_default_Score = 0;
+    //        }
+    //    }
+    //}
 
     void Update()
     {
@@ -83,7 +83,12 @@ public class Fruit_Dongri : FruitInterFace
             Sound_Check();
             return;
         }
-        Update_Arive();
+        if(this.transform.root.GetComponent<PicturePaper>().m_move)
+        {
+            DestroyObject(this.gameObject);
+        }
+
+        //Update_Arive();
 
     }
 

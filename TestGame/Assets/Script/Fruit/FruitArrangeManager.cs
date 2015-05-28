@@ -52,6 +52,8 @@ public class FruitArrangeManager : MonoBehaviour {
 
     private int m_current_Fruit =0;
 
+    private GameObject m_player;
+
     void Awake()
     {
         m_event_Manager = GetComponent<FruitEventManager>();
@@ -74,6 +76,7 @@ public class FruitArrangeManager : MonoBehaviour {
             m_tree_Array[i] = m_GameObjectOfTree[i].GetComponent<Tree>();
         }
         feaver_sign = GameObject.Find("FeaverSign");
+        m_player = GameObject.Find("Player");
 	}
 
    private bool Book_SpecialFruit(FruitInterFace.FRUIT_TYPE type)
@@ -102,7 +105,7 @@ public class FruitArrangeManager : MonoBehaviour {
 
     }
 
-    public  void Dongri_Check()
+    public  void Dongri_Check(float fruit_score)
     {
         if(m_spern_type == DONGRI_SPORNTYPE.NUM_FRUIT)
         {
@@ -115,6 +118,11 @@ public class FruitArrangeManager : MonoBehaviour {
         }
         else
         {
+            if(feaver_sign.GetComponent<FeaverSign>().feaver_flag)
+            {
+                m_next_Dongrisocre += m_dongri_score;
+            }
+
             float score = Objectmanager.m_instance.m_score.score;
             if(score > m_next_Dongrisocre)
             {
@@ -127,23 +135,43 @@ public class FruitArrangeManager : MonoBehaviour {
 
     public void Create_Dongri()
     {
-        bool loop = true;
-        int count = 0;
-        while(loop)
+        //bool loop = true;
+        //int count = 0;
+        //while(loop)
+        //{
+        //    int index = Random.Range(0, m_tree_Array.Length);
+        //    if(m_GameObjectOfTree[index].GetComponent<TreeParametor>().m_enable_Donguri)
+        //    {
+        //        m_tree_Array[index].GetComponent<Tree>().Set_BookFruit(FruitInterFace.FRUIT_TYPE.donguri);
+        //        loop = false;
+        //    }
+        //    count++;
+        //    if(count >= 100)
+        //    {
+        //        Debug.Log("LoopがFruitManagerでまわりすぎ");
+        //        loop = false;
+        //    }
+        //}
+
+        float max_far_dist =0f;
+        Tree create_Tree = null;
+        foreach(var it in m_tree_Array)
         {
-            int index = Random.Range(0, m_tree_Array.Length);
-            if(m_GameObjectOfTree[index].GetComponent<TreeParametor>().m_enable_Donguri)
+            Vector3 vec = it.transform.position - m_player.transform.position;
+
+            float dist = vec.magnitude;
+            if (dist > max_far_dist)
             {
-                m_tree_Array[index].GetComponent<Tree>().Set_BookFruit(FruitInterFace.FRUIT_TYPE.donguri);
-                loop = false;
-            }
-            count++;
-            if(count >= 100)
-            {
-                Debug.Log("LoopがFruitManagerでまわりすぎ");
-                loop = false;
+                max_far_dist = dist;
+                create_Tree = it;
             }
         }
+        if(create_Tree == null)
+        {
+            Debug.Log("どんぐりできない");
+        }
+        create_Tree.Set_BookFruit(FruitInterFace.FRUIT_TYPE.donguri);
+
     }
 
 	void Update ()
