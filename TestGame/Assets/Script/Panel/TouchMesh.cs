@@ -52,12 +52,9 @@ public class TouchMesh : MonoBehaviour {
     [SerializeField, HeaderAttribute("フリック判定までの遊び")]
     private float m_FlickLen;
 
-    [SerializeField, HeaderAttribute("複数タッチ受けるどうか")]
-    public bool m_isTouches;
-
     public void IsTouch()
     {
-        if( !m_isTouches )
+        if( !Objectmanager.m_instance.m_touchinfo.m_isTouches )
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
@@ -274,12 +271,12 @@ public class TouchMesh : MonoBehaviour {
                     }
 
                     //ターゲットパネルの操作
-                    if (changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
-                        changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
+                    if (param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                        param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
                     else
-                        changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = true;
+                        param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = true;
 
-                    if (changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
+                    if (param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
                         changer.AddCount_SelectPanel();
                     else
                         changer.SubCount_SelectPanel();
