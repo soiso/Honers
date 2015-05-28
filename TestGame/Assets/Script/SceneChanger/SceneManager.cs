@@ -15,6 +15,11 @@ public class SceneManager : MonoBehaviour
     public string[] sceneName;
     [SerializeField]
     public float[] rimit_time;
+    [SerializeField]
+    public GameObject light;
+    [SerializeField]
+    public GameObject fever_sign;
+
     private GameObject picpaper;
     private GameObject startsign;
     private AsyncOperation loadInfo;
@@ -38,6 +43,7 @@ public class SceneManager : MonoBehaviour
     {
         if (LoadFlg == true)
         {
+            light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 1.0f, 0.03f);
             if (loadInfo.allowSceneActivation == false)
             {
                 if (loadInfo.progress >= 0.9f)
@@ -93,6 +99,8 @@ public class SceneManager : MonoBehaviour
     }
     public void ChangeScene_Add(string sceneName)
     {
+        fever_sign.GetComponent<FeaverSign>().Reset();
+
         Time.timeScale = 0;
         currentSceneName = sceneName;
         picpaper = GameObject.Find("PicturePaper");

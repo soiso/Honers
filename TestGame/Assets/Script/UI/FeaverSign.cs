@@ -28,6 +28,13 @@ public class FeaverSign : MonoBehaviour {
         light.GetComponent<Light>().intensity = 1;
         move_target = this.transform.Find("Target");
 	}
+
+    public void Reset()
+    {
+        feaver_flag = false;
+        this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
+    }
+
 	
 	// Update is called once per frame
     void Update()
