@@ -1374,9 +1374,9 @@ MonoBehaviour:
   m_distance: 20
   m_target_TransForm: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
   m_default_target: {fileID: 458452}
-  m_lerp_Speed: .140000001
-  m_lerp_Speed_Inv: .109999999
-  m_timer: 1.10000002
+  m_lerp_Speed: .0700000003
+  m_lerp_Speed_Inv: .119999997
+  m_timer: .730000019
 --- !u!114 &11424852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1445,11 +1445,25 @@ MonoBehaviour:
   sceneName:
   - New_Stage1
   - New_Stage2
+  - New_Stage4
   - TitleTest
+  - H_TestScene
+  - K_TestScene
+  - MO_TestScene
+  - MU_TestScene
+  - N_TestScene
+  - T_TestScene
   rimit_time:
-  - 10
-  - 40
+  - 60
+  - 70
+  - 80
   - 0
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
   currentScene_num: 0
   currentSceneName: 
 --- !u!114 &11446068
@@ -1529,7 +1543,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 143478}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15a4a95b861894d4f8a65579474d72d8, type: 3}
   m_Name: 

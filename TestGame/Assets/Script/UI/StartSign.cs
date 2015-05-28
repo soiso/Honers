@@ -7,7 +7,7 @@ public class StartSign : MonoBehaviour
 
     public float FadeTime = 0.0f;
     public float AlphaCounter = 0.0f;
-    public bool IncFlag = false;
+    private bool IncFlag = false;
     // Use this for initialization
     void Start()
     {
@@ -35,7 +35,6 @@ public class StartSign : MonoBehaviour
 
             IncFlag = false;
 
-            //this.transform.parent.GetComponent<Canvas>().enabled = false;
             return true;
         }
         else

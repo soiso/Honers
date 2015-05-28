@@ -8,6 +8,8 @@ public class Result : MonoBehaviour
     private float timer;
     [SerializeField]
     GameObject[] fruit_obj;
+    [SerializeField]
+    public GameObject create_fruit;
     private float start_time;
     private float current_time;
     private bool s_flag;
@@ -18,6 +20,8 @@ public class Result : MonoBehaviour
     private int peach_num = 0;
     private int grape_num = 0;
 
+    private int max_fruit_num;
+    private int current_fruit_num;
     private Text scoretext;
 
 #if UNITY_STANDALONE
@@ -97,6 +101,11 @@ public class Result : MonoBehaviour
             if (obj.name == "strawberry")
                 scoretext.text = strawberry_num.ToString();
         }
+        current_fruit_num = 0;
+        max_fruit_num = apple_num;
+        if (max_fruit_num < grape_num) max_fruit_num = grape_num;
+        if (max_fruit_num < peach_num) max_fruit_num = peach_num;
+        if (max_fruit_num < strawberry_num) max_fruit_num = strawberry_num;
     }
 
     // Update is called once per frame
@@ -109,6 +118,7 @@ public class Result : MonoBehaviour
         //    NextScene();
         //    s_flag = true;
         //}
+        Fruit_Fall();
         if (Touch())
         {
             NextScene();
@@ -147,6 +157,32 @@ public class Result : MonoBehaviour
         return false;
     }
 
+    private void Fruit_Fall()
+    {
+        GameObject insert = null;
+
+        if (current_fruit_num < apple_num) insert = create_fruit.GetComponent<FruitFactory>().Create_Object(FruitInterFace.FRUIT_TYPE.apple);
+        Vector3 rand = new Vector3(Random.Range(-12.0f, 12.0f), Random.Range(-5.0f, 5.0f), 0);
+        Vector3 fruit_scale = new Vector3(1.5f, 1.5f, 1.0f);
+        insert.transform.position = create_fruit.transform.position + rand;
+        insert.transform.localScale = fruit_scale;
+        if (current_fruit_num < grape_num) insert = create_fruit.GetComponent<FruitFactory>().Create_Object(FruitInterFace.FRUIT_TYPE.grape);
+        rand = new Vector3(Random.Range(-12.0f, 12.0f), Random.Range(-5.0f, 5.0f), 0);
+        fruit_scale = new Vector3(1.5f, 1.5f, 1.0f);
+        insert.transform.position = create_fruit.transform.position + rand;
+        insert.transform.localScale = fruit_scale;
+        if (current_fruit_num < peach_num) insert = create_fruit.GetComponent<FruitFactory>().Create_Object(FruitInterFace.FRUIT_TYPE.peach);
+        rand = new Vector3(Random.Range(-12.0f, 12.0f), Random.Range(-5.0f, 5.0f), 0);
+        fruit_scale = new Vector3(1.5f, 1.5f, 1.0f);
+        insert.transform.position = create_fruit.transform.position + rand;
+        insert.transform.localScale = fruit_scale;
+        if (current_fruit_num < strawberry_num) insert = create_fruit.GetComponent<FruitFactory>().Create_Object(FruitInterFace.FRUIT_TYPE.strawberry);
+        rand = new Vector3(Random.Range(-12.0f, 12.0f), Random.Range(-5.0f,5.0f), 0);
+        fruit_scale = new Vector3(1.5f, 1.5f, 1.0f);
+        insert.transform.position = create_fruit.transform.position + rand;
+        insert.transform.localScale = fruit_scale;
+        current_fruit_num += 1;
+    }
 
 #endif
 
