@@ -60,6 +60,7 @@ public class Result : MonoBehaviour
             NextScene();
             s_flag = true;
         }
+
     }
     public void NextScene()
     {
@@ -67,6 +68,8 @@ public class Result : MonoBehaviour
         Objectmanager.m_instance.m_score.Reset();
         Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }
+
+
 #elif UNITY_ANDROID || UNITY_IOS
     // Use this for initialization
     void Start()
@@ -101,7 +104,12 @@ public class Result : MonoBehaviour
     {
         if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() == "TitleTest") return;
         current_time = Time.time;
-        if (current_time - start_time > timer && s_flag != true)
+        //if (current_time - start_time > timer && s_flag != true)
+        //{
+        //    NextScene();
+        //    s_flag = true;
+        //}
+        if (Touch())
         {
             NextScene();
             s_flag = true;
@@ -113,6 +121,32 @@ public class Result : MonoBehaviour
         Objectmanager.m_instance.m_score.Reset();
         Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }
+    private Vector3 m_StartPos;
+    private Vector3 m_EndPos;
+
+    private bool Touch()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            m_StartPos = Input.mousePosition;
+            m_StartPos.z = .0f;
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            m_EndPos = Input.mousePosition;
+            m_EndPos.z = .0f;
+            Vector3 FlickVec = m_EndPos - m_StartPos;
+            FlickVec.Normalize();
+            Vector3 Horlizon = new Vector3(1.0f, .0f, .0f);
+            if (Vector3.Dot(FlickVec, Horlizon) < .0f)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
 
 #endif
 
