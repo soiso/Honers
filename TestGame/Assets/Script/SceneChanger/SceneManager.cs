@@ -15,15 +15,18 @@ public class SceneManager : MonoBehaviour
     public string[] sceneName;
     [SerializeField]
     public float[] rimit_time;
+    [SerializeField]
+    public GameObject light;
+    [SerializeField]
+    public GameObject fever_sign;
+
     private GameObject picpaper;
     private GameObject startsign;
     private AsyncOperation loadInfo;
-    protected bool next_scene_load = false;
     public int currentScene_num = 0;
     public string currentSceneName;
 
     private GameObject oldPicPaper;
-
     private bool LoadFlg = false;
 
     // Use this for initialization
@@ -38,15 +41,15 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (next_scene_load == true)
+        if (LoadFlg == true)
         {
+            light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 1.0f, 0.03f);
             if (loadInfo.allowSceneActivation == false)
             {
                 if (loadInfo.progress >= 0.9f)
                 {
                     //シーン切替 .
-                    picpaper = GameObject.Find("PicturePaper_old");
-                    picpaper.GetComponent<PicturePaper>().Move_Begin();
+                    oldPicPaper.GetComponent<PicturePaper>().Move_Begin();
                     loadInfo.allowSceneActivation = true;
                 }
             }
@@ -93,10 +96,11 @@ public class SceneManager : MonoBehaviour
         Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(sceneName);
         if (sceneName == "TitleTest")
             currentScene_num = 0;
-
     }
     public void ChangeScene_Add(string sceneName)
     {
+        fever_sign.GetComponent<FeaverSign>().Reset();
+
         Time.timeScale = 0;
         currentSceneName = sceneName;
         picpaper = GameObject.Find("PicturePaper");
@@ -105,7 +109,6 @@ public class SceneManager : MonoBehaviour
         loadInfo = Application.LoadLevelAdditiveAsync(sceneName);
         LoadFlg = true;
         loadInfo.allowSceneActivation = false;
-        next_scene_load = true;
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
         oldPicPaper = picpaper;

@@ -31,7 +31,7 @@ EditorBuildSettings:
     path: Assets/Scene/morioka/MO_TestScene.unity
   - enabled: 0
     path: Assets/Scene/murata/MU_TestScene.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scene/terauchi/New_Stage3.unity
   - enabled: 0
     path: Assets/Scene/nagao/N_TestScene.unity

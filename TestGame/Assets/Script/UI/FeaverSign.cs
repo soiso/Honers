@@ -18,7 +18,7 @@ public class FeaverSign : MonoBehaviour {
     private Transform move_target;
 
     private Vector3 velocity;
-    private bool feaver_flag;
+    public bool feaver_flag;
 	// Use this for initialization
 	void Start () {
         //velocity = new Vector3(0, 0, 0);
@@ -28,6 +28,13 @@ public class FeaverSign : MonoBehaviour {
         light.GetComponent<Light>().intensity = 1;
         move_target = this.transform.Find("Target");
 	}
+
+    public void Reset()
+    {
+        feaver_flag = false;
+        this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
+    }
+
 	
 	// Update is called once per frame
     void Update()
