@@ -25,13 +25,13 @@ public class Cementery : FieldObjectInterface {
         {
             m_isonce = true;
             m_is_active = true;
-            m.color = Color.red;
+            //m.color = Color.red;
         }
         if( Is_SleepTimeZone(m_CurrentTimeZone))
         {
             m_isonce = false;
             m_is_active = false;
-            m.color = Color.black;
+            //m.color = Color.black;
         }
 
 	}

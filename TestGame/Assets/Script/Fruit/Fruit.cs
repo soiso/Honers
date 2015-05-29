@@ -10,13 +10,13 @@ public class Fruit : FruitInterFace
     private PanelParametor.TIMEZONE m_current_Timezone;
 
     [SerializeField, HeaderAttribute("消えるまでの時間(秒)")]
-    private float m_EraseTime = 10;
+    public float m_EraseTime = 10;
 
     [SerializeField, HeaderAttribute("EraseTime = EraseTime + Randam.Range(0, eraseAdjust)")]
     private float m_erase_Adjust = 10;
 
     [SerializeField, HeaderAttribute("点滅し始めるまでの時間")]
-    private float m_swith_Time;
+    public float m_swith_Time;
 
     [SerializeField, HeaderAttribute("点滅周期")]
     private float m_swith_Interval = 1.0f;
