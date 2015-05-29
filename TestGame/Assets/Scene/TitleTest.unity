@@ -605,7 +605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ad9618de949284ea9345e4000b2b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: TitleTest
+  sceneName: 
 --- !u!114 &569901572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -921,8 +921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60db9c25bc009c48837366212b90e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeTime: .5
-  AlphaCounter: 0
+  FadeTime: .300000012
+  AlphaCounter: .00999999978
 --- !u!114 &744366524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,9 +1993,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c921453bb1b08a4793d67d66d54e045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  Height: 200
+  speed: .5
+  Height: 150
   FadeSpeed: .0299999993
+  feaver_flag: 0
 --- !u!114 &1657979559
 MonoBehaviour:
   m_ObjectHideFlags: 0
