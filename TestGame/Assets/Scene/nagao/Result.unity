@@ -751,7 +751,7 @@ MonoBehaviour:
   score_rank: {fileID: 658363066}
   create_fruit_scale: {x: 1.79999995, y: 1.79999995, z: 1}
   create_fruit_pos_play: {x: 12, y: 6, z: 0}
-  create_fruit_wait: .0399999991
+  create_fruit_wait: .0799999982
 --- !u!114 &500120723
 MonoBehaviour:
   m_ObjectHideFlags: 0
