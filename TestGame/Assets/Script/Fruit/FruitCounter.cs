@@ -83,12 +83,12 @@ public class FruitCounter : MonoBehaviour
             //    }
             //    break;
         }
-          m_total_Num++;
-          int amari = m_total_Num % m_fruitmanager.Get_DongriCount;
-        if( amari == 0)
-        {
-            m_fruitmanager.Create_Dongri();
-        }
+        //  m_total_Num++;
+        //  int amari = m_total_Num % m_fruitmanager.Get_DongriCount;
+        //if( amari == 0)
+        //{
+        //    m_fruitmanager.Create_Dongri();
+        //}
 
         Objectmanager.m_instance.m_score.SetScore(score);
     }

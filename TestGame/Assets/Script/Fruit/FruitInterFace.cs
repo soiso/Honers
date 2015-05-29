@@ -19,6 +19,9 @@ public class FruitInterFace : MonoBehaviour {
     [SerializeField, HideInInspector]
     public int m_event_Affiliation; //どのイベント木に所属するか
 
+    [SerializeField, HideInInspector]
+    public bool m_IsFeaverSporn; 
+
     public virtual void Collision(GameObject col_object) { }
 
     public bool Event()
