@@ -39,7 +39,7 @@ public class Hamster : MonoBehaviour {
             case PanelParametor.TIMEZONE.night :
                 m_animator.SetBool("isDush", true);
                 m_animator.SetBool("isSleep", false);
-                m_kassha.transform.Rotate(new Vector3(0, 0, 1), 5.0f);
+                m_kassha.transform.Rotate(new Vector3(0, 0, -1), 2.5f);
                 break;
         }
 	}
