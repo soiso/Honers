@@ -56,6 +56,7 @@ public class FruitArrangeManager : MonoBehaviour {
 
     void Awake()
     {
+        Objectmanager.m_instance.m_fruit_Counter.Set_FruitManager(this);
         m_event_Manager = GetComponent<FruitEventManager>();
       foreach(var it in m_GameObjectOfTree)
       {
@@ -66,7 +67,7 @@ public class FruitArrangeManager : MonoBehaviour {
 
 	void Start () 
     {
-        Objectmanager.m_instance.m_fruit_Counter.Set_FruitManager(this);
+        
         m_factory = GetComponent<FruitFactory>();
         m_next_Enable_Arrangetime = m_enable_ArrangeInterval;
 

@@ -39,6 +39,7 @@ public class FruitEventManager : MonoBehaviour {
 
     void Awake()
     {
+        m_evepointHolder = GetComponent<EventPointHolder>();
         if(m_sporn_Point.Length != 0)
         {
             m_event_Checker = new EvenLocker[m_sporn_Point.Length];
@@ -53,7 +54,7 @@ public class FruitEventManager : MonoBehaviour {
 
 	void Start () 
     {
-        m_evepointHolder = GetComponent<EventPointHolder>();
+      
 	}
 
     void Update_EventLock()
