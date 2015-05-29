@@ -19,6 +19,7 @@ public class Rank : MonoBehaviour
     private int m_current_surplus = 0;
     private Material m_currentMaterial = null;
     private int Score = 0;
+    private Vector3 rank_scale;
     void Awake()
     {
         m_currentMaterial = this.GetComponent<Renderer>().material;
@@ -38,6 +39,9 @@ public class Rank : MonoBehaviour
     bool Dram_Roll()
     {
         SetMaterialTexture(score_tex[Random.Range(0, 3)]);
+        //rank_scale.x = Mathf.Lerp(rank_scale.x, 1.0f, 0.01f);
+        //rank_scale.y = Mathf.Lerp(rank_scale.y, 1.0f, 0.01f);
+        //this.transform.localScale = rank_scale;
 
         if (Time.time > m_rollBeginTime + m_rollTime)
         {
@@ -66,6 +70,8 @@ public class Rank : MonoBehaviour
         this.GetComponent<Renderer>().enabled = true;
         m_rollBeginTime = Time.time;
         m_is_rolling = true;
+        //rank_scale = new Vector3(2.0f, 2.0f, 0.0f);
+        //this.transform.localScale = rank_scale;
     }
 
     public void SetMaterialTexture(Texture insert)
