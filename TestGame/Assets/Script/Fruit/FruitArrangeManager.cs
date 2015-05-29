@@ -35,7 +35,7 @@ public class FruitArrangeManager : MonoBehaviour {
     private float m_speedUp_Interval = 7.0f;
     private float m_last_SpeedUpSpornTime = 0f;
 
-   private FruitEventManager m_event_Manager;
+    public FruitEventManager m_event_Manager { get; private set; }
 
    private float m_next_Dongrisocre = 0;
 
