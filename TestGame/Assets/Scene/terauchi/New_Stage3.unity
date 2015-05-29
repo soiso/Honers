@@ -3066,7 +3066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_createFruitList:
-  - {fileID: 110732, guid: ae178d65e73ee2b4583bed10be19762d, type: 2}
+  - {fileID: 144830, guid: db021f0a0f349ac449c48aa96ffc14c7, type: 2}
   - {fileID: 136552, guid: d13435b5436e1a8438a41310e7cca7be, type: 2}
   - {fileID: 166472, guid: 172dbf7b45a9ccf4887b3238d23efd3b, type: 2}
   - {fileID: 174328, guid: 078e1c2eb03d9ce49a07add2bacc3d81, type: 2}

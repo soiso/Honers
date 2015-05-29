@@ -24,6 +24,7 @@ public class P_Move : PlayerStateInterFace
     private void Move(ref Player player)
     {
         Vector3 right = Camera.main.transform.right.normalized;
+        right.z = 0f;
         Vector3 move = right * m_current_Speed * (float)player.Get_FrameInfo.MoveDirection * Time.deltaTime;
         move.y = Physics.gravity.y * Time.deltaTime;
         //player.Get_RigidBody.MovePosition(this.transform.position + move);

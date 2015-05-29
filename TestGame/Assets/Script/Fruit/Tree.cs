@@ -69,7 +69,7 @@ public class Tree : MonoBehaviour
         }
 
         //Vector3 adjust = new Vector3(Random.Range(-0.1f, 0.1f),Random.Range(-0.1f, 0.1f), 0);
-        Vector3 adjust = new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f, 0.05f), 0);
+        Vector3 adjust = new Vector3(Random.Range(-0.05f, 0.05f),0, 0);
         //adjust.y += 0.2f;
         m_sporn_Transform.position = m_default_SpornPosition + adjust;
         int next_Fruit = Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit);
