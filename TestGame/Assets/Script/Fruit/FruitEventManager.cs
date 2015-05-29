@@ -18,6 +18,9 @@ public class FruitEventManager : MonoBehaviour {
     [SerializeField,HeaderAttribute("イベントオブジェクト")]
     GameObject[] m_event_ObjectArray;
 
+
+    public EventPointHolder m_evepointHolder { get; private set; }
+
     public void Calculate_TreePoint(TreeParametor parametor)
     {
         float min_dist = 1000000000.0f;
@@ -45,11 +48,12 @@ public class FruitEventManager : MonoBehaviour {
             }
         }
    
+
     }
 
 	void Start () 
     {
-	
+        m_evepointHolder = GetComponent<EventPointHolder>();
 	}
 
     void Update_EventLock()
@@ -95,5 +99,6 @@ public class FruitEventManager : MonoBehaviour {
         event_Object.transform.position = m_sporn_Point[index].transform.position;
         m_event_Checker[point_No].m_is_Enable = false;
         m_event_Checker[point_No].m_lastEventTime = Time.time;
+        //Objectmanager.m_instance.m_fruit_Counter.m_fruitmanager.m_event_Manager.m_evepointHolder.GetUsagiPoint();
     }
 }
