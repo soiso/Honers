@@ -37,7 +37,7 @@ public class Mole : FieldObjectInterface
             m_Animator.SetBool("isSleep", true);
             GetComponent<BoxCollider>().enabled = false;
             AnimatorStateInfo info = m_Animator.GetCurrentAnimatorStateInfo(0);
-            if (info.normalizedTime%1.0f > 0.9975f) m_obj.localScale = new Vector3(transform.localScale.x, .0f, transform.localScale.z);          
+            if (info.normalizedTime%1.0f > 0.993f) m_obj.localScale = new Vector3(transform.localScale.x, .0f, transform.localScale.z);          
         }
 	}
 }
