@@ -105,7 +105,7 @@ public class FruitArrangeManager : MonoBehaviour {
 
     }
 
-    public  void Dongri_Check(float fruit_score)
+    public  void Dongri_Check(float fruit_score,bool is_FeaverSporn)
     {
         if(m_spern_type == DONGRI_SPORNTYPE.NUM_FRUIT)
         {
@@ -118,9 +118,10 @@ public class FruitArrangeManager : MonoBehaviour {
         }
         else
         {
-            if(feaver_sign.GetComponent<FeaverSign>().feaver_flag)
+            if(feaver_sign.GetComponent<FeaverSign>().feaver_flag ||
+                is_FeaverSporn)
             {
-                m_next_Dongrisocre += m_dongri_score;
+                m_next_Dongrisocre += fruit_score;
             }
 
             float score = Objectmanager.m_instance.m_score.score;

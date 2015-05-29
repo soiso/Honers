@@ -10,10 +10,14 @@ public class Hamster : MonoBehaviour {
 
     private Animator m_animator;
 
+    [SerializeField]
+    private GameObject m_kassha;
+
 	void Start () 
     {
         m_collider = GetComponentInChildren<TimeZone_BoxCollider>();
         m_animator = GetComponentInChildren<Animator>();
+        //m_kassha = this.gameObject.transform.Find("kassha").gameObject;
 	}
 	
 	// Update is called once per frame
@@ -35,6 +39,7 @@ public class Hamster : MonoBehaviour {
             case PanelParametor.TIMEZONE.night :
                 m_animator.SetBool("isDush", true);
                 m_animator.SetBool("isSleep", false);
+                m_kassha.transform.Rotate(new Vector3(0, 0, 1), 5.0f);
                 break;
         }
 	}

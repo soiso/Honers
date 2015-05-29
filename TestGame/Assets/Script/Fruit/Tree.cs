@@ -93,7 +93,7 @@ public class Tree : MonoBehaviour
         {
 
             int index = Random.Range(0, (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit - 1);
-            Sporn_Fruit((FruitInterFace.FRUIT_TYPE)index);
+            Sporn_Fruit((FruitInterFace.FRUIT_TYPE)index,true);
             // m_owner.m_factory.Create_Object((FruitInterFace.FRUIT_TYPE)index);
             m_next_SpornTime = Time.time + m_feaversporn_Interval;
         }
@@ -131,7 +131,7 @@ public class Tree : MonoBehaviour
             m_light.enabled = false;
             if (Graw_Fruit())
             {
-                Sporn_Fruit(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type);
+                Sporn_Fruit(m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type,false);
                 float next_Interval = Random.Range(-m_adjust_Second, m_adjust_Second);
                 m_next_SpornTime = Time.time + m_defaultUpdateInterval + next_Interval;
                 Direction_NextGrawFruit();
@@ -167,7 +167,7 @@ public class Tree : MonoBehaviour
         return false;
     }
 
-    public bool Sporn_Fruit(FruitInterFace.FRUIT_TYPE type)
+    public bool Sporn_Fruit(FruitInterFace.FRUIT_TYPE type,bool is_Feaver)
     {
         GameObject insert = m_owner.m_factory.Create_Object(type, m_param.m_event_Affiliation);
         insert.transform.position = m_sporn_Transform.position;
@@ -177,8 +177,12 @@ public class Tree : MonoBehaviour
             Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
             insert.transform.rotation = q;
         }
-
-
+       var script = insert.GetComponent<FruitInterFace>();
+       if (is_Feaver)
+           script.m_IsFeaverSporn = true;
+       else
+           script.m_IsFeaverSporn = false;
+  
         return true;
     }
 

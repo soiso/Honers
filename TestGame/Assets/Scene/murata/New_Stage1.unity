@@ -560,7 +560,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
 --- !u!1001 &875470975
 Prefab:
   m_ObjectHideFlags: 0
@@ -669,6 +669,10 @@ Prefab:
     - target: {fileID: 454662, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425112, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_dongri_score
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
@@ -914,7 +918,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
 --- !u!1001 &1984759250
 Prefab:
   m_ObjectHideFlags: 0

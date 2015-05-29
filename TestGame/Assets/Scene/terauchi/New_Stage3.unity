@@ -554,9 +554,17 @@ Prefab:
       propertyPath: m_Name
       value: Hamster 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11420624, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
+      propertyPath: m_kassha
+      value: 
+      objectReference: {fileID: 245138928}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &245138928 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 167802, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
+  m_PrefabInternal: {fileID: 245138927}
 --- !u!1 &295628730
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,6 +2122,7 @@ MonoBehaviour:
   - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
   - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
   - {fileID: 149192, guid: a12f5e6d159161a4da28b5c998d649f6, type: 2}
+  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
 --- !u!114 &1372657825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,9 +2287,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 11420624, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
+      propertyPath: m_kassha
+      value: 
+      objectReference: {fileID: 1471535630}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1471535630 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 167802, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
+  m_PrefabInternal: {fileID: 1471535629}
 --- !u!1 &1534658706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2683,7 @@ MonoBehaviour:
   - {fileID: 165642, guid: 62450954a2806a74882e3ed260beba57, type: 2}
   - {fileID: 169682, guid: 590a1c8ebb8a89d48b6f460f1ee0dcf2, type: 2}
   - {fileID: 149192, guid: a12f5e6d159161a4da28b5c998d649f6, type: 2}
+  - {fileID: 183778, guid: b9f19131333803b459a2b07bdf5e8d7c, type: 2}
 --- !u!114 &1703276214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2683,7 +2701,7 @@ MonoBehaviour:
   m_donguri_Probability: 10
   m_feaverTime: 4
   m_book_fruit: 0
-  m_enable_Donguri: 0
+  m_enable_Donguri: 1
 --- !u!114 &1703276215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3065,7 +3083,7 @@ MonoBehaviour:
   - {fileID: 1372657822}
   m_speedUp_Interval: 7.07000017
   dongri_count: 5
-  m_dongri_score: 0
+  m_dongri_score: 200
 --- !u!1 &1995578042 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 96868aafbedd3df43ae5891cc1ebb4c5, type: 3}
