@@ -116,7 +116,8 @@ public class Ghost : FieldObjectInterface {
             m_TargetPos = GameObject.Find("Player").transform.position;
             m_TargetPos.z = .0f;
         }
-        Vector3 move_Vec = m_TargetPos - transform.position;
+        Vector3 move_Vec = m_TargetPos - this.transform.position;
+
         if( m_Threaten && Vector3.Distance( transform.position, m_TargetPos ) < 0.5f )
         {
             if (!m_isChange)

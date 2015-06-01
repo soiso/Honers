@@ -120,7 +120,121 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: eye
+        weight: 1
+      - path: hand_l
+        weight: 1
+      - path: hand_r
+        weight: 1
+      - path: null
+        weight: 1
+      - path: null/null1_NeutralPose
+        weight: 1
+      - path: null/null1_NeutralPose/null1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root/bone/eff
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root1/bone1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root1/bone1/eff1
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/eff2
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root3/bone5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root3/bone5/eff3
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root4/bone6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root4/bone6/eff4
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root8/bone13
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root8/bone13/eff8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root9/bone14
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/bone4/root9/bone14/eff9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5/bone7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5/bone7/bone8
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root5/bone7/bone8/eff5
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6/bone9
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6/bone9/bone10
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root6/bone9/bone10/eff6
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7/bone11
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7/bone11/bone12
+        weight: 1
+      - path: null/null1_NeutralPose/null1/root2/bone2/bone3/root7/bone11/bone12/eff7
+        weight: 1
+      - path: scarf
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
