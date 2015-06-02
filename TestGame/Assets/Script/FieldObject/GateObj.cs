@@ -40,7 +40,12 @@ public class GateObj : FieldObjectInterface
 
         if( Is_ActiveTimeZone( m_CurrentTimeZone ) )
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            //GetComponent<Renderer>().material.color = Color.red;
+            MeshRenderer[] mesh = GetComponentsInChildren<MeshRenderer>();
+            foreach( MeshRenderer m in mesh )
+            {
+                m.enabled = true;
+            }
 
             if (!m_once)
             {
@@ -57,7 +62,15 @@ public class GateObj : FieldObjectInterface
         }
         else
         {
-            GetComponent<Renderer>().material.color = Color.white;
+            //GetComponent<Renderer>().material.color = Color.white;
+            MeshRenderer[] mesh = GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in mesh)
+            {
+                if (m.transform.childCount == 0)
+                    m.enabled = false;
+                else
+                    m.enabled = true;
+            }
             m_once = false;
         }
 	}

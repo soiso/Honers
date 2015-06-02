@@ -678,11 +678,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 11425112, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
-      propertyPath: m_dongri_score
-      value: 300
+    - target: {fileID: 414618, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4.24250126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 414618, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.72000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 478410, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.53999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 478410, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4.35810184
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3315072, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+    - {fileID: 2308214, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &975840779

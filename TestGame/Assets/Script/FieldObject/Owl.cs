@@ -21,11 +21,14 @@ public class Owl : FieldObjectInterface
 
     private FruitArrangeManager m_owner;
 
+    private Animator m_Animator;
+
     // Use this for initialization
     void Start()
     {
         m_TimeTrigger = GetComponentInChildren<TimeZone_BoxCollider>();
         m_owner = GetComponentInParent<FruitArrangeManager>();
+        m_Animator = GetComponent<Animator>();
         m_CurrentNum = 0;
         m_num = m_TargetNum;
         m_once = false;
@@ -44,7 +47,8 @@ public class Owl : FieldObjectInterface
 
         if (Is_ActiveTimeZone(m_CurrentTimeZone))
         {
-            GetComponent<Renderer>().enabled = true;
+           // GetComponent<Renderer>().enabled = true;
+            m_Animator.SetBool("isSporn", true);
 
             if (!m_once)
             {
@@ -55,6 +59,7 @@ public class Owl : FieldObjectInterface
                 }
                 else
                 {
+                    if (m_isFlg) m_isFlg = false;
                     m_num--;
                     if (m_num <= 0) m_num = m_TargetNum;
                 }
@@ -64,13 +69,16 @@ public class Owl : FieldObjectInterface
             if (m_isFlg && !m_isSporn)
             {
                 //レアフルーツ生成したいなぁ
+                m_Animator.SetBool("isThrow", true);
                 SpornFruit(m_Fruit[0].GetComponent<FruitInfomation>().fruit_type);
                 m_isSporn = true;
             }
         }
         else
         {
-            GetComponent<Renderer>().enabled = false;
+            //GetComponent<Renderer>().enabled = false;
+            m_Animator.SetBool("isSporn", false);
+            m_Animator.SetBool("isThrow", false);
             m_once = false;
             m_isSporn = false;
         }
