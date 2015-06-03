@@ -54,6 +54,8 @@ public class FruitArrangeManager : MonoBehaviour {
 
     private GameObject m_player;
 
+    public GameObject m_fieldFruit_Root = null;
+
     void Awake()
     {
         Objectmanager.m_instance.m_fruit_Counter.Set_FruitManager(this);
@@ -63,6 +65,10 @@ public class FruitArrangeManager : MonoBehaviour {
           m_event_Manager.Calculate_TreePoint(it.GetComponent<TreeParametor>());
       }
       m_next_Dongrisocre = m_dongri_score;
+      m_fieldFruit_Root = new GameObject("Fruit_Root");
+      m_fieldFruit_Root.transform.position = Vector3.zero;
+      m_fieldFruit_Root.transform.rotation = Quaternion.identity;
+      m_fieldFruit_Root.transform.parent = this.gameObject.transform.root;
     }
 
 	void Start () 
@@ -201,4 +207,10 @@ public class FruitArrangeManager : MonoBehaviour {
     {
        return m_event_Manager.Event_Check(point_no);
     }
+
+    public void Regist_Fruit(GameObject regist_Fruit)
+    {
+        regist_Fruit.transform.parent = m_fieldFruit_Root.transform;
+    }
+
 }

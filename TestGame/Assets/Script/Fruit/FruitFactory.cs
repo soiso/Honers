@@ -27,6 +27,7 @@ public class FruitFactory : MonoBehaviour {
             {
                 ret = Instantiate(m_createFruitList[i]);
                 ret.GetComponent<FruitInterFace>().m_event_Affiliation = eventIndex;
+                Objectmanager.m_instance.m_fruit_Counter.m_fruitmanager.Regist_Fruit(ret);
                 return ret;
             }
         }
