@@ -30,6 +30,8 @@ public class Tree : MonoBehaviour
     private bool m_impact_StreetLight = false;
     private bool m_active = true;
     private RandamRotate m_rotate;
+    [SerializeField, HeaderAttribute("ログハウス持ちのやつかどうか")]
+    private bool m_hasLogHouse = false;
 
     private GameObject m_current_GrawFruit = null;
 
@@ -222,10 +224,26 @@ public class Tree : MonoBehaviour
         if (!m_impact_StreetLight)
             return;
         m_active = true;
-        MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer m in renderer)
+        if (m_hasLogHouse)
         {
-            m.material.mainTexture = (Texture)Resources.Load("woods2_light");
+            MeshRenderer[] renderer = transform.GetChild(2).GetComponentsInChildren<MeshRenderer>();
+            foreach( MeshRenderer m in renderer )
+            {
+                m.enabled = false;
+            }
+            renderer = transform.GetChild(3).GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in renderer)
+            {
+                m.enabled = true;
+            }
+        }
+        else
+        {
+            MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in renderer)
+            {
+                m.material.mainTexture = (Texture)Resources.Load("woods2_light");
+            }
         }
     }
 
@@ -234,10 +252,26 @@ public class Tree : MonoBehaviour
         if (!m_impact_StreetLight)
             return;
         m_active = false;
-        MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer m in renderer)
+        if (m_hasLogHouse)
         {
-            m.material.mainTexture = (Texture)Resources.Load("woods2_shadow");
+            MeshRenderer[] renderer = transform.GetChild(2).GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in renderer)
+            {
+                m.enabled = true;
+            }
+            renderer = transform.GetChild(3).GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in renderer)
+            {
+                m.enabled = false;
+            }
+        }
+        else
+        {
+            MeshRenderer[] renderer = GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer m in renderer)
+            {
+                m.material.mainTexture = (Texture)Resources.Load("woods2_shadow");
+            }
         }
 
     }

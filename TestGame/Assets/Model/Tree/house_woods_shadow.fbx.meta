@@ -1,0 +1,103 @@
+fileFormatVersion: 2
+guid: 58cb54f5e5ac017458fae394f640754b
+timeCreated: 1433206952
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: house_under
+    100002: //RootNode
+    100004: s_house_log01
+    100006: s_house_log_t01
+    100008: woods2A1
+    100010: woods2B1
+    100012: woods2B_shadow
+    100014: woods2C1
+    400000: house_under
+    400002: //RootNode
+    400004: s_house_log01
+    400006: s_house_log_t01
+    400008: woods2A1
+    400010: woods2B1
+    400012: woods2B_shadow
+    400014: woods2C1
+    2300000: house_under
+    2300002: s_house_log01
+    2300004: s_house_log_t01
+    2300006: woods2A1
+    2300008: woods2B1
+    2300010: woods2B_shadow
+    2300012: woods2C1
+    3300000: house_under
+    3300002: s_house_log01
+    3300004: s_house_log_t01
+    3300006: woods2A1
+    3300008: woods2B1
+    3300010: woods2B_shadow
+    3300012: woods2C1
+    4300000: house_under
+    4300002: s_house_log01
+    4300004: s_house_log_t01
+    4300006: woods2A1
+    4300008: woods2B1
+    4300010: woods2B_shadow
+    4300012: woods2C1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
