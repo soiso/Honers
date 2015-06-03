@@ -37,9 +37,26 @@ public class EventRaven : MonoBehaviour {
 
     }
 	
+    void EraseCheck()
+    {
+        Vector3 screenpos = Camera.main.WorldToViewportPoint(this.transform.position);
+
+        if (screenpos.x >= 1.1 ||
+            screenpos.x <= -0.1 ||
+            screenpos.y <= -0.1 ||
+            screenpos.y >= 1.1)
+        {
+            DestroyObject(this.gameObject);
+        }
+    }
+
 	// Update is called once per frame
 	void Update ()
     {
         Move();
+        if(m_drop)
+        {
+            EraseCheck();
+        }
 	}
 }
