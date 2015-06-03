@@ -869,9 +869,9 @@ MonoBehaviour:
   score_sort_SA: 3027
   m_rollTime: .5
   score_tex:
-  - {fileID: 2800000, guid: 75db1e80c16ce9b4586b699afbb89751, type: 3}
-  - {fileID: 2800000, guid: b87e8e2bba3ed6c40a7f2ef6e47c08f0, type: 3}
-  - {fileID: 2800000, guid: a34114721a2c7b547be6bc4c9001a57f, type: 3}
+  - {fileID: 2800000, guid: 1349d08768c5e964eaf54cad49c159a5, type: 3}
+  - {fileID: 2800000, guid: 5c11e2b6abac1294c8a60d57a53ef836, type: 3}
+  - {fileID: 2800000, guid: 96d8a7528dfb2e04c99b8e0726627ce2, type: 3}
 --- !u!23 &658363069
 MeshRenderer:
   m_ObjectHideFlags: 0

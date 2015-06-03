@@ -14,11 +14,13 @@ public class SceneManager : MonoBehaviour
     [SerializeField, SceneName]
     public string[] sceneName;
     [SerializeField]
-    public float[] rimit_time;
+    private float[] rimit_time;
     [SerializeField]
-    public GameObject light;
+    private GameObject light;
     [SerializeField]
-    public GameObject fever_sign;
+    private GameObject fever_sign;
+    [SerializeField]
+    public int[] stage_pic_num;
 
     private GameObject picpaper;
     private GameObject startsign;
