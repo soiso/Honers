@@ -19,6 +19,7 @@ public class EventRaven : MonoBehaviour {
 	void Start ()
     {
         m_dropper = GetComponent<FruitDropper>();
+        m_animator = GetComponent<Animator>();
         m_movetargetTransForm = Objectmanager.m_instance.m_fruit_Counter.m_fruitmanager.m_event_Manager.m_evepointHolder.GetKarasuPoint();
         this.transform.position = m_movetargetTransForm[0].position;
 	}
@@ -31,6 +32,7 @@ public class EventRaven : MonoBehaviour {
         Vector3 d = this.transform.position - m_movetargetTransForm[1].position;
         if(d.magnitude < 0.1f && !m_drop)
         {
+            m_animator.SetBool("isDrop", true);
             m_dropper.Drop();
             m_drop = true;
         }

@@ -51,6 +51,18 @@ public class Player : MonoBehaviour {
 
     public Vector3 m_lossyScale;
 
+    [SerializeField, HeaderAttribute("落ちた時に復帰する場所")]
+    private Transform m_SpornPoint;
+    private bool m_isSporn = false;
+
+    [SerializeField, HeaderAttribute("点滅周期")]
+    private float m_swith_Interval = 1.0f;
+
+    [SerializeField, HeaderAttribute("点滅時間")]
+    private int m_swith_Time;
+    private int m_switch_Timer = 0;
+    private float m_nextSwitch;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -83,6 +95,13 @@ public class Player : MonoBehaviour {
     {
         //m_TimeZone = m_TimeZoneTrigger.m_myColliderTimeZone;
         //GetComponent<ShaderChanger>().Change( m_TimeZone );
+
+        if( this.transform.position.y < -5 )
+        {
+            this.transform.position = m_SpornPoint.position;
+            m_isSporn = true;
+            m_switch_Timer = m_swith_Time * 60;
+        }
 
         switch(m_frame_Information.m_movetype)
         {
@@ -118,6 +137,32 @@ public class Player : MonoBehaviour {
         //    pos.z = 0;
         //    this.transform.position = pos;
         //}
+
+        if( m_isSporn )
+        {
+            if( m_switch_Timer > 0 )
+            {
+                if (Time.time > m_nextSwitch)
+                {
+                    SkinnedMeshRenderer[] renderere = GetComponentsInChildren<SkinnedMeshRenderer>();
+                    foreach (SkinnedMeshRenderer r in renderere)
+                    {
+                        r.enabled = !r.enabled;
+                    }
+                    m_nextSwitch = Time.time + m_swith_Interval;
+                }
+                m_switch_Timer--;
+            }
+            else
+            {
+                SkinnedMeshRenderer[] renderere = GetComponentsInChildren<SkinnedMeshRenderer>();
+                foreach (SkinnedMeshRenderer r in renderere)
+                {
+                    if( !r.enabled ) r.enabled = !r.enabled;
+                }
+                m_isSporn = false;
+            }
+        }
 	}
 
     public bool ChangeState(PlayerStateInterFace new_state)

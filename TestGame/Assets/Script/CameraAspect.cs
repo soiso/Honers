@@ -33,7 +33,7 @@ public class CameraAspect : MonoBehaviour {
             m_rect.width = 1.0f;
             m_rect.y = (1.0f - ratio) / 2.0f;
             m_rect.height = ratio;
-           // m_target_Camera.orthographicSize = Screen.width / 2.0f;
+            //m_target_Camera.orthographicSize = Screen.width / 2.0f;
         }
         else
         {
