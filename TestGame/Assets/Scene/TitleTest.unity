@@ -2282,7 +2282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[1]
@@ -2475,6 +2475,14 @@ Prefab:
     - target: {fileID: 8212070, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: BypassEffects
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_target_width
+      value: 1280
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_target_Height
+      value: 800
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
