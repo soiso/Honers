@@ -174,11 +174,11 @@ public class Tree : MonoBehaviour
         GameObject insert = m_owner.m_factory.Create_Object(type, m_param.m_event_Affiliation);
         insert.transform.position = m_sporn_Transform.position;
         insert.transform.rotation = m_sporn_Transform.rotation;
-        if (insert.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
-        {
-            Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
-            insert.transform.rotation = q;
-        }
+        //if (insert.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
+        //{
+        //    Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
+        //    insert.transform.rotation = q;
+        //}
        var script = insert.GetComponent<FruitInterFace>();
        if (is_Feaver)
            script.m_IsFeaverSporn = true;

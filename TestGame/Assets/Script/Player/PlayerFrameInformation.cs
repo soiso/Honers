@@ -96,6 +96,10 @@ public class PlayerFrameInformation : MonoBehaviour
             is_move = false;
             move_Direction = movedirection.STAY;
             gameObject.GetComponent<Player>().m_StopFrame++;
+
+
+         
+
         }
         else if (m_left_touch.GetComponent<Touch_Collider>().m_is_active && !m_right_touch.GetComponent<Touch_Collider>().m_is_active)
         {
@@ -103,6 +107,11 @@ public class PlayerFrameInformation : MonoBehaviour
                 is_move = true;
                 move_Direction = movedirection.LEFT;
                 m_lastMoveDirection = movedirection.LEFT;
+
+
+                GameObject.Find("Vacuum").GetComponent<FruitVaccumer>().Begin_Vaccum();
+
+
         }
         else if (!m_left_touch.GetComponent<Touch_Collider>().m_is_active && m_right_touch.GetComponent<Touch_Collider>().m_is_active)
         {
@@ -110,6 +119,7 @@ public class PlayerFrameInformation : MonoBehaviour
             is_move = true;
             move_Direction = movedirection.RIGHT;
             m_lastMoveDirection = movedirection.RIGHT;
+            GameObject.Find("Vacuum").GetComponent<FruitSpout>().Begin_Spout();
         }
         else
         {

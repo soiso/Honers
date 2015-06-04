@@ -54,7 +54,7 @@ public class FruitArrangeManager : MonoBehaviour {
 
     private GameObject m_player;
 
-    public GameObject m_fieldFruit_Root = null;
+    public GameObject m_fieldFruit_Root { get; private set; }
 
     void Awake()
     {
@@ -68,7 +68,7 @@ public class FruitArrangeManager : MonoBehaviour {
       m_fieldFruit_Root = new GameObject("Fruit_Root");
       m_fieldFruit_Root.transform.position = Vector3.zero;
       m_fieldFruit_Root.transform.rotation = Quaternion.identity;
-      m_fieldFruit_Root.transform.parent = this.gameObject.transform.root;
+     
     }
 
 	void Start () 
@@ -84,6 +84,7 @@ public class FruitArrangeManager : MonoBehaviour {
         }
         feaver_sign = GameObject.Find("FeaverSign");
         m_player = GameObject.Find("Player");
+        m_fieldFruit_Root.transform.parent = this.gameObject.transform.parent;
 	}
 
    private bool Book_SpecialFruit(FruitInterFace.FRUIT_TYPE type)

@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11486380}
   - 54: {fileID: 5453956}
   - 65: {fileID: 6575480}
-  - 114: {fileID: 11411338}
   - 82: {fileID: 8262056}
   - 65: {fileID: 6533638}
   - 199: {fileID: 19964202}
@@ -178,19 +177,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &11411338
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 166472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!114 &11486380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c8643431dff8542a3a5a94b1a39d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_event_Affiliation: 0
+  m_IsFeaverSporn: 0
   m_default_Score: 35
   m_attenuation_Score: 0
   m_EraseTime: 10

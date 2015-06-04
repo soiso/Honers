@@ -14,7 +14,6 @@ GameObject:
   - 114: {fileID: 11402496}
   - 54: {fileID: 5454868}
   - 65: {fileID: 6518978}
-  - 114: {fileID: 11494682}
   - 82: {fileID: 8247980}
   - 65: {fileID: 6565178}
   - 199: {fileID: 19951784}
@@ -201,6 +200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c8643431dff8542a3a5a94b1a39d81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_event_Affiliation: 0
+  m_IsFeaverSporn: 0
   m_default_Score: 30
   m_attenuation_Score: 0
   m_EraseTime: 10
@@ -209,19 +210,6 @@ MonoBehaviour:
   m_swith_Interval: .5
   m_switch_adjust: .00499999989
   clip: {fileID: 8300000, guid: dd4d291c0ff313349979d500f7272fcd, type: 3}
---- !u!114 &11494682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 174328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 0}
 --- !u!135 &13557816
 SphereCollider:
   m_ObjectHideFlags: 1
