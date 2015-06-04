@@ -2382,7 +2382,7 @@ Prefab:
       objectReference: {fileID: 1657979556}
     - target: {fileID: 8212070, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: Mute
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22450138, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2471,6 +2471,10 @@ Prefab:
     - target: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_Depth
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8212070, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: BypassEffects
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
