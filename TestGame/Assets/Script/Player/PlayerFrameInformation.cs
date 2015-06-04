@@ -109,7 +109,7 @@ public class PlayerFrameInformation : MonoBehaviour
                 m_lastMoveDirection = movedirection.LEFT;
 
 
-                GameObject.Find("Vacuum").GetComponent<FruitVaccumer>().Begin_Vaccum();
+                //GameObject.Find("Vacuum").GetComponent<FruitVaccumer>().Begin_Vaccum();
 
 
         }
@@ -119,7 +119,7 @@ public class PlayerFrameInformation : MonoBehaviour
             is_move = true;
             move_Direction = movedirection.RIGHT;
             m_lastMoveDirection = movedirection.RIGHT;
-            GameObject.Find("Vacuum").GetComponent<FruitSpout>().Begin_Spout();
+            //GameObject.Find("Vacuum").GetComponent<FruitSpout>().Begin_Spout();
         }
         else
         {
