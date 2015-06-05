@@ -130,6 +130,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 155450, guid: 50b3212c3cbd653418d72b8815ccc405, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50b3212c3cbd653418d72b8815ccc405, type: 2}
   m_IsPrefabParent: 0
@@ -764,6 +768,10 @@ Prefab:
       propertyPath: m_karasu_TargetPoint.Array.data[1]
       value: 
       objectReference: {fileID: 1943111912}
+    - target: {fileID: 11476830, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_createFruitList.Array.data[0]
+      value: 
+      objectReference: {fileID: 144830, guid: db021f0a0f349ac449c48aa96ffc14c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
   m_IsPrefabParent: 0
