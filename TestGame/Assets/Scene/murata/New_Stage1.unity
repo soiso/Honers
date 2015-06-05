@@ -772,6 +772,10 @@ Prefab:
       propertyPath: m_createFruitList.Array.data[0]
       value: 
       objectReference: {fileID: 144830, guid: db021f0a0f349ac449c48aa96ffc14c7, type: 2}
+    - target: {fileID: 11437372, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
+      propertyPath: m_event_ObjectArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 126286, guid: 9c5b6f55a535dfa4ca38093159487b29, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d1527a6104d54746a15ead16c4692ec, type: 2}
   m_IsPrefabParent: 0

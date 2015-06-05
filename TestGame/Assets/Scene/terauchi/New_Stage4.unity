@@ -1612,7 +1612,7 @@ Prefab:
     - target: {fileID: 11482866, guid: 554c831b2b7640a4ba84dbfe2c709d0f, type: 2}
       propertyPath: m_event_ObjectArray.Array.data[1]
       value: 
-      objectReference: {fileID: 107308, guid: 5d8b9a872bb9e1946b5989cda83b811a, type: 2}
+      objectReference: {fileID: 126286, guid: 9c5b6f55a535dfa4ca38093159487b29, type: 2}
     - target: {fileID: 11482866, guid: 554c831b2b7640a4ba84dbfe2c709d0f, type: 2}
       propertyPath: m_event_ObjectArray.Array.data[0]
       value: 

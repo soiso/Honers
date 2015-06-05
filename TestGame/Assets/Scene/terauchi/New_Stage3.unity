@@ -2306,6 +2306,10 @@ Prefab:
       propertyPath: m_karasu_TargetPoint.Array.data[1]
       value: 
       objectReference: {fileID: 2070559490}
+    - target: {fileID: 11458508, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_event_ObjectArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 126286, guid: 9c5b6f55a535dfa4ca38093159487b29, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
   m_IsPrefabParent: 0
