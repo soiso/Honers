@@ -50,6 +50,9 @@ public class Ghost : FieldObjectInterface {
     [SerializeField, HeaderAttribute("フルーツマネージャー")]
     private GameObject m_FruitManager;
 
+    private FruitVaccumer m_Vaccumer;
+    private FruitSpout m_Spout;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -67,6 +70,9 @@ public class Ghost : FieldObjectInterface {
         m_Sporn = false;
         m_Threaten = false;
         m_isChange = false;
+
+        m_Vaccumer = GetComponentInChildren<FruitVaccumer>();
+        m_Spout = GetComponentInChildren<FruitSpout>();
 	}
 
     private void Sub_Alpha()
@@ -124,7 +130,8 @@ public class Ghost : FieldObjectInterface {
             {
                 if( m_type != FruitInterFace.FRUIT_TYPE.error )
                 {
-                    DropFruit(m_type);
+                    //DropFruit(m_type);
+                    m_Spout.Begin_Spout();
                 }
                 ChangePanel();
                 m_ownerCementery.m_is_active = false;
@@ -144,7 +151,7 @@ public class Ghost : FieldObjectInterface {
 
     void Threaten()
     {
-        m_type = Objectmanager.m_instance.m_fruit_Counter.SnatchFruit();
+        //m_type = Objectmanager.m_instance.m_fruit_Counter.SnatchFruit();
         //行き先決定
         var changer = m_changer.GetComponent<PanelChanger>();
 
@@ -235,6 +242,7 @@ public class Ghost : FieldObjectInterface {
     public void OnTriggerEnter(Collider other)
     {
         m_Threaten = true;
+        m_Vaccumer.Begin_Vaccum();
         Threaten();
     }
 
