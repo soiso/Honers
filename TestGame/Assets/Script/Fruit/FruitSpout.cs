@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class FruitSpout : MonoBehaviour {
 
@@ -12,6 +14,8 @@ public class FruitSpout : MonoBehaviour {
     private bool m_isSpoutNow;
 
     private float m_interval = 0.1f;
+
+    private List<int> m_spout_List;
 
     void Awake()
     {
@@ -31,7 +35,7 @@ public class FruitSpout : MonoBehaviour {
            
            for(int j = 0 ; j < m_spoutArray[i] ; j++)
            {
-               FruitInterFace.FRUIT_TYPE type = (FruitInterFace.FRUIT_TYPE)m_spoutArray[i];
+               FruitInterFace.FRUIT_TYPE type = (FruitInterFace.FRUIT_TYPE)i;
                GameObject insert = m_factory.Create_Object(type);
                insert.transform.position = this.transform.position;
                insert.transform.rotation = Quaternion.identity;
@@ -62,6 +66,12 @@ public class FruitSpout : MonoBehaviour {
         {
             m_spoutArray[i] = send_Info[i];
         }
+
+        //for(int i = 0 ; i < send_Info.Length ; i++)
+        //{
+        //    for(int j = 0 ; )
+
+        //}
     }
 
     public void Begin_Spout()
