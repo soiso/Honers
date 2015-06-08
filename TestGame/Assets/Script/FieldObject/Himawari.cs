@@ -52,31 +52,22 @@ public class Himawari : MonoBehaviour {
     void Awake()
     {
         m_current_Movetarget = m_default_Point;
-        //m_hana = this.transform.FindChild("ModelData").gameObject;
-        //m_kuki = this.transform.FindChild("Kuki").gameObject;
-        //m_rotate_root = this.transform.FindChild("RotateRoot").gameObject;
-        m_hana_DefaultScale =m_hana.transform.localScale;
-        //m_hana_DefaultScale.y = m_rotate_root.transform.localScale.y * m_kuki.transform.localScale.y * m_hana.transform.localScale.y;
-       // Caluculate_MoveTarget();
+        
     }
 
     Vector3 default_Scale;
 	// Use this for initialization
 	void Start () {
         default_Scale = m_hana.transform.lossyScale;
+       m_hana_DefaultScale = m_hana.transform.lossyScale;
 	}
 	
 
     void Adjust_Ashiba(Vector3 axis, float angle)
     {
-        axis.z *= -1.0f;
-       // Quaternion rot = m_ashiba.transform.rotation * Quaternion.AngleAxis(angle, axis.normalized);
         Quaternion rot = Quaternion.identity;
         Quaternion q = Quaternion.Slerp(m_ashiba.transform.transform.rotation, rot, 0.1f);
         m_ashiba.transform.rotation = q;
-
-       
-        
     }
 
     bool Rotate()
@@ -163,13 +154,13 @@ public class Himawari : MonoBehaviour {
         {
             Scaling();
         }
-        Vector3 hana_scale = Vector3.one;
-        hana_scale.x = m_hana.transform.localScale.x / m_hana.transform.lossyScale.x * default_Scale.x;
-        hana_scale.y = m_hana.transform.localScale.y / m_hana.transform.lossyScale.y * default_Scale.y;
-        hana_scale.z = m_hana.transform.localScale.z / m_hana.transform.lossyScale.z * default_Scale.z;
+        Vector3 hana_scale;
+        hana_scale.x = m_hana.transform.localScale.x / m_hana.transform.lossyScale.x * m_hana_DefaultScale.x;
+        hana_scale.y = m_hana.transform.localScale.y / m_hana.transform.lossyScale.y * m_hana_DefaultScale.y;
+        hana_scale.z = m_hana.transform.localScale.z / m_hana.transform.lossyScale.z * m_hana_DefaultScale.z;
         m_hana.transform.localScale = hana_scale;
         Quaternion rot = Quaternion.identity;
-        m_hana.transform.rotation = Quaternion.Slerp(m_hana.transform.rotation, rot, 0.1f);
+        //m_hana.transform.rotation = Quaternion.Slerp(m_hana.transform.rotation, rot, 0.1f);
      // m_rotate_root.transform.localScale = scale;
 	
 	}
