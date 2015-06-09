@@ -15,6 +15,11 @@ public class NumberRenderer : MonoBehaviour {
     IList<int> m_worklist;
     private int max_num = 999999;
 
+    [SerializeField, Range(0, 10), HeaderAttribute("ロールが開始するまでの待ち時間")]
+    private float start_wait = 0;
+
+    private float m_start_time;
+
     [SerializeField, HeaderAttribute("ドラムロールする時間")]
     private float m_rollTime = 0.5f;
 
@@ -29,28 +34,30 @@ public class NumberRenderer : MonoBehaviour {
     void Awake()
     {
         m_scale_Weaver = GetComponent<ScaleWeaver>();
+        m_worklist = new List<int>();
     }
 
 	void Start () 
     {
-        m_worklist = new List<int>();
+       
         Calculate(m_value);
-      
+      m_start_time = Time.time;
 	}
-	
 
-	void Update ()
+
+    void Update()
     {
-
-
-	    if(m_is_rolling)
+        if (Time.time > m_start_time + start_wait)
         {
-            if(Dram_Roll())
+            if (m_is_rolling)
             {
-                Calculate(m_value);
+                if (Dram_Roll())
+                {
+                    Calculate(m_value);
+                }
             }
         }
-	}
+    }
 
     bool Dram_Roll()
     {
