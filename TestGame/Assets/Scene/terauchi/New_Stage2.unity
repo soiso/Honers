@@ -1241,9 +1241,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11420624, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
+      propertyPath: m_kassha
+      value: 
+      objectReference: {fileID: 1323007027}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1323007027 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 167802, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
+  m_PrefabInternal: {fileID: 1323007026}
 --- !u!1001 &1430218066
 Prefab:
   m_ObjectHideFlags: 0
