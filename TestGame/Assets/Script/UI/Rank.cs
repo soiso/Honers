@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Rank : MonoBehaviour
 {
-
+    [SerializeField, Range(0, 10),HeaderAttribute("ロールが開始するまでの待ち時間")]
+    private float start_wait=0;
     [SerializeField, Range(0, 9997), HeaderAttribute("BとAの境")]
     public int score_sort_AB;
     [SerializeField, Range(0, 9999), HeaderAttribute("AとSの境")]
@@ -13,6 +14,7 @@ public class Rank : MonoBehaviour
     [SerializeField]
     public Texture[] score_tex;
 
+    private float m_start_time;
     private float m_rollBeginTime;
     private bool m_is_rolling = false;
 
@@ -26,13 +28,20 @@ public class Rank : MonoBehaviour
         if (score_sort_AB > score_sort_SA)
             score_sort_SA = score_sort_AB + 2;
     }
+    void Start()
+    {
+        m_start_time = Time.time;
+    }
     void Update()
     {
-        if (m_is_rolling)
+        if (Time.time > m_start_time + start_wait)
         {
-            if (Dram_Roll())
+            if (m_is_rolling)
             {
-                Calculate();
+                if (Dram_Roll())
+                {
+                    Calculate();
+                }
             }
         }
     }
@@ -81,6 +90,7 @@ public class Rank : MonoBehaviour
     }
     public void SetScore(int score)
     {
+        //m_currentMaterial.color = new Color(255,255,255,255);
         Score = score;
     }
 }
