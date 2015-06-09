@@ -38,6 +38,16 @@ public class EventRaven : MonoBehaviour {
         }
 
     }
+
+    void Rotate()
+    {
+        Vector3 vec = m_movetargetTransForm[1].position - m_movetargetTransForm[0].position;
+        Vector3 rotate_Angle = new Vector3(0, 0, 0);
+        rotate_Angle.z = (vec.x <= .0f) ? -1.0f : 1.0f;
+
+        Quaternion rotate_Q = Quaternion.LookRotation(rotate_Angle);
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotate_Q, 0.1f);
+    }
 	
     void EraseCheck()
     {
@@ -56,6 +66,7 @@ public class EventRaven : MonoBehaviour {
 	void Update ()
     {
         Move();
+        Rotate();
         if(m_drop)
         {
             EraseCheck();

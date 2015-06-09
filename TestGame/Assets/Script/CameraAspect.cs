@@ -22,7 +22,7 @@ public class CameraAspect : MonoBehaviour {
 	void Update () {
 
         float target_Aspect = m_target_width / m_target_Height;
-        float current_Aspect = Screen.width / Screen.height;
+        float current_Aspect = (float)Screen.width / Screen.height;
 
 
         float ratio = current_Aspect / target_Aspect;
@@ -30,6 +30,7 @@ public class CameraAspect : MonoBehaviour {
         if (target_Aspect > current_Aspect)
         {
             ratio = target_Aspect / current_Aspect;
+            ratio = 1.0f / ratio;
             m_rect.x = 0f;
             m_rect.width = 1.0f;
             m_rect.y = (1.0f - ratio) / 2.0f;
@@ -38,7 +39,7 @@ public class CameraAspect : MonoBehaviour {
         }
         else
         {
-            ratio = current_Aspect / target_Aspect;
+            //ratio = current_Aspect / target_Aspect;
             ratio = 1.0f / ratio;
             m_rect.x = (1.0f - ratio) / 2.0f;
             m_rect.width = ratio;
