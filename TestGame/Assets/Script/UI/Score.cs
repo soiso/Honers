@@ -6,7 +6,8 @@ public class Score : MonoBehaviour
 {
     //private Text score_num;
     private NumberRenderer score_num;
-    public float score;
+    private float[] score = new float[5];
+    private float total_score;
     // Use this for initialization
     void Awake()
     {
@@ -15,25 +16,33 @@ public class Score : MonoBehaviour
     }
     void Start()
     {
-        score = 0.0f;
+        Reset();
     }
     // Update is called once per frame
     void Update()
     {
         //score_num.text = score.ToString();
-       
     }
-    public void SetScore(float num)
+    public void SetScore(float num, int stage)
     {
-        score += num;
-        score_num.SetNumber((int)score);
+        score[stage] += num;
+        total_score += num;
+        score_num.SetNumber((int)score[stage]);
     }
-    public float GetScore()
+    public float GetScore(int stage)
     {
-        return score;
+        return score[stage];
+    }
+    public float GetTotalScore()
+    {
+        return total_score;
     }
     public void Reset()
     {
-        score = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            score[i] = .0f;
+        }
+        total_score = .0f;
     }
 }

@@ -100,11 +100,14 @@ public class LastResult : MonoBehaviour {
     {
         for (int i = 0; i < 5; i++)
         {
-            score_num[i].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetScore());
-            yield return new WaitForSeconds(m_interval);;
+            score_num[i].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetScore(i));
+            yield return new WaitForSeconds(m_interval);
         }
+
+        score_num[5].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetTotalScore());
+        yield return new WaitForSeconds(m_interval);
         
-        score_rank.GetComponent<Rank>().SetScore((int)Objectmanager.m_instance.m_score.GetScore());
+        score_rank.GetComponent<Rank>().SetScore((int)Objectmanager.m_instance.m_score.GetTotalScore());
         score_rank.GetComponent<Rank>().Enable();
     }
     public void NextScene()

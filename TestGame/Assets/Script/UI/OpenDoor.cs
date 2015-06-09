@@ -8,6 +8,9 @@ public class OpenDoor : MonoBehaviour
     [SerializeField]
     GameObject LeftParent;
 
+    public GameObject RightDoor;
+    public GameObject LeftDoor;
+
     [SerializeField, Range(0, 1.0f)]
     private float rotate_speed = .0f;
     [SerializeField, Range(0, 180)]
@@ -20,11 +23,15 @@ public class OpenDoor : MonoBehaviour
     void Start()
     {
         rotation_angle = .0f;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Color col = RightDoor.GetComponent<Renderer>().material.color;
+        RightDoor.GetComponent<Renderer>().material.color = new Color(col.r,col.g,col.b, 255);
+        LeftDoor.GetComponent<Renderer>().material.color = new Color(col.r, col.g, col.b, 255);
         if (rotation_flg)
         {
             ParentRotation();

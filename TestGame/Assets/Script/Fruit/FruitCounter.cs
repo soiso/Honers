@@ -90,7 +90,7 @@ public class FruitCounter : MonoBehaviour
         //    m_fruitmanager.Create_Dongri();
         //}
 
-        Objectmanager.m_instance.m_score.SetScore(score);
+        Objectmanager.m_instance.m_score.SetScore(score,Objectmanager.m_instance.m_scene_manager.currentScene_num);
     }
 
     public bool Set_FruitManager(FruitArrangeManager m)

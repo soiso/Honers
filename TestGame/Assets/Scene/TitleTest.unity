@@ -2616,6 +2616,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightParent: {fileID: 1078762702}
   LeftParent: {fileID: 2060436160}
+  RightDoor: {fileID: 477175698}
+  LeftDoor: {fileID: 466717108}
   rotate_speed: .600000024
   rotation_angle_max: 120
 --- !u!114 &1665865911

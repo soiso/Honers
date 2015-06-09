@@ -90,7 +90,8 @@ public class Rank : MonoBehaviour
     }
     public void SetScore(int score)
     {
-        //m_currentMaterial.color = new Color(255,255,255,255);
+        Color col = m_currentMaterial.color;
+        m_currentMaterial.color = new Color(col.r,col.g,col.b,255);
         Score = score;
     }
 }

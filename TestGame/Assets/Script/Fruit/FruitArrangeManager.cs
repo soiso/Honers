@@ -132,7 +132,7 @@ public class FruitArrangeManager : MonoBehaviour {
                 m_next_Dongrisocre += fruit_score;
             }
 
-            float score = Objectmanager.m_instance.m_score.score;
+            float score = Objectmanager.m_instance.m_score.GetScore(Objectmanager.m_instance.m_scene_manager.currentScene_num);
             if(score > m_next_Dongrisocre)
             {
                 Create_Dongri();

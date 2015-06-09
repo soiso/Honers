@@ -76,7 +76,7 @@ public class Result : MonoBehaviour
     public void NextScene()
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
-        Objectmanager.m_instance.m_score.Reset();
+        //Objectmanager.m_instance.m_score.Reset();
         Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }
 
@@ -89,9 +89,9 @@ public class Result : MonoBehaviour
         s_flag = false;
 
         score_num = GetComponentInChildren<NumberRenderer>();
-        score_num.SetNumber((int)Objectmanager.m_instance.m_score.GetScore());
+        score_num.SetNumber((int)Objectmanager.m_instance.m_score.GetScore(Objectmanager.m_instance.m_scene_manager.currentScene_num));
 
-        score_rank.GetComponent<Rank>().SetScore((int)Objectmanager.m_instance.m_score.GetScore());
+        score_rank.GetComponent<Rank>().SetScore((int)Objectmanager.m_instance.m_score.GetScore(Objectmanager.m_instance.m_scene_manager.currentScene_num));
         score_rank.GetComponent<Rank>().Enable();
 
         apple_num = Objectmanager.m_instance.m_fruit_Counter.apple_num;
@@ -141,7 +141,7 @@ public class Result : MonoBehaviour
     public void NextScene()
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
-        Objectmanager.m_instance.m_score.Reset();
+        //Objectmanager.m_instance.m_score.Reset();
         Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }
     private Vector3 m_StartPos;
