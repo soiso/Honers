@@ -131,12 +131,12 @@ public class Player : MonoBehaviour {
        // this.transform.position = pos;
         Update_Strong();
 
-        //if(this.transform.position.z < 0)
-        //{
-        //    Vector3 pos = this.transform.position;
-        //    pos.z = 0;
-        //    this.transform.position = pos;
-        //}
+        if(Time.timeScale > 0)
+        {
+            Vector3 pos = this.transform.position;
+            pos.z = 0;
+            this.transform.position = pos;
+        }
 
         if( m_isSporn )
         {

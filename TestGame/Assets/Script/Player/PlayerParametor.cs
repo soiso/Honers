@@ -13,6 +13,9 @@ public class PlayerParametor : MonoBehaviour
     private float m_brakeSpeed = 0.1f;
     public float Get_BrakeSpeed { get { return m_brakeSpeed; } }
 
+    [SerializeField, Range(2,10),HeaderAttribute("どんぐり込の最大速度")]
+    float m_donguri_maxSpeed;
+
     [SerializeField]
     private float m_stop_radius = 1.0f;
     public float Get_StopLength { get{return m_stop_radius;} }
@@ -20,6 +23,9 @@ public class PlayerParametor : MonoBehaviour
     public void Add_PlayerMaxSpeed(float val)
     {
         m_maxSpeed += val;
+        if (m_maxSpeed > m_donguri_maxSpeed)
+            m_maxSpeed = m_donguri_maxSpeed;
+
     }
 
     public void Add_Acceleraoin(float val)
