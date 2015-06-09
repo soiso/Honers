@@ -43,6 +43,7 @@ public class Asagao : FieldObjectInterface {
         //m_current_Leap = Mathf.Clamp(m_current_Leap, 0, 1);
         //this.transform.position = Vector3.Lerp(this.transform.position, m_target_TransForm.position, m_current_Leap);
         //m_Animator.speed = m_glowSpeed;
+        m_Animator.speed = m_animation_Speed;
         m_Animator.SetBool("isSleep", false);
         m_Animator.SetBool("isGlow", true);
     }
@@ -53,6 +54,7 @@ public class Asagao : FieldObjectInterface {
         //m_current_Leap = Mathf.Clamp(m_current_Leap, 0, 1);
         //this.transform.position = Vector3.Lerp(this.transform.position, m_default_Position, m_current_Leap);
         //m_Animator.speed = -m_glowSpeed;
+        m_Animator.speed = -m_animation_Speed;
         m_Animator.SetBool("isGlow", false);
         m_Animator.SetBool("isSleep", true);
     }

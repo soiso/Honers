@@ -2099,9 +2099,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   m_usagi_TargetPoint:
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -2217,7 +2215,7 @@ MonoBehaviour:
   m_sameEventInterval: 20
   m_event_ObjectArray:
   - {fileID: 130444, guid: e0d754e5709cb22489398137e3f2e32f, type: 2}
-  - {fileID: 107308, guid: 5d8b9a872bb9e1946b5989cda83b811a, type: 2}
+  - {fileID: 126286, guid: 9c5b6f55a535dfa4ca38093159487b29, type: 2}
 --- !u!114 &11462410
 MonoBehaviour:
   m_ObjectHideFlags: 1

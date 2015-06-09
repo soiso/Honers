@@ -6,7 +6,7 @@ public class FruitVaccumer : MonoBehaviour {
     [SerializeField, HeaderAttribute("吸い込む範囲")]
     private float m_range = 5.0f;
     [SerializeField, HeaderAttribute("吸い込む時間")]
-    private float m_vaccum_Time = 3.0f;
+    public float m_vaccum_Time = 3.0f;
 
     [SerializeField, HeaderAttribute("吸引力")]
     private float m_power = 2.0f;

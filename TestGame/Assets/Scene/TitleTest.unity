@@ -2484,6 +2484,14 @@ Prefab:
       propertyPath: m_target_Height
       value: 800
       objectReference: {fileID: 0}
+    - target: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: orthographic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: orthographic size
+      value: 8.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
   m_IsPrefabParent: 0
