@@ -28,6 +28,9 @@ public class Himawari : MonoBehaviour {
     private float m_current_Yscale = 1.0f;
 
     private Vector3 m_hana_DefaultScale;
+
+    private int m_currentMode = 2;
+
     //MoveTargetに変更があればtrue
     private bool Caluculate_MoveTarget()
     {
@@ -76,7 +79,11 @@ public class Himawari : MonoBehaviour {
         Vector3 current_vec = m_hana.transform.position - m_rotate_root.transform.position;
         float cos = Vector3.Dot(current_vec.normalized, target_vec.normalized);
         if (cos > 0.999f)
+        {
+            m_currentMode++;
             return true;
+        }
+           
 
         Vector3 axis = Vector3.Cross(current_vec, target_vec);
         axis.Normalize();
@@ -93,7 +100,7 @@ public class Himawari : MonoBehaviour {
     void Scaling()
     {
         Vector3 vec = m_current_Movetarget.transform.position - m_hana.transform.position;
-        if (vec.magnitude < 0.5f)
+        if (vec.magnitude < 0.2f)
             return;
 
         Vector3 axis = Vector3.Cross(Vector3.up, vec.normalized);
@@ -143,17 +150,50 @@ public class Himawari : MonoBehaviour {
        
     }
 
+    void DefaultScaling()
+    {
+        
+        Vector3 target_scale =  m_rotate_root.transform.localScale;
+        target_scale.y = 1.0f;
+        m_rotate_root.transform.localScale = Vector3.Lerp(m_rotate_root.transform.localScale, target_scale, 0.1f);
+        m_current_Yscale = m_rotate_root.transform.localScale.y;
+        if(m_rotate_root.transform.localScale.y >= 0.95f && 
+            m_rotate_root.transform.localScale.y <= 1.05f)
+        {
+            m_currentMode++;
+        }
+    }
+
+    void Update_Move()
+    {
+        switch(m_currentMode)
+        {
+            case 0 :
+                DefaultScaling();
+                break;
+
+            case 1 :
+                Rotate();
+                break;
+
+            case 2 :
+                Scaling();
+                break;
+        }
+    }
 
 	// Update is called once per frame
 	void Update () {
 
         if (Time.timeScale < 0.1f)
             return;
-        Caluculate_MoveTarget();
-        if(Rotate())
+
+        if(Caluculate_MoveTarget())
         {
-            Scaling();
+            m_currentMode = 0;
         }
+        Update_Move();
+       
         Vector3 hana_scale;
         hana_scale.x = m_hana.transform.localScale.x / m_hana.transform.lossyScale.x * m_hana_DefaultScale.x;
         hana_scale.y = m_hana.transform.localScale.y / m_hana.transform.lossyScale.y * m_hana_DefaultScale.y;
