@@ -51,6 +51,7 @@ public class Ghost : FieldObjectInterface {
     private GameObject m_FruitManager;
 
     private FruitVaccumer m_Vaccumer;
+    private int m_Timer;
     private FruitSpout m_Spout;
 
 	// Use this for initialization
@@ -73,6 +74,8 @@ public class Ghost : FieldObjectInterface {
 
         m_Vaccumer = GetComponentInChildren<FruitVaccumer>();
         m_Spout = GetComponentInChildren<FruitSpout>();
+
+        m_Timer = -1;
 	}
 
     private void Sub_Alpha()
@@ -178,6 +181,8 @@ public class Ghost : FieldObjectInterface {
         m_TargetPos = changer.m_Panel[m_target_index].transform.position;
         m_TargetPos.z = .0f;
 
+        if( m_Timer < 0 ) m_Timer = (int)m_Vaccumer.m_vaccum_Time * 60;
+
     }
 	
 	// Update is called once per frame
@@ -185,6 +190,9 @@ public class Ghost : FieldObjectInterface {
     {
         if (this.transform.root.GetComponent<PicturePaper>().m_move)
             return;
+
+        m_Timer--;
+        if (m_Timer > 0) return;
 
         if (m_ownerCementery.m_is_active)
         {

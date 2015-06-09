@@ -291,6 +291,7 @@ GameObject:
   - 114: {fileID: 11483302}
   - 114: {fileID: 11429300}
   - 114: {fileID: 11482866}
+  - 114: {fileID: 11471988}
   m_Layer: 0
   m_Name: FruitManager4
   m_TagString: Untagged
@@ -2801,6 +2802,33 @@ MonoBehaviour:
   m_max_fruit_Type: 4
   m_impact_StreetLight: 0
   m_hasLogHouse: 0
+--- !u!114 &11471988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 134232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650d81eba97925141a68db4df9b99a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_usagi_SpornPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_usagi_TargetPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_karasu_SpornPoint:
+  - {fileID: 0}
+  - {fileID: 0}
+  m_karasu_TargetPoint:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11482866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2813,13 +2841,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sporn_Point:
-  - {fileID: 431644}
+  - {fileID: 0}
   - {fileID: 448320}
   - {fileID: 444834}
   - {fileID: 485852}
   m_sameEventInterval: 20
   m_event_ObjectArray:
-  - {fileID: 112604, guid: a3135320fcbcbf745b86e6c7ce4b32e2, type: 2}
+  - {fileID: 130444, guid: e0d754e5709cb22489398137e3f2e32f, type: 2}
+  - {fileID: 126286, guid: 9c5b6f55a535dfa4ca38093159487b29, type: 2}
 --- !u!114 &11483018
 MonoBehaviour:
   m_ObjectHideFlags: 1
