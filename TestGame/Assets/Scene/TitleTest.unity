@@ -2274,7 +2274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[0]
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11422642, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_timer
@@ -2676,7 +2676,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 7.88999939, y: 6.00000191}
+  m_AnchoredPosition: {x: 7.9000001, y: 6.69999981}
   m_SizeDelta: {x: 606, y: 379}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1739744371

@@ -99,18 +99,6 @@ public class Result : MonoBehaviour
         peach_num = Objectmanager.m_instance.m_fruit_Counter.peach_num;
         grape_num = Objectmanager.m_instance.m_fruit_Counter.grape_num;
 
-        foreach (GameObject obj in fruit_obj)
-        {
-            scoretext = obj.GetComponentInChildren<Text>();
-            if (obj.name == "apple")
-                scoretext.text = apple_num.ToString();
-            if (obj.name == "peach")
-                scoretext.text = peach_num.ToString();
-            if (obj.name == "orrange")
-                scoretext.text = grape_num.ToString();
-            if (obj.name == "strawberry")
-                scoretext.text = strawberry_num.ToString();
-        }
         current_fruit_num = 0;
         max_fruit_num = apple_num;
         if (max_fruit_num < grape_num) max_fruit_num = grape_num;
