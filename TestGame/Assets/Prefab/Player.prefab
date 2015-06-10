@@ -1857,6 +1857,7 @@ MonoBehaviour:
   m_maxSpeed: 2.51999998
   m_acceleration: .134000003
   m_brakeSpeed: .49000001
+  m_donguri_maxSpeed: 8
   m_stop_radius: 1
 --- !u!114 &11425350
 MonoBehaviour:
@@ -1887,7 +1888,6 @@ MonoBehaviour:
   m_SpornPoint: {fileID: 0}
   m_swith_Interval: .25
   m_swith_Time: 2
-  m_switch_adjust: .000500000024
 --- !u!114 &11464358
 MonoBehaviour:
   m_ObjectHideFlags: 1

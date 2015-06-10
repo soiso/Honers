@@ -1333,41 +1333,37 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.42000008
+      value: .5
       objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .180000007
+      value: .25999999
       objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalPosition.z
+      value: -.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+      propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 1.49011612e-08
-      objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalRotation.y
       value: .707106829
       objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 2.23517418e-08
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
+    - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106769
-      objectReference: {fileID: 0}
-    - target: {fileID: 450748, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
+      value: .707106709
       objectReference: {fileID: 0}
     - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11459690, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_SpornPoint
