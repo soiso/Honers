@@ -63,6 +63,8 @@ public class Player : MonoBehaviour {
     private int m_switch_Timer = 0;
     private float m_nextSwitch;
 
+    private ParticleSystem m_Particle;
+
 	// Use this for initialization
 	void Start () 
     {
@@ -77,6 +79,7 @@ public class Player : MonoBehaviour {
         //m_TimeZoneTrigger = GetComponentInChildren<TimeZone_BoxCollider>();
         m_lossyScale = this.transform.lossyScale;
         m_is_strong = false;
+        m_Particle = GetComponentInChildren<ParticleSystem>();
 	}
 	
     void    Update_Strong()
@@ -186,6 +189,7 @@ public class Player : MonoBehaviour {
          {
              var fruit = col_object.GetComponent<FruitInterFace>();
              fruit.Collision(this.gameObject);
+             m_Particle.Play();
          }
 
     }
