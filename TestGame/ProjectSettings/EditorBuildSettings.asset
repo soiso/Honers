@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/TitleTest.unity
   - enabled: 0
     path: Assets/Scene/testGame.unity
@@ -31,21 +31,23 @@ EditorBuildSettings:
     path: Assets/Scene/morioka/MO_TestScene.unity
   - enabled: 0
     path: Assets/Scene/murata/MU_TestScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/murata/New_Stage5.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/terauchi/New_Stage3.unity
   - enabled: 0
     path: Assets/Scene/nagao/N_TestScene.unity
   - enabled: 0
     path: Assets/Scene/terauchi/T_TestScene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/nagao/Result.unity
   - enabled: 1
+    path: Assets/Scene/murata/Ranking.unity
+  - enabled: 0
     path: Assets/Scene/nagao/LastResult.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/terauchi/New_Stage2.unity
-  - enabled: 1
-    path: Assets/Scene/murata/New_Stage1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/terauchi/New_Stage4.unity
+  - enabled: 0
+    path: Assets/Scene/murata/New_Stage1.unity
