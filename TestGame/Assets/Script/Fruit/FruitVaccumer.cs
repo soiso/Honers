@@ -89,6 +89,11 @@ public class FruitVaccumer : MonoBehaviour {
             return;
         int type = (int)script.fruit_type;
 
+        if (type >= (int)FruitInterFace.FRUIT_TYPE.num_normal_fruit)
+            return;
+         
+        
+
         m_vaccum_FruitArray[type]++;
         DestroyObject(other.gameObject);
     }
