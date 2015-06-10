@@ -11,10 +11,10 @@ public class PicturePaperRegister : MonoBehaviour {
     GameObject pic_paper_prefab;
 
     private GameObject picpaper;
-	void Start ()
-    {
 
-        GameObject paperObj = GameObject.Find(m_picturePaperName);
+    void Awake()
+    {
+     GameObject paperObj = GameObject.Find(m_picturePaperName);
         if(!paperObj)
         {
             Debug.Log("PicturePaper is Not GameScene !!");
@@ -27,6 +27,12 @@ public class PicturePaperRegister : MonoBehaviour {
 
         }
         this.transform.SetParent(paperObj.transform);
+    }
+
+	void Start ()
+    {
+
+   
 	}
 	
 	// Update is called once per frame

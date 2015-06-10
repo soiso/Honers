@@ -2581,7 +2581,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1665865909}
   - 114: {fileID: 1665865910}
-  - 114: {fileID: 1665865911}
   m_Layer: 0
   m_Name: OpenDoor
   m_TagString: Untagged
@@ -2620,19 +2619,6 @@ MonoBehaviour:
   LeftDoor: {fileID: 466717108}
   rotate_speed: .600000024
   rotation_angle_max: 120
---- !u!114 &1665865911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1665865908}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!1 &1739744369
 GameObject:
   m_ObjectHideFlags: 0
