@@ -31,6 +31,8 @@ public class SceneManager : MonoBehaviour
     private GameObject oldPicPaper;
     private bool LoadFlg = false;
 
+    private bool ResultFlg = false;
+
     // Use this for initialization
     void Start()
     {
@@ -43,15 +45,25 @@ public class SceneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ResultFlg)
+        {
+            light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 0.0f, 0.03f);
+            float inset = light.GetComponent<Light>().intensity;
+            if (inset <= 0.5f)
+                AddSceneResult();
+        }
         if (LoadFlg == true)
         {
-            light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 1.0f, 0.03f);
+            //light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 1.0f, 0.03f);
             if (loadInfo.allowSceneActivation == false)
             {
                 if (loadInfo.progress >= 0.9f)
                 {
                     //シーン切替 .
-                    oldPicPaper.GetComponent<PicturePaper>().Move_Begin();
+                    if (currentSceneName != "Result")
+                        oldPicPaper.GetComponent<PicturePaper>().Move_Begin();
+                    else
+                        LoadFlg = false;
                     loadInfo.allowSceneActivation = true;
                 }
             }
@@ -115,9 +127,16 @@ public class SceneManager : MonoBehaviour
         picpaper.name += "_old";
         oldPicPaper = picpaper;
         if (currentSceneName != "Result" || currentSceneName != "LastResult")
-        Objectmanager.m_instance.m_camera_move.Init();
+            Objectmanager.m_instance.m_camera_move.Init();
     }
-
+    public void AddSceneResult()
+    {
+        loadInfo = Application.LoadLevelAdditiveAsync("Result");
+        LoadFlg = true;
+        loadInfo.allowSceneActivation = false;
+        ResultFlg = false;
+        currentSceneName = "Result";
+    }
     public void NextSceneLoad()
     {
         if (LoadFlg) return;
@@ -177,7 +196,11 @@ public class SceneManager : MonoBehaviour
         if (currentSceneName == "New_Stage5")
             ChangeScene_Add("LastResult");
         else
-            ChangeScene_Add("Result");
+        {
+            //ChangeScene_Add("Result");
+            ResultFlg = true;
+            Time.timeScale = .0f;
+        }
     }
     public string GetCurrentStageName()
     {

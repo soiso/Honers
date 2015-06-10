@@ -6,7 +6,7 @@ using System.Collections;
 public class Stage_Timer : MonoBehaviour {
 
     //[SerializeField]
-    public float stage_rimit;
+    private float stage_rimit;
 
     private float start_time=0.0f;
     private float current_time;
