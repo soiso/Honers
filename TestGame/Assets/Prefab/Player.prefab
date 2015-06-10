@@ -1591,7 +1591,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173976}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 1.95200002, y: .35800001, z: -.349999994}
+  m_LocalPosition: {x: .5, y: .25999999, z: -.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 484364}
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_maxSpeed: 2.51999998
   m_acceleration: .134000003
   m_brakeSpeed: .49000001
-  m_donguri_maxSpeed: 0
+  m_donguri_maxSpeed: 6.94000006
   m_stop_radius: 1
 --- !u!114 &11425350
 MonoBehaviour:
