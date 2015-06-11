@@ -112,9 +112,10 @@ public class LastResult : MonoBehaviour {
     }
     public void NextScene()
     {
-        Objectmanager.m_instance.m_fruit_Counter.Reset();
-        Objectmanager.m_instance.m_score.Reset();
-        Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+        //Objectmanager.m_instance.m_fruit_Counter.Reset();
+        //Objectmanager.m_instance.m_score.Reset();
+        //Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+        Objectmanager.m_instance.m_scene_manager.ChangeScene_Add("Ranking");
     }
     private Vector3 m_StartPos;
     private Vector3 m_EndPos;

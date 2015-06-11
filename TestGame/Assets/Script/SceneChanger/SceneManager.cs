@@ -72,7 +72,7 @@ public class SceneManager : MonoBehaviour
         {
             if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 20.0f)
             {
-                if (currentSceneName != "Result" && currentSceneName != "LastResult")
+                if (currentSceneName != "Result" && currentSceneName != "LastResult" && currentSceneName != "Ranking")
                 {
                     Objectmanager.m_instance.m_camera_move.cMove_Begin();
                     startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
@@ -126,7 +126,7 @@ public class SceneManager : MonoBehaviour
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
         oldPicPaper = picpaper;
-        if (currentSceneName != "Result" || currentSceneName != "LastResult")
+        if (currentSceneName != "Result" || currentSceneName != "LastResult" || currentSceneName !="Ranking" )
             Objectmanager.m_instance.m_camera_move.Init();
     }
     public void AddSceneResult()
