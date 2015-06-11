@@ -3,6 +3,15 @@ using System.Collections;
 
 public class Story : MonoBehaviour {
 
+    [SerializeField, SceneName]
+    private string nect_scene_name;
+    [SerializeField, Range(0, 9997), HeaderAttribute("BとAの境")]
+    public int score_sort_AB;
+    [SerializeField, Range(0, 9999), HeaderAttribute("AとSの境")]
+    public int score_sort_SA;
+
+    private int Score = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,7 +27,10 @@ public class Story : MonoBehaviour {
     public void NextScene()
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
-        Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+        if(Objectmanager.m_instance.m_scene_manager.currentSceneName == "story_11")
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad(CheckEnding());
+        else
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad(nect_scene_name);
     }
 
     private Vector3 m_StartPos;
@@ -44,5 +56,28 @@ public class Story : MonoBehaviour {
         }
 
         return false;
+    }
+    private string CheckEnding()
+    {
+
+        switch(Calculate()){
+            case 1:
+        return "story_bad";
+            case 2:
+        return "story_normal";
+            case 3:
+        return "story_happy";
+        }
+        return null;
+    }
+    int Calculate()
+    {
+        if (Score < score_sort_AB)
+            return 1;
+        if (Score > score_sort_AB && Score < score_sort_SA)
+            return 2;
+        if (Score > score_sort_SA)
+            return 3;
+        return 0;
     }
 }

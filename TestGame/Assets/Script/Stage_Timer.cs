@@ -37,10 +37,10 @@ public class Stage_Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage1" ||
-                Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage2" ||
-                Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage3" ||
-                Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage4" ||
+            if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage1" &&
+                Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage2" &&
+                Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage3" &&
+                Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage4" &&
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage5")
                 return;
         float remaining_time = stage_rimit - (current_time - start_time);

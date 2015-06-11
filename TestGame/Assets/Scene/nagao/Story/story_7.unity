@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45420ea9bb60154cbeb86038cbab4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nect_scene_name: New_Stage1
 --- !u!1 &1492236149
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a4a95b861894d4f8a65579474d72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_target_Camera: {fileID: 0}
   m_target_width: 1280
   m_target_Height: 800
 --- !u!114 &1492236151

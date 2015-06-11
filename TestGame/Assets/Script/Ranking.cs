@@ -160,7 +160,7 @@ public class Ranking : MonoBehaviour
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
         Objectmanager.m_instance.m_score.Reset();
-        Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+        Objectmanager.m_instance.m_scene_manager.NextSceneLoad("TitleTest");
     }
 
     private bool IsFlick()

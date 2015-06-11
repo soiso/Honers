@@ -95,6 +95,11 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 39c3f54f05baf344997128607d988488, type: 3}
   m_PrefabInternal: {fileID: 1952061693}
+--- !u!20 &125168795 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2076020, guid: 7c632ddce514e994dba77da6256c2036,
+    type: 2}
+  m_PrefabInternal: {fileID: 1630234866}
 --- !u!1 &277995059
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,9 +358,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 505604198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a06757ef12df4c4cbd60293f79a70df, type: 3}
+  m_Script: {fileID: 11500000, guid: 39ad9618de949284ea9345e4000b2b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: story_1
 --- !u!114 &505604201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1685,6 +1691,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 50b5efb5d5cddf245b50c98d1353f09e, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &1175739798 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036,
+    type: 2}
+  m_PrefabInternal: {fileID: 1630234866}
 --- !u!1 &1208994632
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,11 +2058,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.size
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.size
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: stage_pic_num.Array.size
@@ -2091,7 +2102,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[0]
-      value: 10
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 11422642, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_timer
@@ -2103,7 +2114,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[1]
-      value: 10
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 11422642, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_lerp_Speed
@@ -2115,51 +2126,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[3]
-      value: story_4
+      value: New_Stage4
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[2]
-      value: story_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: rimit_time.Array.data[2]
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: sceneName.Array.data[4]
-      value: story_5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: sceneName.Array.data[5]
-      value: story_6
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: sceneName.Array.data[6]
-      value: story_7
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: sceneName.Array.data[7]
-      value: New_Stage1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: sceneName.Array.data[8]
-      value: New_Stage2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
-      propertyPath: sceneName.Array.data[9]
       value: New_Stage3
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: rimit_time.Array.data[2]
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[4]
+      value: New_Stage5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[5]
+      value: TitleTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[6]
+      value: story_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[7]
+      value: story_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[8]
+      value: story_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[9]
+      value: story_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[4]
-      value: 10
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[5]
-      value: 10
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[6]
-      value: 10
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[7]
@@ -2175,7 +2186,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[10]
-      value: New_Stage4
+      value: story_5
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[10]
@@ -2187,7 +2198,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[3]
-      value: 101
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: light
@@ -2315,7 +2326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[1]
-      value: story_2
+      value: New_Stage2
       objectReference: {fileID: 0}
     - target: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_NormalizedViewPortRect.x
@@ -2363,43 +2374,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[0]
-      value: story_1
+      value: New_Stage1
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[11]
-      value: New_Stage5
+      value: story_6
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[12]
-      value: TitleTest
+      value: story_7
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[13]
-      value: TitleTest
+      value: story_8
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[14]
-      value: TitleTest
+      value: story_9
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[15]
-      value: TitleTest
+      value: story_10
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[16]
-      value: TitleTest
+      value: story_11
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[17]
-      value: TitleTest
+      value: story_bad
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[18]
-      value: TitleTest
+      value: story_happy
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[19]
-      value: TitleTest
+      value: story_normal
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[11]
@@ -2435,6 +2446,22 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[19]
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448564, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_target_Camera
+      value: 
+      objectReference: {fileID: 125168795}
+    - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_target_Camera
+      value: 
+      objectReference: {fileID: 1175739798}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[20]
+      value: LastResult
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: rimit_time.Array.data[20]
       value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents:
