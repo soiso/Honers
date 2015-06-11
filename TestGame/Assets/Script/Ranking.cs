@@ -17,6 +17,9 @@ public class Ranking : MonoBehaviour
     private int m_CurrentScore;
     private int m_CurrentRnak;
 
+    [SerializeField, HeaderAttribute("拡大倍率")]
+    private float m_scale;
+
     [SerializeField, HeaderAttribute("点滅周期")]
     private float m_swith_Interval = 1.0f;
     private int m_switch_Timer = 0;
@@ -24,6 +27,18 @@ public class Ranking : MonoBehaviour
 
     Vector3 m_StartPos;
     Vector3 m_EndPos;
+
+    private int m_numloop;
+
+    [SerializeField, HeaderAttribute("基本LocalScale")]
+    private Vector3 m_default_Scale;
+    [SerializeField, HeaderAttribute("拡大Scale")]
+    private Vector3 m_expand_Scale;
+
+    [SerializeField, HeaderAttribute("縮小Scale")]
+    private Vector3 m_reduction_Scale;
+    [SerializeField, HeaderAttribute("拡縮速度"), Range(0f, 1f)]
+    private float m_speed = 0.05f;
 
 	// Use this for initialization
 	void Start ()
@@ -44,6 +59,13 @@ public class Ranking : MonoBehaviour
         }
         m_CurrentRnak = Compare(m_CurrentScore);
         SetNewScore(m_CurrentScore);
+        m_numloop = 0;
+        while( m_CurrentScore > 0 )
+        {
+            m_numloop++;
+            m_CurrentScore /= 10;
+        }
+         //m_current_Mode = ScalingMode.fix_default;
 	}
 	
 	// Update is called once per frame
@@ -58,11 +80,13 @@ public class Ranking : MonoBehaviour
         if (m_CurrentRnak != -1)
         {
             float interval = Time.time + m_swith_Interval;
+            Transform t = m_numbers.transform.GetChild(m_CurrentRnak).transform;
+            t.transform.localScale = Vector3.Lerp(t.transform.localScale, m_expand_Scale, m_speed);
             if (Time.time > m_nextSwitch)
             {
-                MeshRenderer[] score_renderer = m_numbers.transform.GetChild(m_CurrentRnak).GetComponentsInChildren<MeshRenderer>();
-                foreach (MeshRenderer r in score_renderer)
+                for (int i = 0; i < m_numloop; i++  )
                 {
+                    MeshRenderer r = m_numbers.transform.GetChild(m_CurrentRnak).GetChild(i).GetComponent<MeshRenderer>();
                     r.enabled = !r.enabled;
                 }
                 m_nextSwitch = Time.time + m_swith_Interval;
