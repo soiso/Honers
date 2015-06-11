@@ -102,6 +102,10 @@ public class Fruit : FruitInterFace
         if (paper.m_move)
             return;
 
+        if (Objectmanager.m_instance.m_scene_manager.currentSceneName == "Result" ||
+            Objectmanager.m_instance.m_scene_manager.currentSceneName == "LastResult")
+            return;
+
         sound = GetComponent<AudioSource>();
         sound.clip = clip;
         sound.Play();

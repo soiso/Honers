@@ -72,7 +72,11 @@ public class SceneManager : MonoBehaviour
         {
             if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 20.0f)
             {
-                if (currentSceneName != "Result" && currentSceneName != "LastResult" && currentSceneName != "Ranking")
+                if (currentSceneName == "New_Stage1" ||
+                    currentSceneName == "New_Stage2" ||
+                    currentSceneName == "New_Stage3" ||
+                    currentSceneName == "New_Stage4" ||
+                    currentSceneName == "New_Stage5")
                 {
                     Objectmanager.m_instance.m_camera_move.cMove_Begin();
                     startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
@@ -126,7 +130,11 @@ public class SceneManager : MonoBehaviour
         picpaper.GetComponent<PicturePaper>().SoundPlay();
         picpaper.name += "_old";
         oldPicPaper = picpaper;
-        if (currentSceneName != "Result" || currentSceneName != "LastResult" || currentSceneName !="Ranking" )
+        if (currentSceneName == "New_Stage1" ||
+            currentSceneName == "New_Stage2" ||
+            currentSceneName == "New_Stage3" ||
+            currentSceneName == "New_Stage4" ||
+            currentSceneName == "New_Stage5")
             Objectmanager.m_instance.m_camera_move.Init();
     }
     public void AddSceneResult()
@@ -164,8 +172,13 @@ public class SceneManager : MonoBehaviour
                     ChangeScene_Add(sceneName[currentScene_num]);
                 }
                 break;
-            }
-            currentScene_num++;
+            } 
+            //if (currentSceneName == "New_Stage1" ||
+            //    currentSceneName == "New_Stage2" ||
+            //    currentSceneName == "New_Stage3" ||
+            //    currentSceneName == "New_Stage4" ||
+            //    currentSceneName == "New_Stage5")
+                currentScene_num++;
         }
     }
 
@@ -187,7 +200,12 @@ public class SceneManager : MonoBehaviour
                 }
                 break;
             }
-            currentScene_num++;
+            if (currentSceneName == "New_Stage1" ||
+                currentSceneName == "New_Stage2" ||
+                currentSceneName == "New_Stage3" ||
+                currentSceneName == "New_Stage4" ||
+                currentSceneName == "New_Stage5")
+                currentScene_num++;
         }
     }
 
@@ -199,7 +217,7 @@ public class SceneManager : MonoBehaviour
         {
             //ChangeScene_Add("Result");
             ResultFlg = true;
-            Time.timeScale = .0f;
+            //Time.timeScale = .0f;
         }
     }
     public string GetCurrentStageName()
