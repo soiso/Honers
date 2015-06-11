@@ -31,10 +31,14 @@ public class Himawari : MonoBehaviour {
 
     private int m_currentMode = 2;
 
+    private AudioSource m_Audio;
+
     //MoveTargetに変更があればtrue
     private bool Caluculate_MoveTarget()
     {
         GameObject candidate = null;
+
+        m_Audio = GetComponent<AudioSource>();
 
         foreach(var it in m_move_PointArray)
         {
@@ -80,6 +84,7 @@ public class Himawari : MonoBehaviour {
         float cos = Vector3.Dot(current_vec.normalized, target_vec.normalized);
         if (cos > 0.999f)
         {
+            m_Audio.Play();
             m_currentMode++;
             return true;
         }
@@ -190,6 +195,7 @@ public class Himawari : MonoBehaviour {
 
         if(Caluculate_MoveTarget())
         {
+            m_Audio.Play();
             m_currentMode = 0;
         }
         Update_Move();

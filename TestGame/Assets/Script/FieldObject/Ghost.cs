@@ -15,6 +15,8 @@ public class Ghost : FieldObjectInterface {
     [SerializeField, HeaderAttribute("消えるまでのスピード")]
     private float m_erase_speed =0.05f;
 
+    private AudioSource m_Audio;
+
     enum MOVE_DIRECTION
     {
         right,
@@ -75,6 +77,8 @@ public class Ghost : FieldObjectInterface {
         m_Vaccumer = GetComponentInChildren<FruitVaccumer>();
         m_Spout = GetComponentInChildren<FruitSpout>();
 
+        m_Audio = GetComponent<AudioSource>();
+
         m_Timer = -1;
 	}
 
@@ -111,6 +115,7 @@ public class Ghost : FieldObjectInterface {
         m_current_Alpha = Mathf.Clamp(m_current_Alpha + m_erase_speed, 0, 1);
         if( m_current_Alpha >= 1.0f )
         {
+            m_Audio.Play();
             m_Sporn = true;
             m_TargetPos = GameObject.Find("Player").transform.position;
             m_TargetPos.y += 1.5f;
