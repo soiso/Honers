@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CameraAspect : MonoBehaviour {
 
-
+    [SerializeField]
     private Camera m_target_Camera = null;
     [SerializeField]
     private float m_target_width = 640.0f;
@@ -14,8 +14,8 @@ public class CameraAspect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        m_rect = Camera.main.rect;
-        m_target_Camera = Camera.main;
+        m_rect =m_target_Camera.rect;
+      //  m_target_Camera = Camera.main;
 	}
 	
 	// Update is called once per frame
@@ -47,7 +47,7 @@ public class CameraAspect : MonoBehaviour {
             m_rect.height = 1.0f;
           //  m_target_Camera.orthographicSize = Screen.height / 2.0f;
         }
-        Camera.main.rect = m_rect;
+      m_target_Camera.rect = m_rect;
 	}
     
 }

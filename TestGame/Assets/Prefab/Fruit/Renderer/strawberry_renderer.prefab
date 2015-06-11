@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3352770}
   - 23: {fileID: 2313496}
   - 114: {fileID: 11412620}
+  - 114: {fileID: 11498180}
   m_Layer: 0
   m_Name: strawberry_renderer
   m_TagString: Untagged
@@ -73,6 +74,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_type: 1
+--- !u!114 &11498180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_picturePaperName: PicturePaper
+  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
