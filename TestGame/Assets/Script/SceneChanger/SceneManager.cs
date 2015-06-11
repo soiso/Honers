@@ -26,6 +26,7 @@ public class SceneManager : MonoBehaviour
     private GameObject startsign;
     private AsyncOperation loadInfo;
     public int currentScene_num = 0;
+    public int LoadStage_num = 0;
     public string currentSceneName;
 
     private GameObject oldPicPaper;
@@ -135,7 +136,9 @@ public class SceneManager : MonoBehaviour
             currentSceneName == "New_Stage3" ||
             currentSceneName == "New_Stage4" ||
             currentSceneName == "New_Stage5")
+        {
             Objectmanager.m_instance.m_camera_move.Init();
+        }
     }
     public void AddSceneResult()
     {
@@ -212,13 +215,13 @@ public class SceneManager : MonoBehaviour
     public void EndStage()
     {
         if (currentSceneName == "New_Stage5")
-            ChangeScene_Add("LastResult");
-        else
-        {
+        LoadStage_num = 5;
+        //else
+        //{
             //ChangeScene_Add("Result");
             ResultFlg = true;
             //Time.timeScale = .0f;
-        }
+        //}
     }
     public string GetCurrentStageName()
     {

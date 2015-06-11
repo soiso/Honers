@@ -119,7 +119,10 @@ public class Result : MonoBehaviour
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
         //Objectmanager.m_instance.m_score.Reset();
-        Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+        if (Objectmanager.m_instance.m_scene_manager.LoadStage_num >4)
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad("story_8");
+        else
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }
     private Vector3 m_StartPos;
     private Vector3 m_EndPos;

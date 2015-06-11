@@ -237,7 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 01b16c8589ed0944b95cd8824d7055cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd8e9a8624a368f488004734161716ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -279,7 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45420ea9bb60154cbeb86038cbab4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nect_scene_name: story_4
+  nect_scene_name: LastResult
+  score_sort_AB: 0
+  score_sort_SA: 0
 --- !u!1 &1492236149
 GameObject:
   m_ObjectHideFlags: 0

@@ -803,6 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a4a95b861894d4f8a65579474d72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_target_Camera: {fileID: 0}
   m_target_width: 1280
   m_target_Height: 800
 --- !u!114 &1295204687
