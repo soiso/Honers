@@ -84,8 +84,6 @@ public class SceneManager : MonoBehaviour
                 else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
                 LoadFlg = false;
-                //BGM変えたい
-                Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(currentSceneName);
             }
         }
 
@@ -110,8 +108,6 @@ public class SceneManager : MonoBehaviour
     {
         currentSceneName = sceneName;
         Application.LoadLevel(sceneName);
-        //BGM変えたい
-        Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(sceneName);
         if (sceneName == "TitleTest")
             currentScene_num = 0;
     }
