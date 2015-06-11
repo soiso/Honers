@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2360170}
   - 95: {fileID: 9537058}
   - 114: {fileID: 11491008}
+  - 114: {fileID: 11458860}
   m_Layer: 0
   m_Name: apple_renderer
   m_TagString: Untagged
@@ -79,6 +80,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11458860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_picturePaperName: PicturePaper
+  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!114 &11491008
 MonoBehaviour:
   m_ObjectHideFlags: 1

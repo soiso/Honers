@@ -83,7 +83,12 @@ public class FruitArrangeManager : MonoBehaviour {
             m_tree_Array[i] = m_GameObjectOfTree[i].GetComponent<Tree>();
         }
         feaver_sign = GameObject.Find("FeaverSign");
-        m_player = GameObject.Find("Player");
+        var pic = GameObject.Find("PicturePaper");
+
+        m_player = pic.transform.FindChild("Player").gameObject;
+        if (!m_player)
+            Debug.Log("player is null !");
+
         m_fieldFruit_Root.transform.parent = this.gameObject.transform.parent;
 	}
 
