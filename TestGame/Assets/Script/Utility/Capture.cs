@@ -6,60 +6,45 @@ using System;
 
 public class Capture : MonoBehaviour {
 
-    [SerializeField]
-    private Camera m_target_Camera;
+    //[SerializeField]
+    //private Camera m_target_Camera;
 
-    public Texture2D Texture = null;
+    //private Texture2D Texture = null;
+    //void Awake()
+    //{
+    //  //  saved_screen_capture = false;
+    //}
 
-    /// <summary>
-    /// キャプチャー画像を保存済みかどうか
-    /// </summary>
-    bool saved_screen_capture = false;
+    //void Update()
+    //{
+    //    //if (saved_screen_capture != true)
+    //    //{
+    //        // キャプチャー
+    //       // Take();
 
-    /// <summary>
-    /// Awake this instance.
-    /// </summary>
-    void Awake()
+    //        //GameObject t = GameObject.Find("Test");
+    //        //t.GetComponent<MeshRenderer>().material.mainTexture = this.Texture;
+    //        // 破棄
+    //        // Destroy(this);
+    ////    }
+    //}
+
+    public Texture2D Capture_Camera(Camera target_Camera)
     {
-        saved_screen_capture = false;
-    }
+        Texture2D ret = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+       
+        RenderTexture work_Buffer = new RenderTexture(ret.width, ret.height, 24);
 
-    /// <summary>
-    /// Raises the post render event.
-    /// </summary>
-    void Update()
-    {
-        if (saved_screen_capture != true)
-        {
-            // キャプチャー
-            Take();
+        RenderTexture pre = target_Camera.targetTexture;
+        target_Camera.targetTexture = work_Buffer;
+        target_Camera.Render();
+        target_Camera.targetTexture = pre;
 
-            GameObject t = GameObject.Find("Test");
-            t.GetComponent<MeshRenderer>().material.mainTexture = this.Texture;
-            // 破棄
-            // Destroy(this);
-        }
-    }
+       RenderTexture.active = work_Buffer;
+        //これがtargetTexture->テクスチャへの焼きこみ関数
+        ret.ReadPixels(new Rect(0, 0, ret.width, ret.height),0,0);
 
-    private void Take()
-    {
-        Texture2D screenShot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        RenderTexture rt = new RenderTexture(screenShot.width, screenShot.height, 24);
-
-
-        RenderTexture pre = m_target_Camera.targetTexture;
-        m_target_Camera.targetTexture = rt;
-        m_target_Camera.Render();
-        m_target_Camera.targetTexture = pre;
-
-        RenderTexture.active = rt;
-        screenShot.ReadPixels(new Rect(0, 0, screenShot.width, screenShot.height), 0, 0);
-
-        //various other post processing here..
-
-        screenShot.Apply();
-
-        this.Texture = screenShot;
-        saved_screen_capture = true;
+        ret.Apply();
+        return ret;
     }
 }
