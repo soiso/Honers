@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 112409941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1000004, y: -.610000014, z: -.209999993}
+  m_LocalPosition: {x: 12.1000004, y: -.610000014, z: 0}
   m_LocalScale: {x: .465896398, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1259330424}
@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a4a95b861894d4f8a65579474d72d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_target_Camera: {fileID: 0}
   m_target_width: 1280
   m_target_Height: 800
 --- !u!114 &233147484
@@ -1337,7 +1338,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458338, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .980000019
+      value: .639999986
       objectReference: {fileID: 0}
     - target: {fileID: 11462570, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_move_PointArray.Array.data[6]
@@ -2399,6 +2400,22 @@ Prefab:
     - target: {fileID: 464842, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3.36999989
+      objectReference: {fileID: 0}
+    - target: {fileID: 464842, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.720000029
+      objectReference: {fileID: 0}
+    - target: {fileID: 426072, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.720000029
+      objectReference: {fileID: 0}
+    - target: {fileID: 426500, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 431268, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}

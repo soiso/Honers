@@ -1107,6 +1107,11 @@ RectTransform:
   m_AnchoredPosition: {x: 96, y: -131}
   m_SizeDelta: {x: -93.0599976, y: 172.570007}
   m_Pivot: {x: .5, y: .5}
+--- !u!20 &777076315 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036,
+    type: 2}
+  m_PrefabInternal: {fileID: 1630234866}
 --- !u!1 &796495418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,6 +2442,14 @@ Prefab:
       propertyPath: rimit_time.Array.data[19]
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 11467270, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_target_Camera
+      value: 
+      objectReference: {fileID: 777076315}
+    - target: {fileID: 11448564, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: m_target_Camera
+      value: 
+      objectReference: {fileID: 2041246312}
     m_RemovedComponents:
     - {fileID: 11473514, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
@@ -2972,6 +2985,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fae4f1ac81afb9d4b96b4603f59b10b7, type: 3}
   m_IsPrefabParent: 0
+--- !u!20 &2041246312 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2076020, guid: 7c632ddce514e994dba77da6256c2036,
+    type: 2}
+  m_PrefabInternal: {fileID: 1630234866}
 --- !u!1 &2045935212
 GameObject:
   m_ObjectHideFlags: 0
