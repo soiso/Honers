@@ -223,7 +223,7 @@ MonoBehaviour:
   m_swith_Time: 0
   m_swith_Interval: 1
   m_switch_adjust: .00999999978
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 0b304c1e9ad0cca47b16e9d26b2685a7, type: 3}
 --- !u!135 &13570028
 SphereCollider:
   m_ObjectHideFlags: 1
