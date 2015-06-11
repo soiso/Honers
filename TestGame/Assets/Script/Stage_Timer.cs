@@ -18,21 +18,31 @@ public class Stage_Timer : MonoBehaviour {
     private GameObject endcount;
 
     public Texture[] count;
+    public AudioClip clip;
+    public AudioClip start;
+    public AudioClip end;
+    private AudioSource audio;
     // Use this for initialization
 	void Start () {
         s_flag = false;
         
         rimit_time = GetComponentInChildren<Text>();
+        audio = GetComponent<AudioSource>();
+        audio.clip = clip;
 	}
     public void Time_Start()
     {
         start_time = Time.time;
         rimit_time.enabled = true;
+        audio.Stop();
+        audio.clip = start;
+        audio.Play();
     }
     public void Reset()
     {
         start_time = Time.time;
         s_flag = false;
+        audio.Stop();
     }
 	
 	// Update is called once per frame
@@ -50,6 +60,8 @@ public class Stage_Timer : MonoBehaviour {
             Color temp = endcount.GetComponent<Renderer>().material.color;
             endcount.GetComponent<Renderer>().material.color = new Color(temp.r, temp.g,temp.b, 255);
             endcount.GetComponent<Renderer>().material.mainTexture = count[(int)remaining_time];
+            audio.clip = clip;
+            if(!audio.isPlaying)audio.Play();
         }
         if (start_time < 0.1f) current_time = 0.0f;
         if (current_time - start_time > stage_rimit && 
@@ -58,6 +70,9 @@ public class Stage_Timer : MonoBehaviour {
             ChangeResult();
             s_flag = true;
             rimit_time.enabled = false;
+            audio.Stop();
+            audio.clip = end;
+            audio.Play();
 	    }
         rimit_time.text = remaining_time.ToString("f2");
     }
