@@ -14,6 +14,9 @@ public class Objectmanager : Singleton<Objectmanager>
 
     public TouchParam m_touchinfo { get; private set; }
 
+    public Camera m_screenShot_Camera { get; private set; }
+    public Capture m_scshot_Machine { get; private set; }
+
     void Awake()
     {
         m_fruit_Counter = GetComponentInChildren<FruitCounter>();
@@ -27,6 +30,9 @@ public class Objectmanager : Singleton<Objectmanager>
 
         m_camera_move = GetComponentInChildren<CameraMove>();
         m_touchinfo = GetComponentInChildren<TouchParam>();
+        var work = this.transform.FindChild("ScreenShotCamera");
+        m_screenShot_Camera = work.GetComponent<Camera>();
+        m_scshot_Machine = GetComponent<Capture>();
     }
 
     void Start()

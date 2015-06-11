@@ -3,30 +3,16 @@ using System.Collections;
 
 public class Test : MonoBehaviour {
 
-    private Camera _mainView = null;
-    private Camera mainView
+
+
+
+    public void Update()
     {
-        get { if (!_mainView) _mainView = Camera.main; return _mainView; }
-        set { _mainView = value; }
-    }
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            var renderer = GetComponent<MeshRenderer>();
+            renderer.material.mainTexture = Objectmanager.m_instance.m_scshot_Machine.Capture_Camera(Objectmanager.m_instance.m_screenShot_Camera);
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void FixedUpdate()
-    {
-
-    }
-
-    void LateUpdate()
-    {
-
+        }
     }
 }
