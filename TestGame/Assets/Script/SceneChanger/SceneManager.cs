@@ -81,6 +81,7 @@ public class SceneManager : MonoBehaviour
                 {
                     Objectmanager.m_instance.m_camera_move.cMove_Begin();
                     startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
+                    Objectmanager.m_instance.m_stage_timer.StartSEPlay();
                 }
                 else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
@@ -199,11 +200,11 @@ public class SceneManager : MonoBehaviour
                 }
                 break;
             }
-            if (currentSceneName == "New_Stage1" ||
-                currentSceneName == "New_Stage2" ||
-                currentSceneName == "New_Stage3" ||
-                currentSceneName == "New_Stage4" ||
-                currentSceneName == "New_Stage5")
+            //if (currentSceneName == "New_Stage1" ||
+            //    currentSceneName == "New_Stage2" ||
+            //    currentSceneName == "New_Stage3" ||
+            //    currentSceneName == "New_Stage4" ||
+            //    currentSceneName == "New_Stage5")
                 currentScene_num++;
         }
     }
