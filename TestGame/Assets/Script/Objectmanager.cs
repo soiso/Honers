@@ -9,7 +9,7 @@ public class Objectmanager : Singleton<Objectmanager>
 
     public Score m_score { get; private set; }
     public Stage_Timer m_stage_timer { get; private set; }
-    public AudioSource m_BGM { get; private set; }
+    public BGM m_BGM { get; private set; }
     public CameraMove m_camera_move { get; private set; }
 
     public TouchParam m_touchinfo { get; private set; }
@@ -26,7 +26,7 @@ public class Objectmanager : Singleton<Objectmanager>
         m_stage_timer = GetComponentInChildren<Stage_Timer>();
         m_score = GetComponentInChildren<Score>();
 
-        m_BGM = GetComponentInChildren<AudioSource>();
+        m_BGM = GetComponentInChildren<BGM>();
 
         m_camera_move = GetComponentInChildren<CameraMove>();
         m_touchinfo = GetComponentInChildren<TouchParam>();

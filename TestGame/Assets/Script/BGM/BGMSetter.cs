@@ -10,6 +10,6 @@ public class BGMSetter : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        Objectmanager.m_instance.m_BGM.GetComponent<BGM>().ChangeBGM(m_SceneBGM);
+        Objectmanager.m_instance.m_BGM.ChangeBGM(m_SceneBGM);
 	}
 }

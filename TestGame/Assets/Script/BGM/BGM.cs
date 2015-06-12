@@ -23,7 +23,7 @@ public class BGM : MonoBehaviour
 
     public void ChangeBGM( AudioClip sound )
     {
-        //m_Source.Stop();
+        m_Source.Stop();
         m_Source.clip = sound;
         m_Source.Play();
     }
