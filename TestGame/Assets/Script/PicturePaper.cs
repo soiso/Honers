@@ -23,14 +23,12 @@ public class PicturePaper : MonoBehaviour {
     public AudioClip clip;
     private AudioSource audio;
 
-    private FruitCounter m_fruit_connter;
 
 	void Start ()
     {
         m_move = false;
         audio = GetComponent<AudioSource>();
         audio.clip = clip;
-        m_fruit_connter = GameObject.Find("FruitCounter").GetComponent<FruitCounter>();
 	}
 
     void Leap_PositionZ()
