@@ -4,24 +4,31 @@ using System.Collections;
 
 public class StartButton : MonoBehaviour
 {
-    private GameObject title_menu;
-    private GameObject game_menu;
+    [SerializeField]
+    private GameObject stage_select;
+    [SerializeField]
+    private GameObject door;
 
     void Start()
     {
-        title_menu = GameObject.Find("Title");
-        game_menu = GameObject.Find("Stage_Select");
+        
     }
 
     void Update()
     {
-        //this.gameObject.transform.rotation = 
-        //    gameObject.transform.parent.transform.rotation;
+        if(IsTouch())
+        {
+            stage_select.GetComponent<Canvas>().enabled = true;
+            door.GetComponent<OpenDoor>().Begin_Rotate();
+        }
     }
-    public void On_Click()
+
+    private bool IsTouch()
     {
-        title_menu.GetComponent<Canvas>().enabled = false;
-        game_menu.GetComponent<Canvas>().enabled = true;
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            return true;
+
+        return false;
     }
 
 

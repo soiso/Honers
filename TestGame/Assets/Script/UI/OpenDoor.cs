@@ -18,7 +18,7 @@ public class OpenDoor : MonoBehaviour
 
     private float rotation_angle;
 
-    private bool rotation_flg = true;
+    private bool rotation_flg = false;
     // Use this for initialization
     void Start()
     {
@@ -50,5 +50,9 @@ public class OpenDoor : MonoBehaviour
         {
             LeftParent.transform.Rotate(new Vector3(0f, rotate_speed, 0f));
         }
+    }
+    public void Begin_Rotate()
+    {
+        rotation_flg = true;
     }
 }
