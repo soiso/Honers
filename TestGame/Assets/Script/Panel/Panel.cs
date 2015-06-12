@@ -79,10 +79,10 @@ public class Panel : MonoBehaviour {
 
         mesh.uv = new Vector2[]
         {
+            new Vector2(m_current_Offset,.0f),
+            new Vector2(m_current_Offset+0.125f,1.0f),
+            new Vector2(m_current_Offset+0.125f,.0f),
             new Vector2(m_current_Offset,1.0f),
-            new Vector2(m_current_Offset+ 0.125f,1.0f),
-            new Vector2(m_current_Offset+0.125f,0f),
-            new Vector2(m_current_Offset  ,0f),
         };
     }
 

@@ -678,6 +678,30 @@ Prefab:
       propertyPath: m_Name
       value: NightPanel_3x2
       objectReference: {fileID: 0}
+    - target: {fileID: 2318886, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 72a1870ecf351284988fb8679f8e26bb, type: 2}
+    - target: {fileID: 2300810, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 72a1870ecf351284988fb8679f8e26bb, type: 2}
+    - target: {fileID: 2307992, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 72a1870ecf351284988fb8679f8e26bb, type: 2}
+    - target: {fileID: 2348844, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5077d8e9d68bcaf4082dbef7e42ae6bf, type: 2}
+    - target: {fileID: 2373654, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5077d8e9d68bcaf4082dbef7e42ae6bf, type: 2}
+    - target: {fileID: 2300180, guid: bfe4909b161dcb842af19d715c844965, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5077d8e9d68bcaf4082dbef7e42ae6bf, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfe4909b161dcb842af19d715c844965, type: 2}
   m_IsPrefabParent: 0
@@ -1203,11 +1227,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443544, guid: c19da5058c052384583345483f17900e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.8381176
+      value: 11.8400002
       objectReference: {fileID: 0}
     - target: {fileID: 443544, guid: c19da5058c052384583345483f17900e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .971345901
+      value: .970000029
       objectReference: {fileID: 0}
     - target: {fileID: 443544, guid: c19da5058c052384583345483f17900e, type: 2}
       propertyPath: m_LocalPosition.z
