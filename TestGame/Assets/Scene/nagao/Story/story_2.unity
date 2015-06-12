@@ -280,6 +280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nect_scene_name: story_3
+  score_sort_AB: 0
+  score_sort_SA: 0
 --- !u!1 &1492236149
 GameObject:
   m_ObjectHideFlags: 0

@@ -206,6 +206,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1001 &1147052363
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448662, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_SceneBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: b1d9e7ed2b0da3c4680bce52c47e2c79, type: 3}
+    m_RemovedComponents:
+    - {fileID: 11464942, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1147052364 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 176896, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+  m_PrefabInternal: {fileID: 1147052363}
+--- !u!114 &1147052365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147052364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_picturePaperName: PicturePaper
+  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!1 &1485475289
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nect_scene_name: story_2
+  score_sort_AB: 0
+  score_sort_SA: 0
 --- !u!1 &1492236149
 GameObject:
   m_ObjectHideFlags: 0

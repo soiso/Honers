@@ -248,7 +248,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410904, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11483282, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
       propertyPath: m_MoveTarget
@@ -277,7 +277,7 @@ Prefab:
     - target: {fileID: 11474698, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
       propertyPath: m_MoveTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 578136053}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
   m_IsPrefabParent: 0
@@ -457,7 +457,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431030, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 102208, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
       propertyPath: m_Name
@@ -633,7 +633,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11459690, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_SpornPoint
@@ -753,7 +753,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436788, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 436788, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
       propertyPath: m_LocalScale.y
@@ -863,7 +863,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436788, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 436788, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
       propertyPath: m_LocalScale.y
@@ -892,6 +892,52 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f73e3c5fe866fd549b37e2514b982eaf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &578136052
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -75.1500015
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.28000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &578136053 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
+  m_PrefabInternal: {fileID: 578136052}
 --- !u!1001 &578874982
 Prefab:
   m_ObjectHideFlags: 0
@@ -1177,7 +1223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416876, guid: 0ebde7e7a473f6942a2072d44192ac8f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ebde7e7a473f6942a2072d44192ac8f, type: 2}
@@ -1292,7 +1338,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479704, guid: e75903dfabc7bb94bb912c183b56ad15, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 176640, guid: e75903dfabc7bb94bb912c183b56ad15, type: 2}
       propertyPath: m_Name
@@ -1333,7 +1379,7 @@ Transform:
   - {fileID: 1711775261}
   - {fileID: 1590995242}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!1 &1033707677 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 112050, guid: 0943a590888c8404f93895d40101d8be, type: 2}
@@ -1375,7 +1421,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 179546, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
       propertyPath: m_IsActive
@@ -1425,7 +1471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439804, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1656,7 +1702,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455342, guid: bfe4909b161dcb842af19d715c844965, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11469092, guid: bfe4909b161dcb842af19d715c844965, type: 2}
       propertyPath: m_timeZone
@@ -1877,7 +1923,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 11448662, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
       propertyPath: m_SceneBGM
@@ -1923,7 +1969,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 431030, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11420624, guid: 479e1d1743c22ed42b10f6793fc20cac, type: 2}
       propertyPath: m_kassha
@@ -2516,7 +2562,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489642, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11477588, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
       propertyPath: m_usagi_SpornPoint.Array.data[0]

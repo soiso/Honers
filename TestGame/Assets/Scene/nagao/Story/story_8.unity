@@ -133,6 +133,52 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
   m_PrefabInternal: {fileID: 580807}
+--- !u!1001 &671520962
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448662, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_SceneBGM
+      value: 
+      objectReference: {fileID: 8300000, guid: b1d9e7ed2b0da3c4680bce52c47e2c79, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &962117287
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +326,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nect_scene_name: story_9
+  score_sort_AB: 0
+  score_sort_SA: 0
 --- !u!1 &1492236149
 GameObject:
   m_ObjectHideFlags: 0
