@@ -155,6 +155,12 @@ public class TouchMesh : MonoBehaviour {
                     return;
                 }
 
+                if(m_target_index >= param.m_linkPanel.Length)
+                {
+                    Debug.Log("Out of Range");
+
+                }
+
                 //ターゲットパネルの操作
                 if (param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select)
                     param.m_linkPanel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select = false;
