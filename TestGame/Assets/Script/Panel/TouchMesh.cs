@@ -77,7 +77,7 @@ public class TouchMesh : MonoBehaviour {
                     }
                 }
                 m_TouchStartPos.z = .0f;
-                m_target_index = m_index;
+                m_target_index = -1;
 
                 //当たったパネルの操作
                 if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
@@ -144,7 +144,7 @@ public class TouchMesh : MonoBehaviour {
                         m_target_index = j;
                     }
                 }
-                if( max_Dot < 0.6f )
+                if( max_Dot < 0.6f || m_target_index == -1 )
                 {
                     if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
                     {
@@ -201,7 +201,7 @@ public class TouchMesh : MonoBehaviour {
                         }
                     }
                     m_TouchStartPos.z = .0f;
-                    m_target_index = m_index;
+                    m_target_index = -1;
 
                     //当たったパネルの操作
                     if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
@@ -267,7 +267,7 @@ public class TouchMesh : MonoBehaviour {
                             m_target_index = j;
                         }
                     }
-                    if (max_Dot < 0.6f)
+                    if (max_Dot < 0.6f || m_target_index == -1)
                     {
                         if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
                         {
