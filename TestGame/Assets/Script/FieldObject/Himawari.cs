@@ -112,7 +112,7 @@ public class Himawari : MonoBehaviour {
     void Scaling()
     {
         Vector3 vec = m_current_Movetarget.transform.position - m_hana.transform.position;
-        if (vec.magnitude < 0.2f)
+        if (vec.magnitude < 0.6f)
             return;
 
         Vector3 axis = Vector3.Cross(Vector3.up, vec.normalized);
