@@ -21,10 +21,11 @@ public class BGM : MonoBehaviour
         m_Source.Stop();
     }
 
-    public void ChangeBGM( AudioClip sound )
+    public void ChangeBGM( AudioClip sound, bool loop )
     {
         m_Source.Stop();
         m_Source.clip = sound;
+        m_Source.loop = loop;
         m_Source.Play();
     }
 }
