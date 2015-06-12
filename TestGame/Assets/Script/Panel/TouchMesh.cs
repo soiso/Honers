@@ -77,6 +77,7 @@ public class TouchMesh : MonoBehaviour {
                     }
                 }
                 m_TouchStartPos.z = .0f;
+                m_target_index = m_index;
 
                 //当たったパネルの操作
                 if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)
@@ -194,6 +195,7 @@ public class TouchMesh : MonoBehaviour {
                         }
                     }
                     m_TouchStartPos.z = .0f;
+                    m_target_index = m_index;
 
                     //当たったパネルの操作
                     if (changer.m_Panel[m_index].GetComponentInChildren<TouchMesh>().m_is_select)

@@ -188,6 +188,7 @@ public class Player : MonoBehaviour {
          if(layer_name == "FieldFruit")
          {
              var fruit = col_object.GetComponent<FruitInterFace>();
+             if (fruit == null) return;
              fruit.Collision(this.gameObject);
              m_Particle.Play();
          }

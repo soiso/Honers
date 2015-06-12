@@ -1085,6 +1085,10 @@ Prefab:
       propertyPath: m_FruitManager
       value: 
       objectReference: {fileID: 814680264}
+    - target: {fileID: 11462312, guid: 033e66aa48755a847bf0533e39e5b24d, type: 2}
+      propertyPath: m_dafault_Position
+      value: 
+      objectReference: {fileID: 718852962}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 033e66aa48755a847bf0533e39e5b24d, type: 2}
   m_IsPrefabParent: 0
@@ -1161,6 +1165,10 @@ Prefab:
 --- !u!1 &718852961 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 127836, guid: a87495a17d7a61041ae2554a51327650, type: 2}
+  m_PrefabInternal: {fileID: 718852960}
+--- !u!4 &718852962 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 456122, guid: a87495a17d7a61041ae2554a51327650, type: 2}
   m_PrefabInternal: {fileID: 718852960}
 --- !u!1 &726964025
 GameObject:

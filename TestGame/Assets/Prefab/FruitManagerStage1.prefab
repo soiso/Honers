@@ -849,7 +849,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0199999996, y: 1.78999996, z: -.50999999}
+  m_LocalPosition: {x: -.0199999996, y: 3.44000006, z: -.50999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 478692}
@@ -888,7 +888,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .119999997, y: 1.73000002, z: -.660000026}
+  m_LocalPosition: {x: .119999997, y: 2.98000002, z: -.660000026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 421524}
@@ -1106,7 +1106,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 115098}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .419999987, y: 1.91999996, z: -.589999974}
+  m_LocalPosition: {x: .419999987, y: 3.3599999, z: -.589999974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 402742}
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_TargetNum: 2
   m_SpornPoint: {fileID: 446096}
   m_Fruit:
-  - {fileID: 138602, guid: 0712d3d1b4fc5b940bfd444fbe0ba5f4, type: 2}
+  - {fileID: 144830, guid: db021f0a0f349ac449c48aa96ffc14c7, type: 2}
 --- !u!114 &11476830
 MonoBehaviour:
   m_ObjectHideFlags: 1
