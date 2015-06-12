@@ -2131,7 +2131,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.size
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.size
@@ -2572,6 +2572,10 @@ Prefab:
     - target: {fileID: 448048, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
+      propertyPath: sceneName.Array.data[21]
+      value: Ranking
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11473514, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
