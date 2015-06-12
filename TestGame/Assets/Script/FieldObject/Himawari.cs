@@ -46,6 +46,10 @@ public class Himawari : MonoBehaviour {
             if (time_collider.m_myColliderTimeZone == PanelParametor.TIMEZONE.noon)
                 candidate = it;
         }
+        if(!candidate)
+        {
+            m_current_Movetarget = m_default_Point;
+        }
 
         if(m_current_Movetarget != candidate)
         {
@@ -79,6 +83,9 @@ public class Himawari : MonoBehaviour {
 
     bool Rotate()
     {
+        if (!m_current_Movetarget)
+            return false;
+
         Vector3 target_vec = m_current_Movetarget.transform.position - m_rotate_root.transform.position;
         Vector3 current_vec = m_hana.transform.position - m_rotate_root.transform.position;
         float cos = Vector3.Dot(current_vec.normalized, target_vec.normalized);
