@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Rank : MonoBehaviour
@@ -12,19 +13,19 @@ public class Rank : MonoBehaviour
     [SerializeField, HeaderAttribute("ドラムロールする時間")]
     private float m_rollTime = 0.5f;
     [SerializeField]
-    public Texture[] score_tex;
+    public Sprite[] score_tex;
 
     private float m_start_time;
     private float m_rollBeginTime;
     private bool m_is_rolling = false;
 
     private int m_current_surplus = 0;
-    private Material m_currentMaterial = null;
+    private SpriteRenderer m_MainSpriteRenderer = null;
     private int Score = 0;
     private Vector3 rank_scale;
     void Awake()
     {
-        m_currentMaterial = this.GetComponent<Renderer>().material;
+        m_MainSpriteRenderer = this.GetComponent<SpriteRenderer>();
         if (score_sort_AB > score_sort_SA)
             score_sort_SA = score_sort_AB + 2;
     }
@@ -47,7 +48,7 @@ public class Rank : MonoBehaviour
     }
     bool Dram_Roll()
     {
-        SetMaterialTexture(score_tex[Random.Range(0, 3)]);
+        SetMaterialTexture(score_tex[Random.Range(0, 2)]);
         //rank_scale.x = Mathf.Lerp(rank_scale.x, 1.0f, 0.01f);
         //rank_scale.y = Mathf.Lerp(rank_scale.y, 1.0f, 0.01f);
         //this.transform.localScale = rank_scale;
@@ -71,27 +72,26 @@ public class Rank : MonoBehaviour
 
     public void Disalble()
     {
-        this.GetComponent<Renderer>().enabled = false;
+        this.GetComponent<Image>().enabled = false;
     }
 
     public void Enable()
     {
-        this.GetComponent<Renderer>().enabled = true;
+        this.GetComponent<Image>().enabled = true;
         m_rollBeginTime = Time.time;
         m_is_rolling = true;
         //rank_scale = new Vector3(2.0f, 2.0f, 0.0f);
         //this.transform.localScale = rank_scale;
     }
 
-    public void SetMaterialTexture(Texture insert)
+    public void SetMaterialTexture(Sprite insert)
     {
-        m_currentMaterial.mainTexture = insert;
-        this.GetComponent<Renderer>().material = m_currentMaterial;
+        m_MainSpriteRenderer.sprite = insert;
     }
     public void SetScore(int score)
     {
-        Color col = m_currentMaterial.color;
-        m_currentMaterial.color = new Color(col.r,col.g,col.b,255);
+        Color col = m_MainSpriteRenderer.color;
+        m_MainSpriteRenderer.color = new Color(col.r,col.g,col.b,255);
         Score = score;
     }
 }
