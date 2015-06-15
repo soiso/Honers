@@ -4,8 +4,12 @@ using System.Collections;
 public class FruitFactory : MonoBehaviour {
 
     [SerializeField]
+    Material[] m_materials;
+
+    [SerializeField]
     GameObject[] m_createFruitList;
-	void Start () {
+	void Start ()
+    {
 	
 	}
 
