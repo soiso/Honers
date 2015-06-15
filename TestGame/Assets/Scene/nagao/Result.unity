@@ -110,8 +110,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 3448536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -109, z: -164}
-  m_LocalScale: {x: 71.4566727, y: 71.4566803, z: 71.4566803}
+  m_LocalPosition: {x: -6, y: -151, z: -170}
+  m_LocalScale: {x: 73.9642868, y: 73.9642944, z: 73.9642944}
   m_Children:
   - {fileID: 754629150}
   - {fileID: 1404532526}
@@ -224,8 +224,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -130, y: -107}
-  m_SizeDelta: {x: 170, y: 281}
+  m_AnchoredPosition: {x: -141, y: -167}
+  m_SizeDelta: {x: 176, y: 291}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &70462994
 MonoBehaviour:
@@ -1504,8 +1504,8 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 5, y: -10.8920002}
-  m_SizeDelta: {x: 140, y: 140}
+  m_AnchoredPosition: {x: -4.00001574, y: -11.1050072}
+  m_SizeDelta: {x: 178, y: 177.789993}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &877497662
 MonoBehaviour:
@@ -1521,11 +1521,11 @@ MonoBehaviour:
   start_wait: 0
   score_sort_AB: 700
   score_sort_SA: 1500
-  m_rollTime: .5
+  m_rollTime: 0
   score_tex:
-  - {fileID: 21300000, guid: e7ab4839cabc2604ab90fdf9168ddf94, type: 3}
-  - {fileID: 21300000, guid: 97717f41cd9e0db47bfb11d12ba8fd0c, type: 3}
-  - {fileID: 21300000, guid: f00a1b6b35256ab4ca201763e90f7471, type: 3}
+  - {fileID: 21300000, guid: 90f4ba6bb359169448b2187446c0ae08, type: 3}
+  - {fileID: 21300000, guid: 1fb3993fdeae0e54496e2f5974540448, type: 3}
+  - {fileID: 21300000, guid: 094872e16ce15c048b149a4563036310, type: 3}
 --- !u!114 &877497663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2521,7 +2521,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 35.8500061, y: 114.899986}
+  m_AnchoredPosition: {x: 36, y: 136}
   m_SizeDelta: {x: -300, y: -273}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1678981354

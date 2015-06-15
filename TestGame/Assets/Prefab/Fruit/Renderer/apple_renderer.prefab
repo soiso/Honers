@@ -70,7 +70,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138602}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 5768fded2f5d5aa499c9416b427a4820, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0

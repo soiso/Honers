@@ -20,12 +20,12 @@ public class Rank : MonoBehaviour
     private bool m_is_rolling = false;
 
     private int m_current_surplus = 0;
-    private SpriteRenderer m_MainSpriteRenderer = null;
+    private Image m_MainSpriteRenderer = null;
     private int Score = 0;
     private Vector3 rank_scale;
     void Awake()
     {
-        m_MainSpriteRenderer = this.GetComponent<SpriteRenderer>();
+        m_MainSpriteRenderer = this.GetComponent<Image>();
         if (score_sort_AB > score_sort_SA)
             score_sort_SA = score_sort_AB + 2;
     }
@@ -90,8 +90,8 @@ public class Rank : MonoBehaviour
     }
     public void SetScore(int score)
     {
-        Color col = m_MainSpriteRenderer.color;
-        m_MainSpriteRenderer.color = new Color(col.r,col.g,col.b,255);
+        //Color col = m_MainSpriteRenderer.color;
+        //m_MainSpriteRenderer.color = new Color(col.r,col.g,col.b,255);
         Score = score;
     }
 }

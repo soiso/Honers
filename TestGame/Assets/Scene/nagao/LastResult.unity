@@ -342,7 +342,7 @@ GameObject:
   - 222: {fileID: 70462995}
   - 114: {fileID: 70462994}
   m_Layer: 5
-  m_Name: Mozi_Score
+  m_Name: Stage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 1cb5a08eddeb1ea4a87dcf4dab755fca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43855fcc46e83e84e86bba37b3b13583, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1155,7 +1155,7 @@ GameObject:
   - 222: {fileID: 390797492}
   - 114: {fileID: 390797491}
   m_Layer: 5
-  m_Name: Mozi_Score 5
+  m_Name: Total
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1328,7 +1328,7 @@ GameObject:
   - 222: {fileID: 512206182}
   - 114: {fileID: 512206181}
   m_Layer: 5
-  m_Name: Mozi_Score 2
+  m_Name: Stage3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 1cb5a08eddeb1ea4a87dcf4dab755fca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a2f464c1596d8e4b9982ad182338caf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2048,9 +2048,9 @@ MonoBehaviour:
   score_sort_SA: 7000
   m_rollTime: .5
   score_tex:
-  - {fileID: 2800000, guid: e7ab4839cabc2604ab90fdf9168ddf94, type: 3}
-  - {fileID: 2800000, guid: 97717f41cd9e0db47bfb11d12ba8fd0c, type: 3}
-  - {fileID: 2800000, guid: f00a1b6b35256ab4ca201763e90f7471, type: 3}
+  - {fileID: 21300000, guid: 90f4ba6bb359169448b2187446c0ae08, type: 3}
+  - {fileID: 21300000, guid: 1fb3993fdeae0e54496e2f5974540448, type: 3}
+  - {fileID: 21300000, guid: 094872e16ce15c048b149a4563036310, type: 3}
 --- !u!23 &658363069
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2763,7 +2763,7 @@ GameObject:
   - 222: {fileID: 984927511}
   - 114: {fileID: 984927510}
   m_Layer: 5
-  m_Name: Mozi_Score 3
+  m_Name: Stage4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2799,7 +2799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 1cb5a08eddeb1ea4a87dcf4dab755fca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 051588fa5be3fda41aea72f0f154601f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4238,7 +4238,7 @@ GameObject:
   - 222: {fileID: 1875782019}
   - 114: {fileID: 1875782018}
   m_Layer: 5
-  m_Name: Mozi_Score 4
+  m_Name: Stage5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4274,7 +4274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 1cb5a08eddeb1ea4a87dcf4dab755fca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8e81ee892d45c944bc51004df157ab6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4495,7 +4495,7 @@ GameObject:
   - 222: {fileID: 1931870106}
   - 114: {fileID: 1931870105}
   m_Layer: 5
-  m_Name: Mozi_Score 1
+  m_Name: Stage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4531,7 +4531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 1cb5a08eddeb1ea4a87dcf4dab755fca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e9b9a95264eaffd47808715fea65b6d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
