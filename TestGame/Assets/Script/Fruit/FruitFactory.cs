@@ -30,6 +30,10 @@ public class FruitFactory : MonoBehaviour {
             if (val == create_Index)
             {
                 ret = Instantiate(m_createFruitList[i]);
+                var t = ret.GetComponent<MeshRenderer>();
+                if (!t)
+                    Debug.Log("t");
+                t.material = m_materials[val];
                 ret.GetComponent<FruitInterFace>().m_event_Affiliation = eventIndex;
                 Objectmanager.m_instance.m_fruit_Counter.m_fruitmanager.Regist_Fruit(ret);
                 return ret;
