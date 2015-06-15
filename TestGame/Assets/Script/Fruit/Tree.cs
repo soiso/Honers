@@ -54,7 +54,7 @@ public class Tree : MonoBehaviour
         m_next_SpornTime = m_defaultUpdateInterval + adjust;
         m_default_SpornPosition = m_sporn_Transform.position;
         m_default_SpornPosition.z = 0f;
-        Direction_NextGrawFruit();
+        //Direction_NextGrawFruit();
 
         if (m_impact_StreetLight) m_active = false;
         else m_active = true;
@@ -110,6 +110,9 @@ public class Tree : MonoBehaviour
     {
         if (Time.timeScale <= 0.1f)
             return;
+
+        if (!m_current_GrawFruit)
+            Direction_NextGrawFruit();
 
         if (!m_active)
         {
