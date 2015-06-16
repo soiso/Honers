@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 43855fcc46e83e84e86bba37b3b13583
-timeCreated: 1434098914
+guid: 51014435ff66d6e4c9e3cdbb281c51e7
+timeCreated: 1434446173
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: stage_1_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -37,7 +38,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +49,17 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: stage_1_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 0
+        width: 494
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
