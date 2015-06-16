@@ -53,6 +53,10 @@ public class OpenDoor : MonoBehaviour
         {
             LeftParent.transform.Rotate(new Vector3(0f, rotate_speed, 0f));
         }
+        else
+        {
+            rotation_flg = !rotation_flg;
+        }
     }
     public void Begin_Rotate()
     {
