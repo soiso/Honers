@@ -8,6 +8,7 @@ public class ResultBackGround : MonoBehaviour {
     void Awake()
     {
         this.GetComponent<Renderer>().material.mainTexture = Objectmanager.m_instance.m_scshot_Machine.Capture_Camera(Objectmanager.m_instance.m_screenShot_Camera);
+        
     }
 	void Start () {
 	
