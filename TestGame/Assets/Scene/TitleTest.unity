@@ -1094,8 +1094,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: .826597691, y: 1}
-  m_AnchoredPosition: {x: 96, y: -131}
-  m_SizeDelta: {x: -93.0599976, y: 172.570007}
+  m_AnchoredPosition: {x: 136, y: -128}
+  m_SizeDelta: {x: -56.1040001, y: 9.11690044}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &796495418
 GameObject:
@@ -2521,14 +2521,14 @@ RectTransform:
   m_GameObject: {fileID: 1657979556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: .399730444, y: .399730533, z: .399730533}
+  m_LocalScale: {x: .624777317, y: .399730533, z: .399730533}
   m_Children: []
   m_Father: {fileID: 277995060}
   m_RootOrder: 1
   m_AnchorMin: {x: .180610314, y: 0}
   m_AnchorMax: {x: .799286962, y: .649000049}
-  m_AnchoredPosition: {x: -175.5, y: 8}
-  m_SizeDelta: {x: 511, y: 446}
+  m_AnchoredPosition: {x: 530, y: 95}
+  m_SizeDelta: {x: 51.980999, y: 32.7900009}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1657979558
 MonoBehaviour:
@@ -2542,7 +2542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Height: 150
+  Height: 50
   FadeSpeed: .0299999993
   feaver_flag: 0
 --- !u!114 &1657979559
@@ -2558,7 +2558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_Sprite: {fileID: 21300000, guid: dfa24f6b795c82744a70f9cc613467a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 36408b72836d18549883add82ce2a057, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
