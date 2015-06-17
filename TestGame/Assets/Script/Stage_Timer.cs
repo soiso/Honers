@@ -13,7 +13,7 @@ public class Stage_Timer : MonoBehaviour {
     
     private bool s_flag;
 
-    private Text rimit_time;
+    private NumberRenderer rimit_time;
     [SerializeField]
     private GameObject endcount;
 
@@ -26,7 +26,7 @@ public class Stage_Timer : MonoBehaviour {
 	void Start () {
         s_flag = false;
         
-        rimit_time = GetComponentInChildren<Text>();
+        rimit_time = GetComponentInChildren<NumberRenderer>();
         audio = GetComponent<AudioSource>();
         audio.clip = clip;
 	}
@@ -57,7 +57,7 @@ public class Stage_Timer : MonoBehaviour {
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage4" &&
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage5")
                 return;
-        float remaining_time = stage_rimit - (current_time - start_time);
+        int remaining_time = (int)stage_rimit - ((int)current_time - (int)start_time);
         current_time = Time.time;
         Color temp = endcount.GetComponent<Renderer>().material.color;
         if (remaining_time < 6.0f && remaining_time > 1.0f)
@@ -86,7 +86,7 @@ public class Stage_Timer : MonoBehaviour {
             audio.clip = end;
             audio.Play();
 	    }
-        rimit_time.text = remaining_time.ToString("f2");
+        rimit_time.SetNumber(remaining_time);
     }
 
     public void ChangeResult()
