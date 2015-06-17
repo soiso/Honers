@@ -42,7 +42,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/nagao/N_Stage1.unity
   - enabled: 0
-    path: Assets/Scene/murata/MU_Stage1.unity
+    path: Assets/Scene/MU_Stage1.unity
   - enabled: 0
     path: Assets/Scene/morioka/MO_Stage1.unity
   - enabled: 0
