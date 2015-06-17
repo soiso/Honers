@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_event_Affiliation: 0
   m_IsFeaverSporn: 0
-  m_default_Score: 30
+  m_default_Score: 45
   m_attenuation_Score: 0
   m_EraseTime: 10
   m_erase_Adjust: 10

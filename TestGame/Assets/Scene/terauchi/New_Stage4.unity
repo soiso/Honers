@@ -175,7 +175,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11462570, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_move_Speed
-      value: .00999999978
+      value: .0199999996
       objectReference: {fileID: 0}
     - target: {fileID: 401996, guid: 0943a590888c8404f93895d40101d8be, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2337,6 +2337,10 @@ Prefab:
     - target: {fileID: 419176, guid: 3b35984f1394d1a4cbe012603ed11916, type: 2}
       propertyPath: m_LocalScale.y
       value: .79314208
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473888, guid: 3b35984f1394d1a4cbe012603ed11916, type: 2}
+      propertyPath: m_animation_Speed
+      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b35984f1394d1a4cbe012603ed11916, type: 2}
