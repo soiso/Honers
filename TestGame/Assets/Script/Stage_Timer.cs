@@ -86,7 +86,7 @@ public class Stage_Timer : MonoBehaviour {
             audio.clip = end;
             audio.Play();
 	    }
-        rimit_time.SetNumber(remaining_time);
+        rimit_time.SetNumber(remaining_time,false);
     }
 
     public void ChangeResult()

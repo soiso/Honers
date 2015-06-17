@@ -112,7 +112,7 @@ public class NumberRenderer : MonoBehaviour {
 
     }
 
-    public void SetNumber(int value)
+    public void SetNumber(int value,bool rool = true)
     {
         if(value > max_num)
         {
@@ -120,7 +120,8 @@ public class NumberRenderer : MonoBehaviour {
         }
         m_value = value;
         Calculate(value);
-        m_is_rolling = true;
+        if(rool)
+            m_is_rolling = true;
         m_rollBeginTime = Time.time;
         if (m_scale_Weaver)
            m_scale_Weaver.Begin_Wave();
