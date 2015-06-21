@@ -79,6 +79,9 @@ public class Tree : MonoBehaviour
         if (m_param.m_book_fruit != FruitInterFace.FRUIT_TYPE.error)
             next_Fruit = (int)m_param.m_book_fruit;
         m_current_GrawFruit = m_renderer_Factory.Create_Object(next_Fruit);
+        if (m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
+            Debug.Log("apple");
+
         //とりあえずのエラー処理
         if (!m_current_GrawFruit)
         {
@@ -87,6 +90,10 @@ public class Tree : MonoBehaviour
         m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
         m_sporn_Transform.transform.localScale = new Vector3(0, 0, 0);
         m_sporn_Transform.rotation = Quaternion.identity;
+
+        m_current_GrawFruit.transform.position = m_sporn_Transform.transform.position;
+        m_current_GrawFruit.transform.rotation = m_sporn_Transform.transform.rotation;
+        m_current_GrawFruit.transform.localScale = m_sporn_Transform.transform.localScale;
     }
 
     bool Update_Feaver()
