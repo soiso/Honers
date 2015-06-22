@@ -56,6 +56,11 @@ public class FruitArrangeManager : MonoBehaviour {
 
     public GameObject m_fieldFruit_Root { get; private set; }
 
+    [SerializeField]
+    private AudioClip[] m_sound_Array;
+
+    public AudioClip[] Get_SpornSound { get { return m_sound_Array; } }
+
     void Awake()
     {
         Objectmanager.m_instance.m_fruit_Counter.Set_FruitManager(this);

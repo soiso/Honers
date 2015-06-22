@@ -839,10 +839,6 @@ Prefab:
       propertyPath: m_karasu_TargetPoint.Array.data[1]
       value: 
       objectReference: {fileID: 1959346966}
-    - target: {fileID: 485440, guid: 172b46d5bc6497d4086ad00b00704f28, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 4.86000013
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 172b46d5bc6497d4086ad00b00704f28, type: 2}
   m_IsPrefabParent: 0
@@ -975,7 +971,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalRotation.y
-      value: .707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalRotation.z
@@ -983,11 +979,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106709
+      value: -1.62920685e-07
       objectReference: {fileID: 0}
     - target: {fileID: 480360, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11459690, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
       propertyPath: m_SpornPoint

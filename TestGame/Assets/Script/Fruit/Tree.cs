@@ -41,8 +41,12 @@ public class Tree : MonoBehaviour
 
     private Light m_light;
 
+    private AudioSource m_sporn_sound;
+
     void Start()
     {
+
+        m_sporn_sound = GetComponent<AudioSource>();
         m_light = GetComponentInChildren<Light>();
         m_renderer_Factory = GetComponent<FruitRendererFactory>();
         m_param = GetComponent<TreeParametor>();
@@ -87,6 +91,10 @@ public class Tree : MonoBehaviour
         m_param.m_book_fruit = FruitInterFace.FRUIT_TYPE.error;
         m_sporn_Transform.transform.localScale = new Vector3(0, 0, 0);
         m_sporn_Transform.rotation = Quaternion.identity;
+
+        m_current_GrawFruit.transform.position = m_sporn_Transform.transform.position;
+        m_current_GrawFruit.transform.rotation = m_sporn_Transform.transform.rotation;
+        m_current_GrawFruit.transform.localScale = m_sporn_Transform.transform.localScale;
     }
 
     bool Update_Feaver()
@@ -186,8 +194,18 @@ public class Tree : MonoBehaviour
        if (is_Feaver)
            script.m_IsFeaverSporn = true;
        else
+       {
+           var fruit_type = insert.GetComponent<FruitInfomation>().fruit_type;
+
+           if (fruit_type == FruitInterFace.FRUIT_TYPE.donguri)
+               m_sporn_sound.clip = m_owner.Get_SpornSound[1];
+           else
+               m_sporn_sound.clip = m_owner.Get_SpornSound[0];
+
+
+           m_sporn_sound.Play();
            script.m_IsFeaverSporn = false;
-  
+       }
         return true;
     }
 

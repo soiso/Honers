@@ -45,12 +45,15 @@ public class P_Move : PlayerStateInterFace
     {
       //  if (!player.Get_FrameInfo.Is_Move)
          //   return;
-        Vector3 rotate_Angle = new Vector3(0, 0, 0);
+        //Vector3 rotate_Angle = new Vector3(0, 0, 0);
 
-        rotate_Angle.x = (player.Get_FrameInfo.m_lastMoveDirection == PlayerFrameInformation.movedirection.LEFT) 
-                                                                                            ? -1f : 1f;
+        //rotate_Angle.x = (player.Get_FrameInfo.m_lastMoveDirection == PlayerFrameInformation.movedirection.LEFT) 
+        //                                                                                    ? -1f : 1f;
 
-        Quaternion rotate_Q = Quaternion.LookRotation(rotate_Angle);
+        //Quaternion rotate_Q = Quaternion.LookRotation(rotate_Angle);
+        Vector3 axis = new Vector3(0, 1, 0);
+        float angle = (player.Get_FrameInfo.m_lastMoveDirection == PlayerFrameInformation.movedirection.LEFT) ? 0 : 180;
+        Quaternion rotate_Q = Quaternion.AngleAxis(angle,axis);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotate_Q, 0.1f);
     }
 
