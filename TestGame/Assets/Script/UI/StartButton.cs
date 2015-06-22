@@ -11,7 +11,7 @@ public class StartButton : MonoBehaviour
 
     void Start()
     {
-        
+        stage_select.GetComponent<Canvas>().enabled = false;
     }
 
     void Update()

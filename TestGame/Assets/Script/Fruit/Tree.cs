@@ -83,6 +83,9 @@ public class Tree : MonoBehaviour
         if (m_param.m_book_fruit != FruitInterFace.FRUIT_TYPE.error)
             next_Fruit = (int)m_param.m_book_fruit;
         m_current_GrawFruit = m_renderer_Factory.Create_Object(next_Fruit);
+        if (m_current_GrawFruit.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
+            Debug.Log("apple");
+
         //とりあえずのエラー処理
         if (!m_current_GrawFruit)
         {

@@ -12,7 +12,7 @@ public class Stage_Select_Canvas : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        Objectmanager.m_instance.m_scene_manager.BeginLoad();
     }
 }
 #endif

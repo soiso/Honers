@@ -15,7 +15,6 @@ public class Retry_Button : MonoBehaviour
 
     public void On_Click()
     {
-        manager.GetComponent<SceneManager>().CloseMenu();
     }
 
     void OnGUI()
