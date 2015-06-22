@@ -34,7 +34,8 @@ public class Stage_Timer : MonoBehaviour {
     {
         start_time = Time.time;
         rimit_time.enabled = true;
-
+        this.transform.position = new Vector3(4.98f, 11.28f, -3.5f);
+        this.transform.localScale = new Vector3(1, 1, 1);
     }
     public void StartSEPlay()
     {
@@ -60,16 +61,15 @@ public class Stage_Timer : MonoBehaviour {
         int remaining_time = (int)stage_rimit - ((int)current_time - (int)start_time);
         current_time = Time.time;
         Color temp = endcount.GetComponent<Renderer>().material.color;
-        if (remaining_time < 6.0f && remaining_time > 1.0f)
+        if (remaining_time < 6.0f && remaining_time > 0.0f)
         {
             endcount.GetComponent<Renderer>().material.color = new Color(temp.r, temp.g,temp.b, 120);
             endcount.GetComponent<Renderer>().material.mainTexture = count[(int)remaining_time-1];
             audio.clip = clip;
             if(!audio.isPlaying)audio.Play();
         }
-        if(remaining_time <= 1.0f && s_flag != true)
+        if(remaining_time <= 0.0f && s_flag != true)
         {
-           
             endcount.GetComponent<Renderer>().material.color = new Color(temp.r, temp.g, temp.b, 120);
             endcount.GetComponent<Renderer>().material.mainTexture = count[5];
             this.transform.position = new Vector3(0, 11.28f, -3.5f);

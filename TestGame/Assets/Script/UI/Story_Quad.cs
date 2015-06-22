@@ -26,6 +26,7 @@ public class Story_Quad : MonoBehaviour {
         if(BeginQuad)
         {
             QuadEnable();
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad(next_scene_name);
         }
 	}
 	

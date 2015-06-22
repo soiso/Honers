@@ -30,7 +30,8 @@ public class SceneManager : MonoBehaviour
     public string currentSceneName;
 
     private GameObject oldPicPaper;
-    private bool LoadFlg = false;
+    private bool LoadFlg = false;   //ロード中かどうか
+    private bool ChangeFlg = false;
 
     private bool ResultFlg = false;
 
@@ -86,6 +87,7 @@ public class SceneManager : MonoBehaviour
                 else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
                 LoadFlg = false;
+                ChangeFlg = false;
             }
         }
 
@@ -96,16 +98,10 @@ public class SceneManager : MonoBehaviour
             Objectmanager.m_instance.m_stage_timer.Time_Start();
         }
     }
-
-    public void OpenMenu()
+    public void BeginLoad()
     {
-        Time.timeScale = 0;
-    }
-    public void CloseMenu()
-    {
-        Time.timeScale = 1;
-    }
 
+    }
     public void ChangeScene(string sceneName)
     {
         currentSceneName = sceneName;
@@ -153,41 +149,40 @@ public class SceneManager : MonoBehaviour
         if (currentSceneName != "TitleTest")
         {
             currentSceneName = sceneName[currentScene_num];
+            currentScene_num += 1;
+            ChangeScene_Add(sceneName[currentScene_num]);
         }
         else
         {
             ChangeScene_Add(sceneName[currentScene_num]);
             return;
         }
-        currentScene_num = 0;
-        foreach (string stageName in sceneName)
-        {
-            if (stageName == currentSceneName)
-            {
-                currentScene_num += 1;
-                if (sceneName[currentScene_num] == "TitleTest")
-                    ChangeScene(sceneName[currentScene_num]);
-                else
-                {
-                    ChangeScene_Add(sceneName[currentScene_num]);
-                }
-                break;
-            } 
-            //if (currentSceneName == "New_Stage1" ||
-            //    currentSceneName == "New_Stage2" ||
-            //    currentSceneName == "New_Stage3" ||
-            //    currentSceneName == "New_Stage4" ||
-            //    currentSceneName == "New_Stage5")
-                currentScene_num++;
-        }
+        
+        //currentScene_num = 0;
+        //foreach (string stageName in sceneName)
+        //{
+        //    if (stageName == currentSceneName)
+        //    {
+        //        currentScene_num += 1;
+        //        if (sceneName[currentScene_num] == "TitleTest")
+        //            ChangeScene(sceneName[currentScene_num]);
+        //        else
+        //        {
+        //            ChangeScene_Add(sceneName[currentScene_num]);
+        //        }
+        //        break;
+        //    }
+
+        //    currentScene_num++;
+        //}
     }
 
     public void NextSceneLoad(string newstageName)
     {
         if (LoadFlg) return;
         Objectmanager.m_instance.m_stage_timer.Reset();
-
-        currentScene_num = 0;
+        if (newstageName != "Result")
+            currentScene_num = 0;
         foreach (string stageName in sceneName)
         {
             if (stageName == newstageName)
@@ -200,11 +195,7 @@ public class SceneManager : MonoBehaviour
                 }
                 break;
             }
-            //if (currentSceneName == "New_Stage1" ||
-            //    currentSceneName == "New_Stage2" ||
-            //    currentSceneName == "New_Stage3" ||
-            //    currentSceneName == "New_Stage4" ||
-            //    currentSceneName == "New_Stage5")
+            if (newstageName != "Result")
                 currentScene_num++;
         }
     }
@@ -212,13 +203,10 @@ public class SceneManager : MonoBehaviour
     public void EndStage()
     {
         if (currentSceneName == "New_Stage5")
-        LoadStage_num = 5;
-        //else
-        //{
-            //ChangeScene_Add("Result");
-            ResultFlg = true;
-            //Time.timeScale = .0f;
-        //}
+            LoadStage_num = 5;
+
+        ResultFlg = true;
+
     }
     public string GetCurrentStageName()
     {
