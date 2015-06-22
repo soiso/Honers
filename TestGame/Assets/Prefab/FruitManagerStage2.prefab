@@ -283,7 +283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &137730
 GameObject:
   m_ObjectHideFlags: 1
@@ -2399,13 +2399,15 @@ MonoBehaviour:
   m_adjust_Second: 1.5
   m_GameObjectOfTree:
   - {fileID: 123480}
-  - {fileID: 136184}
+  - {fileID: 126578}
   - {fileID: 164182}
   - {fileID: 147490}
-  - {fileID: 126578}
   m_speedUp_Interval: 7
   dongri_count: 3
   m_dongri_score: 200
+  m_sporn_Sound:
+  - {fileID: 8300000, guid: 0750c1eb8cd88744ab10a610365976af, type: 3}
+  - {fileID: 8300000, guid: 78fce4db18760bb438642568ea08b650, type: 3}
 --- !u!114 &11430310
 MonoBehaviour:
   m_ObjectHideFlags: 1

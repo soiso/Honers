@@ -38,11 +38,14 @@ public class Tree : MonoBehaviour
     private Vector3 m_default_SpornPosition;
     private TreeParametor m_param;
 
+	private AudioSource m_sporn_Sound;
 
     private Light m_light;
 
     void Start()
     {
+
+		m_sporn_Sound = GetComponent<AudioSource> ();
         m_light = GetComponentInChildren<Light>();
         m_renderer_Factory = GetComponent<FruitRendererFactory>();
         m_param = GetComponent<TreeParametor>();
@@ -191,10 +194,25 @@ public class Tree : MonoBehaviour
         //}
        var script = insert.GetComponent<FruitInterFace>();
        if (is_Feaver)
-           script.m_IsFeaverSporn = true;
-       else
-           script.m_IsFeaverSporn = false;
-  
+			script.m_IsFeaverSporn = true;
+		else {
+			script.m_IsFeaverSporn = false;
+
+			//sound
+
+			var fruit_type = insert.GetComponent<FruitInfomation>().fruit_type;
+			if(fruit_type == FruitInterFace.FRUIT_TYPE.donguri)
+			{
+				m_sporn_Sound.clip = m_owner.Get_SpornSound[1];
+
+			}
+			else
+			{
+				m_sporn_Sound.clip = m_owner.Get_SpornSound[0];
+			}
+			m_sporn_Sound.Play();
+
+		}
         return true;
     }
 

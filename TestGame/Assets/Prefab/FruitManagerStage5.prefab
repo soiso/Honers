@@ -1181,7 +1181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.42999983, y: 2.83999991, z: .550000012}
+  m_LocalPosition: {x: 4.86000013, y: 2.83999991, z: .550000012}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400360}
@@ -2318,7 +2318,10 @@ MonoBehaviour:
   - {fileID: 107974}
   m_speedUp_Interval: 7
   dongri_count: 3
-  m_dongri_score: 0
+  m_dongri_score: 200
+  m_sporn_Sound:
+  - {fileID: 8300000, guid: 0750c1eb8cd88744ab10a610365976af, type: 3}
+  - {fileID: 8300000, guid: 78fce4db18760bb438642568ea08b650, type: 3}
 --- !u!114 &11410296
 MonoBehaviour:
   m_ObjectHideFlags: 1

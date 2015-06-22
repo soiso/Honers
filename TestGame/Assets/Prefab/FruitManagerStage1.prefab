@@ -721,7 +721,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.3600006, y: 7.5, z: .219999999}
+  m_LocalPosition: {x: 17.3600006, y: 7.5, z: .449999988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 464650}
@@ -825,7 +825,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.66999996, y: 7.36000013, z: .310000002}
+  m_LocalPosition: {x: -1.66999996, y: 7.36000013, z: .569999993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488198}
@@ -1145,7 +1145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 185508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.78999996, y: 7.46999979, z: .469999999}
+  m_LocalPosition: {x: 2.78999996, y: 7.46999979, z: .819999993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 422956}
@@ -2458,6 +2458,9 @@ MonoBehaviour:
   m_speedUp_Interval: 7.07000017
   dongri_count: 5
   m_dongri_score: 300
+  m_sporn_Sound:
+  - {fileID: 8300000, guid: 0750c1eb8cd88744ab10a610365976af, type: 3}
+  - {fileID: 8300000, guid: 78fce4db18760bb438642568ea08b650, type: 3}
 --- !u!114 &11424768
 MonoBehaviour:
   m_ObjectHideFlags: 1

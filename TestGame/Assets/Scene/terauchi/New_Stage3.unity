@@ -2474,6 +2474,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11456824, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_sporn_Sound.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 11477588, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
       propertyPath: m_usagi_SpornPoint.Array.size
       value: 2
@@ -2582,6 +2586,14 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -9.31999969
       objectReference: {fileID: 0}
+    - target: {fileID: 11456824, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_sporn_Sound.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0750c1eb8cd88744ab10a610365976af, type: 3}
+    - target: {fileID: 11456824, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
+      propertyPath: m_sporn_Sound.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 78fce4db18760bb438642568ea08b650, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8df856301ee3744ca8307b46d127e3b, type: 2}
   m_IsPrefabParent: 0
