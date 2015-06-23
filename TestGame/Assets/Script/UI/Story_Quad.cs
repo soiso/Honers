@@ -42,6 +42,10 @@ public class Story_Quad : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (move_flg)
+        {
+            Move();
+        }
         if (!quad_enable) return;
         if (Touch())
         {
@@ -53,11 +57,9 @@ public class Story_Quad : MonoBehaviour
                     Objectmanager.m_instance.m_scene_manager.BeginLoad();
                 }
             }
+            quad_enable = false;
         }
-        if (move_flg)
-        {
-            Move();
-        }
+        
 
 
     }
@@ -89,7 +91,7 @@ public class Story_Quad : MonoBehaviour
             }
             else
             {
-                Destroy(this);
+               
             }
         }
     }
