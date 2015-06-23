@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class LastResult : MonoBehaviour {
+public class LastResult : MonoBehaviour
+{
 
     [SerializeField, Range(0, 20.0f)]
     private float timer;
@@ -15,9 +16,12 @@ public class LastResult : MonoBehaviour {
     [SerializeField]
     private GameObject[] score_num;
 
-    public float m_interval = 0.1f;
+    public float m_interval = 1.0f;
 
     private Text scoretext;
+    private float SetTime = .0f;
+    [SerializeField]
+    private float wait_time = .0f;
 
 #if UNITY_STANDALONE
 
@@ -78,6 +82,7 @@ public class LastResult : MonoBehaviour {
     void Start()
     {
         start_time = Time.time;
+        
         s_flag = true;
         Objectmanager.m_instance.m_scene_manager.NextSceneLoad("Ranking");
     }
@@ -87,30 +92,34 @@ public class LastResult : MonoBehaviour {
     {
         if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() == "TitleTest") return;
 
-        if(s_flag)
+        if (s_flag)
         {
-            StartCoroutine("SetScore");
-            s_flag = false;
+            Time.timeScale = 1.0f;
+            if (Time.time > SetTime + wait_time)
+            {
+                int interval = (int)Time.time - (int)start_time;
+                if (interval >= 0 && interval < 5)
+                {
+                    score_num[interval].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetScore(interval));
+                    SetTime = Time.time;
+                } if (interval == 5)
+                {
+                    score_num[5].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetTotalScore());
+                    SetTime = Time.time;
+                } if (interval == 6)
+                {
+                    score_rank.GetComponent<Rank>().SetScore((int)Objectmanager.m_instance.m_score.GetTotalScore());
+                    score_rank.GetComponent<Rank>().Enable();
+                    s_flag = false;
+                }
+            }
         }
         if (Touch())
         {
             NextScene();
         }
     }
-    private IEnumerator SetScore()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            score_num[i].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetScore(i));
-            yield return new WaitForSeconds(m_interval);
-        }
 
-        score_num[5].GetComponent<NumberRenderer>().SetNumber((int)Objectmanager.m_instance.m_score.GetTotalScore());
-        yield return new WaitForSeconds(m_interval);
-        
-        score_rank.GetComponent<Rank>().SetScore((int)Objectmanager.m_instance.m_score.GetTotalScore());
-        score_rank.GetComponent<Rank>().Enable();
-    }
     public void NextScene()
     {
         //Objectmanager.m_instance.m_fruit_Counter.Reset();

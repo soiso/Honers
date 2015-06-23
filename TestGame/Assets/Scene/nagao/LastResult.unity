@@ -1246,6 +1246,7 @@ MonoBehaviour:
   - {fileID: 1235056249}
   - {fileID: 857151341}
   m_interval: 1
+  wait_time: 1
 --- !u!114 &500120723
 MonoBehaviour:
   m_ObjectHideFlags: 0

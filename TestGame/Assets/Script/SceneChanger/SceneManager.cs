@@ -105,7 +105,7 @@ public class SceneManager : MonoBehaviour
     {
         if (!LoadFlg) return false;
         if (loadInfo.allowSceneActivation) return false;
-        if(previousSceneName == "TitleTest")
+        if(previousSceneName != "TitleTest")
             if (loadInfo.progress < 0.9f) return false;
         
         return true;
