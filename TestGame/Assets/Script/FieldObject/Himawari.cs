@@ -46,12 +46,14 @@ public class Himawari : MonoBehaviour {
             if (time_collider.m_myColliderTimeZone == PanelParametor.TIMEZONE.noon)
                 candidate = it;
         }
-        if(!candidate)
+        if(!candidate && m_current_Movetarget != m_default_Point)
         {
             m_current_Movetarget = m_default_Point;
+			Debug.Log("DefaultMode");
+			return true;
         }
 
-        if(m_current_Movetarget != candidate)
+        if(m_current_Movetarget != candidate && candidate != null)
         {
             m_current_Movetarget = candidate;
             return true;
