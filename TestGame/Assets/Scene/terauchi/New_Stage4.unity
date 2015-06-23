@@ -233,6 +233,18 @@ Prefab:
       propertyPath: m_move_PointArray.Array.data[3]
       value: 
       objectReference: {fileID: 191935845}
+    - target: {fileID: 2377462, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391114, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362080, guid: 0943a590888c8404f93895d40101d8be, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0943a590888c8404f93895d40101d8be, type: 2}
   m_IsPrefabParent: 0
