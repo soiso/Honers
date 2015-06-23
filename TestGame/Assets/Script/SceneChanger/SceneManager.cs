@@ -28,6 +28,7 @@ public class SceneManager : MonoBehaviour
     public int currentScene_num = 0;
     public int LoadStage_num = 0;
     public string currentSceneName;
+    private string previousSceneName;
 
     private GameObject oldPicPaper;
     private bool LoadFlg = false;   //ロード中かどうか
@@ -104,7 +105,8 @@ public class SceneManager : MonoBehaviour
     {
         if (!LoadFlg) return false;
         if (loadInfo.allowSceneActivation) return false;
-        //if(loadInfo.progress<0.9f) return false;
+        if(previousSceneName == "TitleTest")
+            if (loadInfo.progress < 0.9f) return false;
         
         return true;
     }
@@ -118,7 +120,7 @@ public class SceneManager : MonoBehaviour
     public void ChangeScene_Add(string sceneName)
     {
         fever_sign.GetComponent<FeaverSign>().Reset();
-
+        previousSceneName = currentSceneName;
         currentSceneName = sceneName;
         if(currentSceneName != "Result")
         Time.timeScale = 0;

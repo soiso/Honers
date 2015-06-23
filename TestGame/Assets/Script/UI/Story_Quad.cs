@@ -31,7 +31,7 @@ public class Story_Quad : MonoBehaviour
     void Start()
     {
         Color col = this.GetComponent<Renderer>().material.color;
-        this.GetComponent<Renderer>().material.color = new Color(col.r, col.g, col.b, 0);
+        //this.GetComponent<Renderer>().material.color = new Color(col.r, col.g, col.b, 0);
         if (BeginQuad)
         {
             QuadEnable();

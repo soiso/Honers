@@ -8,6 +8,8 @@ public class StartButton : MonoBehaviour
     private GameObject stage_select;
     [SerializeField]
     private GameObject door;
+    [SerializeField]
+    private GameObject TitleLogo;
 
     private bool OpenFlg=false;
     void Start()
@@ -20,9 +22,7 @@ public class StartButton : MonoBehaviour
         if (OpenFlg) return;
         if(IsTouch())
         {
-            stage_select.GetComponent<Canvas>().enabled = true;
-            door.GetComponent<OpenDoor>().Begin_Rotate();
-            OpenFlg = true;
+            OpenDoor();
         }
     }
 
@@ -33,6 +33,11 @@ public class StartButton : MonoBehaviour
 
         return false;
     }
-
+    private void OpenDoor()
+    {
+            stage_select.GetComponent<Canvas>().enabled = true;
+            door.GetComponent<OpenDoor>().Begin_Rotate();
+            OpenFlg = true;
+    }
 
 }
