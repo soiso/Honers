@@ -586,10 +586,6 @@ Prefab:
       propertyPath: m_SpornPoint
       value: 
       objectReference: {fileID: 1656895789}
-    - target: {fileID: 14396312, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
-      propertyPath: m_Center.z
-      value: .140000001
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8539aeccbc5c8d49a44517661c72cb3, type: 2}
   m_IsPrefabParent: 0
@@ -1025,6 +1021,23 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 416146, guid: 5426fd6585221cc4caec18074e839e94, type: 2}
   m_PrefabInternal: {fileID: 1943111910}
+--- !u!1 &1943111923 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 141178, guid: 5426fd6585221cc4caec18074e839e94, type: 2}
+  m_PrefabInternal: {fileID: 1943111910}
+--- !u!114 &1943111924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943111923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_picturePaperName: PicturePaper
+  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!1001 &1984759250
 Prefab:
   m_ObjectHideFlags: 0
