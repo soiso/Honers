@@ -57,7 +57,7 @@ public class Stage_Timer : MonoBehaviour {
         int remaining_time = (int)stage_rimit - ((int)current_time - (int)start_time);
         current_time = Time.time;
         if (start_time < 0.1f) current_time = 0.0f;
-        if (current_time - start_time+1.0f > stage_rimit &&
+        if (current_time - start_time > stage_rimit &&
         s_flag != true)
         {
             ChangeResult();

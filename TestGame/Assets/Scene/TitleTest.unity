@@ -3086,7 +3086,6 @@ GameObject:
   - 223: {fileID: 1956311648}
   - 114: {fileID: 1956311647}
   - 114: {fileID: 1956311646}
-  - 114: {fileID: 1956311644}
   - 114: {fileID: 1956311645}
   m_Layer: 5
   m_Name: Title
@@ -3095,19 +3094,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1956311644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1956311643}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!114 &1956311645
 MonoBehaviour:
   m_ObjectHideFlags: 0

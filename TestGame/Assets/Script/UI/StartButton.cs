@@ -1,5 +1,6 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class StartButton : MonoBehaviour
@@ -22,6 +23,8 @@ public class StartButton : MonoBehaviour
         if (OpenFlg) return;
         if(IsTouch())
         {
+            Color col = TitleLogo.GetComponent<Image>().color;
+            TitleLogo.GetComponent<Image>().color = new Color(col.r,col.g,col.b,0);
             OpenDoor();
         }
     }
