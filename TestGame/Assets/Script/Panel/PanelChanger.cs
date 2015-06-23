@@ -18,7 +18,7 @@ public class PanelChanger : MonoBehaviour {
     public bool m_is_changeNow { get; private set; }
     public int m_change_Endcount { get;  set; }
 
-    [SerializeField, Range(1.0f, 5.0f)]
+    [SerializeField, Range(0.1f, 5.0f)]
     public float m_ChangeSecond;
 
     public AudioClip clip;
