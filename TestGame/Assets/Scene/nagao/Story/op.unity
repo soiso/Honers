@@ -174,7 +174,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 8300000, guid: d3696edb97b88b048bc20983c1ea81b6, type: 3}
 --- !u!114 &139851610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,7 +242,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &345323012
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &345323014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,7 +348,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &424987007
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: New_Stage1
-  m_isactive: 0
+  m_BGM: {fileID: 8300000, guid: b1d9e7ed2b0da3c4680bce52c47e2c79, type: 3}
 --- !u!114 &424987009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!1 &547784436
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: New_Stage1
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &547784438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -560,7 +560,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &902677235
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &902677237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,7 +666,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &962117287
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &1045600941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,75 +845,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
---- !u!1001 &1147052363
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 430402, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11448662, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_SceneBGM
-      value: 
-      objectReference: {fileID: 8300000, guid: b1d9e7ed2b0da3c4680bce52c47e2c79, type: 3}
-    - target: {fileID: 176896, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-      propertyPath: m_Name
-      value: StoryBGMSetter
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11464942, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &1147052364 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176896, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
-  m_PrefabInternal: {fileID: 1147052363}
---- !u!114 &1147052365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1147052364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
+  m_RootOrder: 10
 --- !u!1 &1302409163
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +883,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &1302409165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,7 +951,7 @@ Transform:
   m_LocalScale: {x: 23.5556183, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &1492236149
 GameObject:
   m_ObjectHideFlags: 0

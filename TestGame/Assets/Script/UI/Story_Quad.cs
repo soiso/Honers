@@ -23,7 +23,8 @@ public class Story_Quad : MonoBehaviour
     private string next_scene_name;
 
     //有効かどうか
-    public bool m_isactive = false;
+    [SerializeField, Header("BGM")]
+    private AudioClip m_BGM = null;
 
 
     // Use this for initialization
@@ -67,7 +68,7 @@ public class Story_Quad : MonoBehaviour
         quad_enable = true;
         Color col = this.GetComponent<Renderer>().material.color;
         this.GetComponent<Renderer>().material.color = new Color(col.r, col.g, col.b, 255);
-        m_isactive = true;
+        if (m_BGM != null) Objectmanager.m_instance.m_BGM.ChangeBGM(m_BGM, true);
     }
 
     private void Move()
