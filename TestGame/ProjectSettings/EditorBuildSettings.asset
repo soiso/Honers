@@ -9,32 +9,8 @@ EditorBuildSettings:
     path: Assets/Scene/TitleTest.unity
   - enabled: 1
     path: Assets/Scene/nagao/Story/op.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_2.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_3.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_4.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_5.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_6.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_7.unity
   - enabled: 1
-    path: Assets/Scene/nagao/Story/ep.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_9.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_10.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_11.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_bad.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_happy.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/Story/story_normal.unity
+    path: Assets/Scene/nagao/Story/ed.unity
   - enabled: 0
     path: Assets/Scene/testGame.unity
   - enabled: 0

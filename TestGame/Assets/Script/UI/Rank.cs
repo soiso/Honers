@@ -4,8 +4,8 @@ using System.Collections;
 
 public class Rank : MonoBehaviour
 {
-    [SerializeField, Range(0, 10),HeaderAttribute("ロールが開始するまでの待ち時間")]
-    private float start_wait=0;
+    [SerializeField, Range(0, 10), HeaderAttribute("ロールが開始するまでの待ち時間")]
+    private float start_wait = 0;
     [SerializeField, Range(0, 9997), HeaderAttribute("BとAの境")]
     public int score_sort_AB;
     [SerializeField, Range(0, 9999), HeaderAttribute("AとSの境")]
@@ -35,16 +35,17 @@ public class Rank : MonoBehaviour
     }
     void Update()
     {
-        if (Time.time > m_start_time + start_wait)
-        {
-            if (m_is_rolling)
-            {
-                if (Dram_Roll())
-                {
-                    Calculate();
-                }
-            }
-        }
+        if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() == "LastResult")
+            if (Time.time < m_start_time + start_wait) return;
+
+        if (!m_is_rolling) return;
+
+        //if (Dram_Roll())
+        //{
+            Calculate();
+        //}
+
+
     }
     bool Dram_Roll()
     {

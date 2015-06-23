@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Stage_Select_Canvas : MonoBehaviour {
-
+    private bool LoadFlg = false;
     void Start()
     {
         GetComponent<Canvas>().enabled = false;
@@ -12,7 +12,13 @@ public class Stage_Select_Canvas : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Objectmanager.m_instance.m_scene_manager.BeginLoad();
+        if (LoadFlg) return;
+
+        if (Objectmanager.m_instance.m_scene_manager.LoadProgress())
+        {
+            Objectmanager.m_instance.m_scene_manager.BeginLoad();
+            LoadFlg = true;
+        }
     }
 }
 #endif
