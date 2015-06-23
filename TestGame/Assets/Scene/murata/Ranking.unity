@@ -664,6 +664,48 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!1001 &1079722477
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 18.8999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.5999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.69000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 458630, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 41a5f3575d0a543448ae31e71a922d86, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1231649981
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +1023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 410904, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11474698, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
       propertyPath: m_MoveTarget
