@@ -15,8 +15,8 @@ public class PicturePaper : MonoBehaviour {
     private Transform m_MoveTarget;
 
     private float m_default_position_z = 5.0f;
-
-    private float m_leap_leapspeed = 0.005f;
+    [SerializeField,Range(0,0.1f)]
+    private float m_leap_leapspeed = 0.01f;
 
     private float m_current_Leep = 0f;
 

@@ -880,6 +880,10 @@ Prefab:
       propertyPath: m_MoveTarget
       value: 
       objectReference: {fileID: 1568342632}
+    - target: {fileID: 11474698, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
+      propertyPath: m_move_Speed
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
   m_IsPrefabParent: 0
@@ -2118,11 +2122,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11422642, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_lerp_Speed
-      value: .0700000003
+      value: .0399999991
       objectReference: {fileID: 0}
     - target: {fileID: 11422642, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: m_lerp_Speed_Inv
-      value: .119999997
+      value: .0900000036
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[3]
@@ -2150,7 +2154,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[7]
-      value: ep
+      value: ed
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: sceneName.Array.data[8]
@@ -2162,7 +2166,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[4]
-      value: 80
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[5]

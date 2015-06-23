@@ -36,6 +36,7 @@ public class Stage_Timer : MonoBehaviour {
         rimit_time.enabled = true;
         this.transform.position = new Vector3(4.98f, 11.28f, -3.5f);
         this.transform.localScale = new Vector3(1, 1, 1);
+        
     }
     public void StartSEPlay()
     {
@@ -52,14 +53,26 @@ public class Stage_Timer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage1" &&
+
+        int remaining_time = (int)stage_rimit - ((int)current_time - (int)start_time);
+        current_time = Time.time;
+        if (start_time < 0.1f) current_time = 0.0f;
+        if (current_time - start_time > stage_rimit &&
+        s_flag != true)
+        {
+            ChangeResult();
+            s_flag = true;
+            rimit_time.enabled = false;
+            audio.Stop();
+            audio.clip = end;
+            audio.Play();
+        } 
+        if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage1" &&
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage2" &&
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage3" &&
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage4" &&
                 Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() != "New_Stage5")
                 return;
-        int remaining_time = (int)stage_rimit - ((int)current_time - (int)start_time);
-        current_time = Time.time;
         Color temp = endcount.GetComponent<Renderer>().material.color;
         if (remaining_time < 6.0f && remaining_time > 0.0f)
         {
@@ -74,18 +87,9 @@ public class Stage_Timer : MonoBehaviour {
             endcount.GetComponent<Renderer>().material.mainTexture = count[5];
             this.transform.position = new Vector3(0, 11.28f, -3.5f);
             this.transform.localScale = new Vector3(3,1,1);
+            Objectmanager.m_instance.m_scene_manager.EndStage();
         }
-        if (start_time < 0.1f) current_time = 0.0f;
-        if (current_time - start_time > stage_rimit && 
-        s_flag != true)
-        {
-            ChangeResult();
-            s_flag = true;
-            rimit_time.enabled = false;
-            audio.Stop();
-            audio.clip = end;
-            audio.Play();
-	    }
+
         rimit_time.SetNumber(remaining_time,false);
     }
 
@@ -93,7 +97,7 @@ public class Stage_Timer : MonoBehaviour {
     {
         Color temp = endcount.GetComponent<Renderer>().material.color;
         endcount.GetComponent<Renderer>().material.color = new Color(temp.r, temp.g, temp.b, 0);
-          Objectmanager.m_instance.m_scene_manager.EndStage();
+        Objectmanager.m_instance.m_scene_manager.BeginLoad();
     }
     public void SetStageRimit(float num)
     {

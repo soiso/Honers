@@ -65,6 +65,7 @@ public class Ranking : MonoBehaviour
             m_numloop++;
             m_CurrentScore /= 10;
         }
+        Objectmanager.m_instance.m_scene_manager.NextSceneLoad("TitleTest");
          //m_current_Mode = ScalingMode.fix_default;
 	}
 	
@@ -160,7 +161,7 @@ public class Ranking : MonoBehaviour
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
         Objectmanager.m_instance.m_score.Reset();
-        Objectmanager.m_instance.m_scene_manager.NextSceneLoad("TitleTest");
+        Objectmanager.m_instance.m_scene_manager.BeginLoad();
     }
 
     private bool IsFlick()

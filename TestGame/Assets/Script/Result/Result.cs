@@ -95,6 +95,10 @@ public class Result : MonoBehaviour
         if (max_fruit_num < strawberry_num) max_fruit_num = strawberry_num;
 
         CreatePosSet();
+        if (Objectmanager.m_instance.m_scene_manager.LoadStage_num > 4)
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad("ed");
+        else
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
     }
 
     // Update is called once per frame
@@ -115,10 +119,7 @@ public class Result : MonoBehaviour
     {
         Objectmanager.m_instance.m_fruit_Counter.Reset();
         //Objectmanager.m_instance.m_score.Reset();
-        if (Objectmanager.m_instance.m_scene_manager.LoadStage_num >4)
-            Objectmanager.m_instance.m_scene_manager.NextSceneLoad("story_8");
-        else
-            Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+        Objectmanager.m_instance.m_scene_manager.BeginLoad();
     }
     private Vector3 m_StartPos;
     private Vector3 m_EndPos;

@@ -44,6 +44,12 @@ public class SceneManager : MonoBehaviour
         Objectmanager.m_instance.m_camera_move.Init();
     }
 
+    public void Init()
+    {
+        LoadFlg = false;   //ロード中かどうか
+        loadInfo = null;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -51,25 +57,13 @@ public class SceneManager : MonoBehaviour
         {
             light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 0.0f, 0.03f);
             float inset = light.GetComponent<Light>().intensity;
-            if (inset <= 0.5f)
-                AddSceneResult();
+            //if (inset <= 0.5f)
+            //{
+                
+                
+            //}
         }
-        if (LoadFlg == true)
-        {
-            //light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 1.0f, 0.03f);
-            if (loadInfo.allowSceneActivation == false)
-            {
-                if (loadInfo.progress >= 0.9f)
-                {
-                    //シーン切替 .
-                    if (currentSceneName != "Result")
-                        oldPicPaper.GetComponent<PicturePaper>().Move_Begin();
-                    else
-                        LoadFlg = false;
-                    loadInfo.allowSceneActivation = true;
-                }
-            }
-        }
+
         if (oldPicPaper != null)
         {
             if (oldPicPaper.GetComponent<PicturePaper>().GetTargetRange() < 20.0f)
@@ -86,7 +80,7 @@ public class SceneManager : MonoBehaviour
                 }
                 else Time.timeScale = 1;
                 GameObject.Destroy(oldPicPaper);
-                LoadFlg = false;
+                //LoadFlg = false;
                 ChangeFlg = false;
             }
         }
@@ -100,7 +94,23 @@ public class SceneManager : MonoBehaviour
     }
     public void BeginLoad()
     {
-
+        if (!LoadFlg) return;
+        if (loadInfo.allowSceneActivation) return;
+        //シーン切替 .
+        if (currentSceneName != "Result" )
+            oldPicPaper.GetComponent<PicturePaper>().Move_Begin();
+        //else
+        LoadFlg = false;
+        ResultFlg = false;
+        loadInfo.allowSceneActivation = true;
+    }
+    public bool LoadProgress()
+    {
+        if (!LoadFlg) return false;
+        if (loadInfo.allowSceneActivation) return false;
+        if(loadInfo.progress<0.9f) return false;
+        
+        return true;
     }
     public void ChangeScene(string sceneName)
     {
@@ -113,8 +123,9 @@ public class SceneManager : MonoBehaviour
     {
         fever_sign.GetComponent<FeaverSign>().Reset();
 
-        Time.timeScale = 0;
         currentSceneName = sceneName;
+        if(currentSceneName != "Result")
+        Time.timeScale = 0;
         picpaper = GameObject.Find("PicturePaper");
         Objectmanager.m_instance.m_stage_timer.SetStageRimit(rimit_time[currentScene_num]);
 
@@ -138,7 +149,7 @@ public class SceneManager : MonoBehaviour
         loadInfo = Application.LoadLevelAdditiveAsync("Result");
         LoadFlg = true;
         loadInfo.allowSceneActivation = false;
-        ResultFlg = false;
+        //ResultFlg = false;
         currentSceneName = "Result";
     }
     public void NextSceneLoad()
@@ -202,10 +213,14 @@ public class SceneManager : MonoBehaviour
 
     public void EndStage()
     {
-        if (currentSceneName == "New_Stage5")
-            LoadStage_num = 5;
-
+        if (LoadFlg) return;
         ResultFlg = true;
+        if (currentSceneName == "New_Stage5")
+        {
+            LoadStage_num = 5;
+            //return;
+        }
+        AddSceneResult();
 
     }
     public string GetCurrentStageName()

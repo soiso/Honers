@@ -79,6 +79,7 @@ public class LastResult : MonoBehaviour {
     {
         start_time = Time.time;
         s_flag = true;
+        Objectmanager.m_instance.m_scene_manager.NextSceneLoad("Ranking");
     }
 
     // Update is called once per frame
@@ -115,7 +116,7 @@ public class LastResult : MonoBehaviour {
         //Objectmanager.m_instance.m_fruit_Counter.Reset();
         //Objectmanager.m_instance.m_score.Reset();
         //Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
-        Objectmanager.m_instance.m_scene_manager.NextSceneLoad("Ranking");
+        Objectmanager.m_instance.m_scene_manager.BeginLoad();
     }
     private Vector3 m_StartPos;
     private Vector3 m_EndPos;
