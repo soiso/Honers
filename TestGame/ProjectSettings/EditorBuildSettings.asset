@@ -23,13 +23,13 @@ EditorBuildSettings:
     path: Assets/Scene/nagao/Story/story_7.unity
   - enabled: 1
     path: Assets/Scene/nagao/Story/ep.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/nagao/Story/story_9.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/nagao/Story/story_10.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/nagao/Story/story_11.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/nagao/Story/story_bad.unity
   - enabled: 1
     path: Assets/Scene/nagao/Story/story_happy.unity
