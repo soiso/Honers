@@ -1355,23 +1355,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e75903dfabc7bb94bb912c183b56ad15, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &904039932 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 176640, guid: e75903dfabc7bb94bb912c183b56ad15, type: 2}
-  m_PrefabInternal: {fileID: 904039931}
---- !u!114 &904039933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 904039932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!4 &931308963 stripped
 Transform:
   m_PrefabParentObject: {fileID: 408192, guid: 0943a590888c8404f93895d40101d8be, type: 2}
