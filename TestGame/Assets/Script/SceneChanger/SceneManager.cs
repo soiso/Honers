@@ -43,6 +43,7 @@ public class SceneManager : MonoBehaviour
         startsign = GameObject.Find("StartSign");
         oldPicPaper = null;
         Objectmanager.m_instance.m_camera_move.Init();
+        Application.targetFrameRate = 60;
     }
 
     public void Init()
