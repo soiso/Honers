@@ -174,6 +174,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
+  m_isactive: 0
 --- !u!114 &139851610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +280,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
+  m_isactive: 0
 --- !u!114 &345323014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,6 +386,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: New_Stage1
+  m_isactive: 0
 --- !u!114 &424987009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +492,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: New_Stage1
+  m_isactive: 0
 --- !u!114 &547784438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,6 +598,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
+  m_isactive: 0
 --- !u!114 &902677237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,6 +777,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
+  m_isactive: 0
 --- !u!114 &1045600941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +889,10 @@ Prefab:
       propertyPath: m_SceneBGM
       value: 
       objectReference: {fileID: 8300000, guid: b1d9e7ed2b0da3c4680bce52c47e2c79, type: 3}
+    - target: {fileID: 176896, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
+      propertyPath: m_Name
+      value: StoryBGMSetter
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11464942, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
@@ -941,6 +951,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
+  m_isactive: 0
 --- !u!114 &1302409165
 MonoBehaviour:
   m_ObjectHideFlags: 0

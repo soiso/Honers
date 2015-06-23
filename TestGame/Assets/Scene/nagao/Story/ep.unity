@@ -179,7 +179,7 @@ Prefab:
     - target: {fileID: 11448662, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
       propertyPath: m_SceneBGM
       value: 
-      objectReference: {fileID: 8300000, guid: b1d9e7ed2b0da3c4680bce52c47e2c79, type: 3}
+      objectReference: {fileID: 8300000, guid: bcc630a3659fd584aa5e9f034d5d5b6b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 600c80f991be198419d0e1428d0957e2, type: 2}
   m_IsPrefabParent: 0

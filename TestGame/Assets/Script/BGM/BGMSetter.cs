@@ -13,6 +13,11 @@ public class BGMSetter : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        Objectmanager.m_instance.m_BGM.ChangeBGM(m_SceneBGM, m_Loop);
+        SetBGM();
 	}
+
+    public void SetBGM()
+    {
+        Objectmanager.m_instance.m_BGM.ChangeBGM(m_SceneBGM, m_Loop);
+    }
 }

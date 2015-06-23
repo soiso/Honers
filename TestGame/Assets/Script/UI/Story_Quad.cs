@@ -19,6 +19,9 @@ public class Story_Quad : MonoBehaviour {
     [SerializeField, SceneName,Header("次のシーン(最後のカードのみ有効)")]
     private string next_scene_name;
 
+    //有効かどうか
+    public bool m_isactive = false;
+
 	// Use this for initialization
 	void Start () {
         Color col = this.GetComponent<Renderer>().material.color;
@@ -47,6 +50,7 @@ public class Story_Quad : MonoBehaviour {
         quad_enable = true;
         Color col = this.GetComponent<Renderer>().material.color;
         this.GetComponent<Renderer>().material.color = new Color(col.r, col.g, col.b, 255);
+        m_isactive = true;
     }
 
     private void Move()
