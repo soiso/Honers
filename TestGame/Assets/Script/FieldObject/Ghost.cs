@@ -151,7 +151,13 @@ public class Ghost : FieldObjectInterface {
         move_Vec.Normalize();
         move_Vec = move_Vec * m_current_MoveSpeed * Time.deltaTime;
 
-        this.transform.Translate(move_Vec);
+       // this.transform.Translate(move_Vec);
+        this.transform.position += move_Vec;
+
+        Vector3 rotate_Angle = new Vector3(0, 0, 0);
+        rotate_Angle.z = (move_Vec.x <= .0f) ? -1.0f : 1.0f;
+        Quaternion rotate_Q = Quaternion.LookRotation(rotate_Angle);
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, rotate_Q, 0.1f);
 
         m_Animator.SetBool("isMove", true);
 
@@ -242,7 +248,9 @@ public class Ghost : FieldObjectInterface {
         //自分と同じ場所だった場合は再度抽選
         do{
             m_target_index = Random.Range( 0, changer.m_Panel.Length );
-        } while (m_target_index == m_index || changer.m_Panel[m_target_index].GetComponent<PanelParametor>().GetTimezone != PanelParametor.TIMEZONE.night);
+        } while (m_target_index == m_index || 
+            changer.m_Panel[m_target_index].GetComponent<PanelParametor>().GetTimezone != PanelParametor.TIMEZONE.night ||
+            changer.m_Panel[m_target_index].GetComponentInChildren<TouchMesh>().m_is_select );
 
         //パネルの入れ替え用にUV計算
         PanelParametor.TIMEZONE temp = changer.m_Panel[m_index].GetComponent<PanelParametor>().GetTimezone;
