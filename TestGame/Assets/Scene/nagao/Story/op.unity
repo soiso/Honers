@@ -174,7 +174,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_BGM: {fileID: 0}
+  m_BGM: {fileID: 8300000, guid: d3696edb97b88b048bc20983c1ea81b6, type: 3}
 --- !u!114 &139851610
 MonoBehaviour:
   m_ObjectHideFlags: 0
