@@ -57,11 +57,7 @@ public class SceneManager : MonoBehaviour
         {
             light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 0.0f, 0.03f);
             float inset = light.GetComponent<Light>().intensity;
-            //if (inset <= 0.5f)
-            //{
-                
-                
-            //}
+ 
         }
 
         if (oldPicPaper != null)
@@ -108,7 +104,7 @@ public class SceneManager : MonoBehaviour
     {
         if (!LoadFlg) return false;
         if (loadInfo.allowSceneActivation) return false;
-        if(loadInfo.progress<0.9f) return false;
+        //if(loadInfo.progress<0.9f) return false;
         
         return true;
     }
@@ -169,23 +165,7 @@ public class SceneManager : MonoBehaviour
             return;
         }
         
-        //currentScene_num = 0;
-        //foreach (string stageName in sceneName)
-        //{
-        //    if (stageName == currentSceneName)
-        //    {
-        //        currentScene_num += 1;
-        //        if (sceneName[currentScene_num] == "TitleTest")
-        //            ChangeScene(sceneName[currentScene_num]);
-        //        else
-        //        {
-        //            ChangeScene_Add(sceneName[currentScene_num]);
-        //        }
-        //        break;
-        //    }
 
-        //    currentScene_num++;
-        //}
     }
 
     public void NextSceneLoad(string newstageName)

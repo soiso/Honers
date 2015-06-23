@@ -3107,7 +3107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_picturePaperName: PicturePaper
-  pic_paper_prefab: {fileID: 0}
+  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!114 &1956311645
 MonoBehaviour:
   m_ObjectHideFlags: 0

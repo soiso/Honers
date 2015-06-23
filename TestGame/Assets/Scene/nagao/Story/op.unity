@@ -174,7 +174,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &139851610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &345323014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: Description
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &424987009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: Description
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &547784438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &902677237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &962117288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,7 +777,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &1045600941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_target: {fileID: 580809}
   move_speed: .5
   next_scene_name: TitleTest
-  m_isactive: 0
+  m_BGM: {fileID: 0}
 --- !u!114 &1302409165
 MonoBehaviour:
   m_ObjectHideFlags: 0

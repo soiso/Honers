@@ -82,18 +82,7 @@ public class Story_Quad : MonoBehaviour
             Vector3 new_pos = this.transform.position + angle * move_speed;
             this.transform.position = new_pos;
         }
-        else
-        {
-            //次に読むQuadがあるかないか
-            if (EndQuad)
-            {
-                //Objectmanager.m_instance.m_scene_manager.BeginLoad();
-            }
-            else
-            {
-               
-            }
-        }
+
     }
     private Vector3 m_StartPos;
     private Vector3 m_EndPos;

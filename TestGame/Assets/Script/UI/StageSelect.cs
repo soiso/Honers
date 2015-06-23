@@ -7,24 +7,21 @@ public class StageSelect : MonoBehaviour
     public string sceneName;
     private GameObject manager;
 
-    
+    private bool LoadFlg = false;
     void Start()
     {
         manager = GameObject.Find("SceneManager");
     }
     public void On_Click()
     {
+        if (LoadFlg) return;
         manager.GetComponent<SceneManager>().NextSceneLoad(sceneName);
+        Objectmanager.m_instance.m_scene_manager.BeginLoad();
+        LoadFlg = true;
     }
     void Update()
     {
-        //if (LoadFlg) return;
 
-        //if(Objectmanager.m_instance.m_scene_manager.LoadProgress())
-        //{
-        //    Objectmanager.m_instance.m_scene_manager.BeginLoad();
-        //    LoadFlg = true;
-        //}
     }
 
 }
