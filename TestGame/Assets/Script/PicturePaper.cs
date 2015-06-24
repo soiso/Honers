@@ -97,4 +97,8 @@ public class PicturePaper : MonoBehaviour {
         audio.Play();
 
     }
+    public void PicDelete()
+    {
+        Destroy(this.gameObject);
+    }
 }

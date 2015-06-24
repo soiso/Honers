@@ -850,8 +850,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1494711617}
   - 114: {fileID: 1494711616}
+  - 114: {fileID: 1494711618}
   m_Layer: 8
-  m_Name: Stage1
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -885,6 +886,18 @@ Transform:
   - {fileID: 77190430}
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &1494711618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1494711615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a167d43fe857c5047973e681e30f22f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_scene: Tips_2
 --- !u!1001 &1656895788
 Prefab:
   m_ObjectHideFlags: 0

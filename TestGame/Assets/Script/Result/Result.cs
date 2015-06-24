@@ -12,6 +12,8 @@ public class Result : MonoBehaviour
     public GameObject create_fruit;
     [SerializeField]
     public GameObject score_rank;
+    [SerializeField]
+    private GameObject backGround;
     private float start_time;
     private float current_time;
     private bool s_flag;
@@ -95,10 +97,11 @@ public class Result : MonoBehaviour
         if (max_fruit_num < strawberry_num) max_fruit_num = strawberry_num;
 
         CreatePosSet();
+        GameObject temp = GameObject.Find("Stage");
         if (Objectmanager.m_instance.m_scene_manager.LoadStage_num > 4)
             Objectmanager.m_instance.m_scene_manager.NextSceneLoad("ed");
         else
-            Objectmanager.m_instance.m_scene_manager.NextSceneLoad();
+            Objectmanager.m_instance.m_scene_manager.NextSceneLoad(temp.GetComponent<SetNextScene>().GetNextSceneName());
     }
 
     // Update is called once per frame
@@ -112,6 +115,7 @@ public class Result : MonoBehaviour
         if (Touch())
         {
             NextScene();
+            backGround.GetComponent<ResultBackGround>().BeginMove(this.transform.parent);
             s_flag = true;
         }
     }

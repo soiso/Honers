@@ -23,38 +23,10 @@ EditorBuildSettings:
     path: Assets/Scene/nagao/Tips/Tips_4.unity
   - enabled: 1
     path: Assets/Scene/nagao/Tips/Tips_5.unity
-  - enabled: 0
-    path: Assets/Scene/testGame.unity
-  - enabled: 0
-    path: Assets/Scene/terauchi/T_Stage1.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/N_Stage1.unity
-  - enabled: 0
-    path: Assets/Scene/MU_Stage1.unity
-  - enabled: 0
-    path: Assets/Scene/morioka/MO_Stage1.unity
-  - enabled: 0
-    path: Assets/Scene/kawasaki/K_Stage1.unity
-  - enabled: 0
-    path: Assets/Scene/hiraiwa/H_Stage1.unity
-  - enabled: 0
-    path: Assets/Scene/terauchi/Stage2.unity
-  - enabled: 0
-    path: Assets/Scene/hiraiwa/H_TestScene.unity
-  - enabled: 0
-    path: Assets/Scene/kawasaki/K_TestScene.unity
-  - enabled: 0
-    path: Assets/Scene/morioka/MO_TestScene.unity
-  - enabled: 0
-    path: Assets/Scene/murata/MU_TestScene.unity
   - enabled: 1
     path: Assets/Scene/murata/New_Stage5.unity
   - enabled: 1
     path: Assets/Scene/terauchi/New_Stage3.unity
-  - enabled: 0
-    path: Assets/Scene/nagao/N_TestScene.unity
-  - enabled: 0
-    path: Assets/Scene/terauchi/T_TestScene.unity
   - enabled: 1
     path: Assets/Scene/nagao/Result.unity
   - enabled: 1

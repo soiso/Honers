@@ -87,7 +87,7 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!20 &125168795
+--- !u!20 &125168795 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2076020, guid: 7c632ddce514e994dba77da6256c2036,
     type: 2}
@@ -1482,16 +1482,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edf681c16cb7d1b4284dc21f16dcad6d, type: 2}
   m_IsPrefabParent: 0
---- !u!20 &1175739798
+--- !u!20 &1175739798 stripped
 Camera:
   m_PrefabParentObject: {fileID: 2071564, guid: 7c632ddce514e994dba77da6256c2036,
     type: 2}
   m_PrefabInternal: {fileID: 1630234866}
---- !u!1 &1185031208
+--- !u!1 &1185031208 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 194418, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
   m_PrefabInternal: {fileID: 1630234866}
---- !u!4 &1185031209
+--- !u!4 &1185031209 stripped
 Transform:
   m_PrefabParentObject: {fileID: 448048, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
   m_PrefabInternal: {fileID: 1630234866}
@@ -1784,7 +1784,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0338230a4efe2b43acfbdedd5fa7341, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1258825156
+--- !u!1 &1258825156 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 126300, guid: edf681c16cb7d1b4284dc21f16dcad6d, type: 2}
   m_PrefabInternal: {fileID: 1089341653}
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   - {fileID: 1857399618}
   start_wait: 0
   m_rollTime: .5
---- !u!4 &1568342632
+--- !u!4 &1568342632 stripped
 Transform:
   m_PrefabParentObject: {fileID: 412546, guid: e092d3c13ca8ae9419663029fa29bdde, type: 2}
   m_PrefabInternal: {fileID: 877902347}
@@ -2224,7 +2224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[4]
-      value: 80
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11445264, guid: 7c632ddce514e994dba77da6256c2036, type: 2}
       propertyPath: rimit_time.Array.data[5]
