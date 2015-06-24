@@ -22,6 +22,7 @@ public class Stage_Timer : MonoBehaviour {
     public AudioClip start;
     public AudioClip end;
     private AudioSource audio;
+
     // Use this for initialization
 	void Start () {
         s_flag = false;

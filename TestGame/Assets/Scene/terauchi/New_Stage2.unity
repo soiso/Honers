@@ -1001,9 +1001,29 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 153274, guid: 37eb2dd65bc524e41a554cec5305335e, type: 2}
+      propertyPath: m_Name
+      value: Stage
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 37eb2dd65bc524e41a554cec5305335e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1554508707 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 153274, guid: 37eb2dd65bc524e41a554cec5305335e, type: 2}
+  m_PrefabInternal: {fileID: 1554508706}
+--- !u!114 &1554508708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1554508707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a167d43fe857c5047973e681e30f22f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_scene: Tips_3
 --- !u!1001 &1588745247
 Prefab:
   m_ObjectHideFlags: 0

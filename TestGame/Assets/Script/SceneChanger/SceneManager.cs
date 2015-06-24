@@ -29,6 +29,7 @@ public class SceneManager : MonoBehaviour
     public int LoadStage_num = 0;
     public string currentSceneName;
     private string previousSceneName;
+    public string nextSceneName;
 
     private GameObject oldPicPaper;
     private bool LoadFlg = false;   //ロード中かどうか
@@ -59,7 +60,6 @@ public class SceneManager : MonoBehaviour
         {
             light.GetComponent<Light>().intensity = Mathf.Lerp(light.GetComponent<Light>().intensity, 0.0f, 0.03f);
             float inset = light.GetComponent<Light>().intensity;
- 
         }
 
         if (oldPicPaper != null)
@@ -75,11 +75,18 @@ public class SceneManager : MonoBehaviour
                     Objectmanager.m_instance.m_camera_move.cMove_Begin();
                     startsign.GetComponent<StartSign>().AlphaIncrease_Begin();
                     Objectmanager.m_instance.m_stage_timer.StartSEPlay();
+                    Time.timeScale = 1;
+                    oldPicPaper.GetComponent<PicturePaper>().PicDelete();
+                    oldPicPaper = null;
                 }
-                else Time.timeScale = 1;
-                GameObject.Destroy(oldPicPaper);
-                //LoadFlg = false;
-                ChangeFlg = false;
+                else
+                {
+                    Time.timeScale = 1;
+                    oldPicPaper.GetComponent<PicturePaper>().PicDelete();
+                    oldPicPaper = null;
+                    //LoadFlg = false;
+                    ChangeFlg = false;
+                }
             }
         }
 
@@ -94,54 +101,70 @@ public class SceneManager : MonoBehaviour
     {
         if (!LoadFlg) return;
         if (loadInfo.allowSceneActivation) return;
+        if (nextSceneName != "Result")
+        {
+            picpaper = GameObject.Find("PicturePaper");
+            picpaper.GetComponent<PicturePaper>().SoundPlay();
+            if (oldPicPaper != null)
+            {
+                oldPicPaper.GetComponent<PicturePaper>().PicDelete();
+                oldPicPaper = null;
+            }
+            picpaper.name += "_old";
+            oldPicPaper = picpaper;
+        }
+        previousSceneName = currentSceneName;
+        currentSceneName = nextSceneName;
         //シーン切替 .
-        if (currentSceneName != "Result" )
+        if (currentSceneName != "Result")
             oldPicPaper.GetComponent<PicturePaper>().Move_Begin();
         //else
         LoadFlg = false;
         ResultFlg = false;
         loadInfo.allowSceneActivation = true;
+        Time.timeScale = 0;
+        if (currentScene_num < 5)
+        Objectmanager.m_instance.m_score.SetScore(0, currentScene_num);
+        if (currentSceneName == "New_Stage1" ||
+    currentSceneName == "New_Stage2" ||
+    currentSceneName == "New_Stage3" ||
+    currentSceneName == "New_Stage4" ||
+    currentSceneName == "New_Stage5")
+        {
+            Objectmanager.m_instance.m_camera_move.Init();
+        }
     }
     public bool LoadProgress()
     {
         if (!LoadFlg) return false;
         if (loadInfo.allowSceneActivation) return false;
-        if(previousSceneName != "TitleTest")
+        if (previousSceneName != "TitleTest")
             if (loadInfo.progress < 0.9f) return false;
-        
+
         return true;
     }
     public void ChangeScene(string sceneName)
     {
         currentSceneName = sceneName;
-        Application.LoadLevel(sceneName);
+        loadInfo = Application.LoadLevelAsync(sceneName);
+        LoadFlg = true;
+        loadInfo.allowSceneActivation = false;
         if (sceneName == "TitleTest")
             currentScene_num = 0;
     }
     public void ChangeScene_Add(string sceneName)
     {
         fever_sign.GetComponent<FeaverSign>().Reset();
-        previousSceneName = currentSceneName;
-        currentSceneName = sceneName;
-        if(currentSceneName != "Result")
-        Time.timeScale = 0;
-        picpaper = GameObject.Find("PicturePaper");
-        Objectmanager.m_instance.m_stage_timer.SetStageRimit(rimit_time[currentScene_num]);
+        //previousSceneName = currentSceneName;
+        nextSceneName = sceneName;
+        if (currentSceneName != "Result")
+            Objectmanager.m_instance.m_stage_timer.SetStageRimit(rimit_time[currentScene_num]);
 
         loadInfo = Application.LoadLevelAdditiveAsync(sceneName);
         LoadFlg = true;
         loadInfo.allowSceneActivation = false;
-        picpaper.GetComponent<PicturePaper>().SoundPlay();
-        picpaper.name += "_old";
-        oldPicPaper = picpaper;
-        if (currentSceneName == "New_Stage1" ||
-            currentSceneName == "New_Stage2" ||
-            currentSceneName == "New_Stage3" ||
-            currentSceneName == "New_Stage4" ||
-            currentSceneName == "New_Stage5")
-        {
-            Objectmanager.m_instance.m_camera_move.Init();
-        }
+
+
     }
     public void AddSceneResult()
     {
@@ -149,7 +172,8 @@ public class SceneManager : MonoBehaviour
         LoadFlg = true;
         loadInfo.allowSceneActivation = false;
         //ResultFlg = false;
-        currentSceneName = "Result";
+        nextSceneName = "Result";
+        currentSceneName = nextSceneName;
     }
     public void NextSceneLoad()
     {
@@ -158,7 +182,7 @@ public class SceneManager : MonoBehaviour
 
         if (currentSceneName != "TitleTest")
         {
-            currentSceneName = sceneName[currentScene_num];
+            //currentSceneName = sceneName[currentScene_num];
             currentScene_num += 1;
             ChangeScene_Add(sceneName[currentScene_num]);
         }
@@ -167,8 +191,6 @@ public class SceneManager : MonoBehaviour
             ChangeScene_Add(sceneName[currentScene_num]);
             return;
         }
-        
-
     }
 
     public void NextSceneLoad(string newstageName)

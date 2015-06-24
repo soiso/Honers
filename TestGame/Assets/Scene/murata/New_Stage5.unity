@@ -96,8 +96,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 136188411}
   - 114: {fileID: 136188412}
+  - 114: {fileID: 136188413}
   m_Layer: 8
-  m_Name: Stage5
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,6 +138,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_picturePaperName: PicturePaper
   pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
+--- !u!114 &136188413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136188410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a167d43fe857c5047973e681e30f22f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  next_scene: TitleTest
 --- !u!1001 &268894412
 Prefab:
   m_ObjectHideFlags: 0
