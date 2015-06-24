@@ -168,11 +168,11 @@ public class Himawari : MonoBehaviour {
     {
         
         Vector3 target_scale =  m_rotate_root.transform.localScale;
-        target_scale.y = 1.0f;
+        target_scale.y = 0.9f;
         m_rotate_root.transform.localScale = Vector3.Lerp(m_rotate_root.transform.localScale, target_scale, 0.1f);
         m_current_Yscale = m_rotate_root.transform.localScale.y;
-        if(m_rotate_root.transform.localScale.y >= 0.95f && 
-            m_rotate_root.transform.localScale.y <= 1.05f)
+        if(m_rotate_root.transform.localScale.y >= 0.88f && 
+            m_rotate_root.transform.localScale.y <= 0.93f)
         {
             m_currentMode++;
         }
