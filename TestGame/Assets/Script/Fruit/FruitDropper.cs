@@ -52,12 +52,12 @@ public class FruitDropper : MonoBehaviour {
                                                                         0f );
         drop.transform.position = m_drop_Point.position;
 
-        if (drop.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
-        {
-            Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
-            drop.transform.rotation = q;
-        }
-        else
+        //if (drop.GetComponent<FruitInfomation>().fruit_type == FruitInterFace.FRUIT_TYPE.apple)
+        //{
+          //  Quaternion q = Quaternion.AngleAxis(180, new Vector3(0, 1, 0));
+            //drop.transform.rotation = q;
+        //}
+        //else
             drop.transform.rotation = m_drop_Point.rotation;
 
         force_vec = force_vec.normalized * Random.Range(m_minForce, m_maxForce);
