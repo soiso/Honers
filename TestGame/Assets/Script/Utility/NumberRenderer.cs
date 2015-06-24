@@ -85,6 +85,20 @@ public class NumberRenderer : MonoBehaviour {
     void Calculate(int val)
     {
         m_worklist.Clear();
+
+		if (val == 0) 
+		{
+			for(int i = 0 ; i < m_numbers.Length ; i++)
+			{
+				var rr = m_numbers[i].GetComponent<Numbers>();
+				rr.Disalble();
+			}
+
+			var render_num = m_numbers[0].GetComponent<Numbers>();
+			render_num.Enable();
+			render_num.SetMaterial(m_numberMaterial[0]);
+			return;
+		}
        //桁数を出す
         while(val > 0)
         {
@@ -106,16 +120,11 @@ public class NumberRenderer : MonoBehaviour {
 
         for (int i = m_current_surplus; i < m_numbers.Length; i++)
         {
-            var render_num = m_numbers[i].GetComponent<Numbers>();
-            render_num.Disalble();
+			var render_num = m_numbers[i].GetComponent<Numbers>();
+			render_num.Disalble();
         }
 
-		if (val == 0) 
-		{
-			var render_num = m_numbers[0].GetComponent<Numbers>();
-			render_num.Enable();
-			render_num.SetMaterial(m_numberMaterial[0]);
-		}
+
 
     }
 
