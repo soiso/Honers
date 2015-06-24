@@ -110,6 +110,13 @@ public class NumberRenderer : MonoBehaviour {
             render_num.Disalble();
         }
 
+		if (val == 0) 
+		{
+			var render_num = m_numbers[0].GetComponent<Numbers>();
+			render_num.Enable();
+			render_num.SetMaterial(m_numberMaterial[0]);
+		}
+
     }
 
     public void SetNumber(int value,bool rool = true)
