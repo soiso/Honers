@@ -124,7 +124,8 @@ public class SceneManager : MonoBehaviour
         loadInfo.allowSceneActivation = true;
         Time.timeScale = 0;
         if (currentScene_num < 5)
-        Objectmanager.m_instance.m_score.SetScore(0, currentScene_num);
+            Objectmanager.m_instance.m_score.Init();
+
         if (currentSceneName == "New_Stage1" ||
     currentSceneName == "New_Stage2" ||
     currentSceneName == "New_Stage3" ||
