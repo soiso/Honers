@@ -572,6 +572,7 @@ GameObject:
   - 33: {fileID: 678881991}
   - 64: {fileID: 678881990}
   - 23: {fileID: 678881989}
+  - 114: {fileID: 678881993}
   m_Layer: 0
   m_Name: FlickNext
   m_TagString: Untagged
@@ -629,11 +630,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 678881988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.00999999, y: .430000007, z: -.300000012}
+  m_LocalPosition: {x: 1.99000001, y: .430000007, z: -.300000012}
   m_LocalScale: {x: 10.0902119, y: 1.05727577, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+--- !u!114 &678881993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 678881988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247768c55a444d448e34f6eaee5b830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_picturePaperName: PicturePaper
+  pic_paper_prefab: {fileID: 187042, guid: e0175dda312c27a43ba81b09b86b12ad, type: 2}
 --- !u!1 &902677235
 GameObject:
   m_ObjectHideFlags: 0

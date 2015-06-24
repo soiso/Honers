@@ -110,8 +110,8 @@ public class Result : MonoBehaviour
         if (Objectmanager.m_instance.m_scene_manager.GetCurrentStageName() == "TitleTest") return;
         current_time = Time.time;
 
-        if (Time.time > create_fruit_time + create_fruit_wait)
-            Fruit_Fall();
+        //if (Time.time > create_fruit_time + create_fruit_wait)
+        //    Fruit_Fall();
         if (Touch())
         {
             NextScene();
