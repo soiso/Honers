@@ -91,8 +91,8 @@ public class Rank : MonoBehaviour
     }
     public void SetScore(int score)
     {
-        //Color col = m_MainSpriteRenderer.color;
-        //m_MainSpriteRenderer.color = new Color(col.r,col.g,col.b,255);
+        Color col = m_MainSpriteRenderer.color;
+        m_MainSpriteRenderer.color = new Color(col.r, col.g, col.b, 255);
         Score = score;
     }
 }
