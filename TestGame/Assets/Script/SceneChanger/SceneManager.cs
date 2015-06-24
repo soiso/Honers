@@ -78,6 +78,8 @@ public class SceneManager : MonoBehaviour
                     Time.timeScale = 1;
                     oldPicPaper.GetComponent<PicturePaper>().PicDelete();
                     oldPicPaper = null;
+                    
+                        Objectmanager.m_instance.m_score.Init();
                 }
                 else
                 {
@@ -123,8 +125,7 @@ public class SceneManager : MonoBehaviour
         ResultFlg = false;
         loadInfo.allowSceneActivation = true;
         Time.timeScale = 0;
-        if (currentScene_num < 5)
-            Objectmanager.m_instance.m_score.Init();
+
 
         if (currentSceneName == "New_Stage1" ||
     currentSceneName == "New_Stage2" ||
