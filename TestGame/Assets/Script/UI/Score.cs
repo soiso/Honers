@@ -45,4 +45,8 @@ public class Score : MonoBehaviour
         }
         total_score = .0f;
     }
+    public void Init()
+    {
+        score_num.SetNumber(0);
+    }
 }
