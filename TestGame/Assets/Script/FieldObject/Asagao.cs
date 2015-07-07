@@ -14,7 +14,9 @@ public class Asagao : FieldObjectInterface {
 
     private Animator m_Animator;
     private BoxCollider m_Collider;
-    
+
+    GameObject m_rotate_root;
+
     //とりあえず
     private float m_current_Leap = 0f;
 
@@ -35,6 +37,7 @@ public class Asagao : FieldObjectInterface {
         m_Animator.speed = m_animation_Speed;
         m_Souce = GetComponent<AudioSource>();
         m_Souce.clip = m_SE;
+        m_rotate_root = this.transform.FindChild("ScalingRoot").gameObject;
 	}
 
     void Glow()
@@ -46,6 +49,10 @@ public class Asagao : FieldObjectInterface {
         m_Animator.speed = m_animation_Speed;
         m_Animator.SetBool("isSleep", false);
         m_Animator.SetBool("isGlow", true);
+        Vector3 scale = m_rotate_root.transform.localScale;
+        scale.y += 0.05f;
+        m_rotate_root.transform.localScale = scale;
+		//m_rotate_root.transform.FindChild ("asagao02").transform.localScale = Vector3.one;
     }
 
     void    Sleep()
@@ -74,7 +81,7 @@ public class Asagao : FieldObjectInterface {
             m_Souce.Play();
         }
         m_CurrentTimeZone = m_trigger_Collider.m_myColliderTimeZone;
-        GetComponent<ShaderChanger>().Change(m_CurrentTimeZone);
+        //GetComponent<ShaderChanger>().Change(m_CurrentTimeZone);
         if (Is_ActiveTimeZone(m_CurrentTimeZone))
         {
             Glow();

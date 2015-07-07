@@ -18,7 +18,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: c39751dfc8fc7ca47829b9fcd7231505, type: 3}
+          m_Texture: {fileID: 2800000, guid: a08c893407d89fc439ca7b073906808e, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -92,16 +92,16 @@ Material:
         second: 0
       data:
         first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
           name: _Glossiness
         second: .5
       data:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _Parallax
-        second: .0199999996
       data:
         first:
           name: _ZWrite
