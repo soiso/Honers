@@ -1182,7 +1182,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: .956862748, b: .839215696, a: 1}
-  m_Intensity: 1
+  m_Intensity: .800000012
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -2031,7 +2031,7 @@ MonoBehaviour:
   m_rotate_Speed: .100000001
   m_move_Speed: 15
   m_MoveTarget: {fileID: 1568342632}
-  m_leap_leapspeed: .00999999978
+  m_leap_leapspeed: .00499999989
   clip: {fileID: 8300000, guid: a7244af2921acf5499415bd284adad64, type: 3}
 --- !u!4 &1423327805
 Transform:

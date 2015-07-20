@@ -134,6 +134,7 @@ public class SceneManager : MonoBehaviour
     currentSceneName == "New_Stage5")
         {
             Objectmanager.m_instance.m_camera_move.Init();
+            fever_sign.GetComponent<FeaverSign>().FeaverSet();
         }
     }
     public bool LoadProgress()

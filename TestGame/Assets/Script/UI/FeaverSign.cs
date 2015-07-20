@@ -20,13 +20,14 @@ public class FeaverSign : MonoBehaviour {
     private Vector3 velocity;
     public bool feaver_flag;
     private Vector3 default_pos;
+    private bool fever_set=false;
 	// Use this for initialization
 	void Start () {
         //velocity = new Vector3(0, 0, 0);
         feaver_flag = false;
         this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
         light = GameObject.Find("Directional Light 1");
-        light.GetComponent<Light>().intensity = 1;
+        //light.GetComponent<Light>().intensity = 1;
         move_target = this.transform.Find("Target");
         default_pos = this.transform.position;
 	}
@@ -41,6 +42,7 @@ public class FeaverSign : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
+        if (!fever_set) return;
         if (feaver_flag)
         {
             this.GetComponent<RectTransform>().position += velocity;
@@ -71,5 +73,9 @@ public class FeaverSign : MonoBehaviour {
     {
         feaver_flag = false;
         this.GetComponent<Image>().color = new Color(255, 255, 255, 0.0f);
+    }
+    public void FeaverSet()
+    {
+        fever_set = true;
     }
 }
